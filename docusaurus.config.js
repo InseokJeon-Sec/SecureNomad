@@ -11,8 +11,8 @@ const config = {
     v4: true,
   },
 
-  url: 'https://inseokjeon-sec.github.io',
-  baseUrl: '/SecureNomad/',
+  url: 'https://wiki.securenomad.kr',
+  baseUrl: '/',
   trailingSlash: false,
 
   organizationName: 'InseokJeon-Sec',
