@@ -35,7 +35,28 @@ const config = {
           sidebarPath: './sidebars.js',
           showLastUpdateTime: true,    // 문서 하단에 마지막 수정일 표시
         },
-        blog: false,                   // 블로그 끄기
+        blog: {                        // Notes (날짜순 이슈 메모)
+          path: 'notes',
+          routeBasePath: 'notes',
+          blogTitle: 'Notes',
+          blogDescription: '보안 · IT · AI 이슈를 그때그때 기록하는 메모',
+          blogSidebarTitle: '최근 노트',
+          blogSidebarCount: 'ALL',
+          postsPerPage: 10,
+          showReadingTime: true,
+          showLastUpdateTime: true,
+          authorsMapPath: 'authors.yml',
+          tags: 'tags.yml',
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
+          feedOptions: {
+            type: ['rss', 'atom'],
+            title: 'SecureNomad Notes',
+            description: '보안 · IT · AI 이슈 메모',
+            language: 'ko',
+          },
+        },
         sitemap: {
           lastmod: 'date',             // 검색엔진에 문서 수정일 전달
           changefreq: 'weekly',
@@ -68,8 +89,10 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {type: 'docSidebar', sidebarId: 'securitySidebar', position: 'left', label: 'Security'},
           {type: 'docSidebar', sidebarId: 'itSidebar', position: 'left', label: 'IT'},
+          {type: 'docSidebar', sidebarId: 'securitySidebar', position: 'left', label: 'Security'},
+          {type: 'docSidebar', sidebarId: 'aiSidebar', position: 'left', label: 'AI'},
+          {to: '/notes', label: 'Notes', position: 'left'},
           {to: '/about', label: 'About', position: 'right'},
           {
             href: 'https://github.com/InseokJeon-Sec/SecureNomad',
