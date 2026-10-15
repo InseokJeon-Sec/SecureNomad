@@ -1,7 +1,7 @@
 ---
 title: AI for Security
 sidebar_label: Overview
-sidebar_position: 1
+sidebar_position: 0
 description: AI를 도구로 활용한 보안 - 취약점 진단, 결과 해석, 학습 정리
 ---
 

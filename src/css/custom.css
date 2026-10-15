@@ -1,30 +1,174 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * SecureNomad global styles
+ * Infima 변수 override + 자체 호스팅 폰트 + 가독성/표/코드/안내박스/카드
  */
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+/* ===== 폰트: Pretendard (자체 호스팅) ===== */
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/PretendardVariable.woff2') format('woff2-variations');
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ===== 라이트 모드 ===== */
+:root {
+  /* 브랜드 색(로고 파랑) */
+  --ifm-color-primary: #2f6fb3;
+  --ifm-color-primary-dark: #2b64a2;
+  --ifm-color-primary-darker: #295f99;
+  --ifm-color-primary-darkest: #224e7e;
+  --ifm-color-primary-light: #377ac0;
+  --ifm-color-primary-lighter: #4484c6;
+  --ifm-color-primary-lightest: #6499d1;
+
+  /* 폰트 */
+  --ifm-font-family-base: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, 'Malgun Gothic',
+    'Apple SD Gothic Neo', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'D2Coding', ui-monospace,
+    SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* 가독성 */
+  --ifm-line-height-base: 1.75;
+  --ifm-heading-line-height: 1.35;
+  --ifm-heading-font-weight: 700;
+
+  --ifm-code-font-size: 92%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
+
+  /* 인라인 코드 */
+  --ifm-code-background: rgba(47, 111, 179, 0.1);
+  --ifm-code-color: #1f4e82;
+}
+
+/* ===== 다크 모드 ===== */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #6ba3e6;
+  --ifm-color-primary-dark: #4f90de;
+  --ifm-color-primary-darker: #4186d9;
+  --ifm-color-primary-darkest: #2f6fb3;
+  --ifm-color-primary-light: #87b4eb;
+  --ifm-color-primary-lighter: #95bded;
+  --ifm-color-primary-lightest: #bcd4f3;
+
+  --ifm-background-color: #11161f;
+  --ifm-background-surface-color: #161c28;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+  --ifm-code-background: rgba(107, 163, 230, 0.14);
+  --ifm-code-color: #cfe0f6;
+}
+
+/* ===== 본문 가독성 ===== */
+.markdown {
+  --ifm-h1-font-size: 2.1rem;
+  --ifm-h2-font-size: 1.55rem;
+  --ifm-h3-font-size: 1.25rem;
+}
+.markdown > h2 {
+  margin-top: 2.4rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+.markdown > h3 {
+  margin-top: 1.8rem;
+}
+.markdown p,
+.markdown li {
+  letter-spacing: -0.003em; /* 한글 자간 미세 보정 */
+}
+
+/* 인라인 코드 */
+code {
+  border: none;
+  padding: 0.15rem 0.4rem;
+  border-radius: 5px;
+}
+
+/* ===== 표 ===== */
+.markdown table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--ifm-table-border-color);
+  border: none;
+}
+.markdown table thead {
+  background: var(--ifm-color-primary);
+}
+.markdown table thead th {
+  color: #fff;
+  border-color: var(--ifm-color-primary-dark);
+  font-weight: 600;
+}
+.markdown table th,
+.markdown table td {
+  border: 1px solid var(--ifm-table-border-color);
+}
+.markdown table tr:nth-child(2n) {
+  background-color: var(--ifm-table-stripe-background);
+}
+
+/* ===== 안내박스(Admonition) ===== */
+.theme-admonition {
+  border-radius: 10px;
+  border-left-width: 5px;
+}
+
+/* ===== 코드블록 ===== */
+.theme-code-block {
+  border-radius: 10px;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+/* ===== Notes · News 글 제목 ===== */
+.blog-list-page article h2 {
+  font-size: 1.7rem;
+}
+.blog-post-page article header h1 {
+  font-size: 2.1rem;
+}
+
+/* ===== 첫 화면 카드 ===== */
+.home-intro {
+  font-size: 1.15rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 2rem;
+}
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+}
+.home-card {
+  display: block;
+  padding: 1.25rem 1.3rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+  text-decoration: none !important;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.home-card:hover {
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(47, 111, 179, 0.15);
+}
+.home-card__title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.4rem;
+}
+.home-card__desc {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
 }

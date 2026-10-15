@@ -133,10 +133,9 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          {to: '/news', label: 'News', position: 'left'},
           {type: 'docSidebar', sidebarId: 'itSidebar', position: 'left', label: 'IT'},
           {type: 'docSidebar', sidebarId: 'securitySidebar', position: 'left', label: 'Security'},
-          {type: 'docSidebar', sidebarId: 'aiSidebar', position: 'left', label: 'AI for Security'},
-          {to: '/news', label: 'News', position: 'left'},
           {to: '/notes', label: 'Notes', position: 'left'},
           {type: 'localeDropdown', position: 'right'},
           {to: '/about', label: 'Profile', position: 'right'},

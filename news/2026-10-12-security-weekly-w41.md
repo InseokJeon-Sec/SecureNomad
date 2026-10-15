@@ -207,7 +207,7 @@ GhostAction과 함께 보면 "개발자 계정 탈취 → 저장소 → 레지�
 - 방어 관점: 짧은 시간에 여러 기관을 도는 IP 로테이션, 동일 IP 교차 관측, AI 도구 특유의 요청 패턴처럼 탐지에 쓸 만한 시그널
 
 :::warning
-실습은 반드시 격리된 로컬 랩(DVWA, Vulhub 등)에서만 한다. 실습 원칙은 [AI 취약점 진단 실습](/ai/ai-pentest/approach-and-ethics)을 따른다.
+실습은 반드시 격리된 로컬 랩(DVWA, Vulhub 등)에서만 한다. 실습 원칙은 [AI 취약점 진단 실습](/security/ai-for-security/ai-pentest/approach-and-ethics)을 따른다.
 :::
 
 **관련 개념**

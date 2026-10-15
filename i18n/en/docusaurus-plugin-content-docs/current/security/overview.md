@@ -7,3 +7,5 @@ sidebar_position: 1
 # Security
 
 Documents on security topics.
+
+- **AI for Security**: Security using AI as a tool (vulnerability assessment labs, etc.)

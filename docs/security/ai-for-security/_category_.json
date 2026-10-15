@@ -1,0 +1,10 @@
+{
+  "label": "AI for Security",
+  "position": 2,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "AI for Security",
+    "description": "AI(Claude)를 도구로 활용해 보안 업무와 학습을 수행한 기록입니다."
+  }
+}
