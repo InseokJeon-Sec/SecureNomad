@@ -156,26 +156,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'SecureNomad',
-            items: [
-              {label: 'News', to: '/news'},
-              {label: 'Notes', to: '/notes'},
-              {label: 'Profile', to: '/about'},
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {label: 'GitHub', href: 'https://github.com/InseokJeon-Sec/SecureNomad'},
-              {label: 'News RSS', to: 'pathname:///news/rss.xml'},
-              {label: 'Notes RSS', to: 'pathname:///notes/rss.xml'},
-              {label: '방문 통계 안내', to: '/privacy'},
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} SecureNomad · Built with Docusaurus`,
+        copyright: `Copyright © ${new Date().getFullYear()} SecureNomad · Built with Docusaurus<br/>Contact: <a class="footer__link-item" href="mailto:wilcois@naver.com">wilcois@naver.com</a> · <a class="footer__link-item" href="/privacy">Analytics Notice</a>`,
       },
       prism: {
         theme: prismThemes.github,
