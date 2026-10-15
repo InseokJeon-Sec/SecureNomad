@@ -63,6 +63,10 @@ const config = {
           priority: 0.5,
           filename: 'sitemap.xml',
         },
+        gtag: {                        // Google Analytics 4 방문 통계
+          trackingID: 'G-JM4LD4WP7D',
+          anonymizeIP: true,
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
