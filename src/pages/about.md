@@ -68,7 +68,7 @@ description: SecureNomad 운영자 소개
 - 고려대학교 정보보호대학원 박사 수료 (정보보안)
 - 건국대학교 정보통신대학원 석사 (정보보안)
   - 학위논문: Personal Information Protection Level Measurement Model Using ISMS
-- 학사 (멀티미디어)
+
 
 ## 자격증
 
