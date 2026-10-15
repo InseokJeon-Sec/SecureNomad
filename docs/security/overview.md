@@ -1,8 +1,9 @@
 ---
-title: 보안 개요
+title: Security Overview
+sidebar_label: Overview
 sidebar_position: 1
 ---
 
-# 보안
+# Security
 
 보안 관련 문서를 정리합니다.

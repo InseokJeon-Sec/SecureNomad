@@ -57,9 +57,9 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {type: 'docSidebar', sidebarId: 'securitySidebar', position: 'left', label: '보안'},
+          {type: 'docSidebar', sidebarId: 'securitySidebar', position: 'left', label: 'Security'},
           {type: 'docSidebar', sidebarId: 'itSidebar', position: 'left', label: 'IT'},
-          {type: 'docSidebar', sidebarId: 'buildSidebar', position: 'left', label: '구축 기록'},
+          {to: '/about', label: 'About', position: 'right'},
           {
             href: 'https://github.com/InseokJeon-Sec/SecureNomad',
             label: 'GitHub',

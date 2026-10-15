@@ -1,0 +1,10 @@
+{
+  "label": "Troubleshooting",
+  "position": 6,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Troubleshooting",
+    "description": "구축 중 실제로 만난 에러와 원인, 해결 방법을 정리합니다."
+  }
+}
