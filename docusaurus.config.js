@@ -36,6 +36,12 @@ const config = {
           showLastUpdateTime: true,    // 문서 하단에 마지막 수정일 표시
         },
         blog: false,                   // 블로그 끄기
+        sitemap: {
+          lastmod: 'date',             // 검색엔진에 문서 수정일 전달
+          changefreq: 'weekly',
+          priority: 0.5,
+          filename: 'sitemap.xml',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -47,6 +53,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/docusaurus-social-card.jpg',
+      metadata: [
+        {name: 'keywords', content: '정보보안, 보안, 침해사고 대응, 보안관제, SOC, OT 보안, 클라우드 보안, ISMS, ISO 27001, 네트워크 보안, IT'},
+        {name: 'author', content: 'Inseok Jeon'},
+      ],
       colorMode: {
         respectPrefersColorScheme: true,
       },

@@ -1,6 +1,7 @@
 ---
 slug: /
 title: SecureNomad
+description: 보안과 IT 지식을 정리하고 공유하는 SecureNomad 위키. 침해사고 대응, 보안관제, OT·클라우드 보안, 정보보호 인증 등을 다룹니다.
 ---
 
 # SecureNomad

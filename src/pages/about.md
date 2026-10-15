@@ -5,7 +5,7 @@ description: SecureNomad 운영자 소개
 
 # About
 
-## 전인석
+## Inseok Jeon
 
 > 보안 담당자에게는 **기술적 보안과 관리적 보안의 균형**이 가장 중요함
 
