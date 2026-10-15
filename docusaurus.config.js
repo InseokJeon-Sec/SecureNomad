@@ -105,7 +105,7 @@ const config = {
         items: [
           {type: 'docSidebar', sidebarId: 'itSidebar', position: 'left', label: 'IT'},
           {type: 'docSidebar', sidebarId: 'securitySidebar', position: 'left', label: 'Security'},
-          {type: 'docSidebar', sidebarId: 'aiSidebar', position: 'left', label: 'AI'},
+          {type: 'docSidebar', sidebarId: 'aiSidebar', position: 'left', label: 'AI for Security'},
           {to: '/notes', label: 'Notes', position: 'left'},
           {type: 'localeDropdown', position: 'right'},
           {to: '/about', label: 'Profile', position: 'right'},

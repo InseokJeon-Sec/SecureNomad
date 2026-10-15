@@ -11,7 +11,7 @@ A space for organizing and sharing knowledge on security and IT.
 - **IT**: Systems, networks, and development environments
   - **Docusaurus Setup**: How this site was built on GitHub Pages
 - **Security**: Vulnerabilities, attack techniques, and countermeasures
-- **AI**: AI security and practical use of AI
+- **AI for Security**: Security using AI (vulnerability assessment labs, etc.)
 - **[Notes](/notes)**: Quick memos on security, IT, and AI issues (written in Korean only)
 
 :::note
