@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.itSidebar.category.Docusaurus Setup": {
+    "message": "Docusaurus Setup",
+    "description": "The label for category 'Docusaurus Setup' in sidebar 'itSidebar'"
+  },
+  "sidebar.itSidebar.category.Docusaurus Setup.link.generated-index.title": {
+    "message": "Docusaurus Setup",
+    "description": "The generated-index page title for category 'Docusaurus Setup' in sidebar 'itSidebar'"
+  },
+  "sidebar.itSidebar.category.Docusaurus Setup.link.generated-index.description": {
+    "message": "A step-by-step record of building a Docusaurus site on a Windows PC and deploying it to GitHub Pages.",
+    "description": "The generated-index page description for category 'Docusaurus Setup' in sidebar 'itSidebar'"
+  },
+  "sidebar.itSidebar.category.Troubleshooting": {
+    "message": "Troubleshooting",
+    "description": "The label for category 'Troubleshooting' in sidebar 'itSidebar'"
+  },
+  "sidebar.itSidebar.category.Troubleshooting.link.generated-index.title": {
+    "message": "Troubleshooting",
+    "description": "The generated-index page title for category 'Troubleshooting' in sidebar 'itSidebar'"
+  },
+  "sidebar.itSidebar.category.Troubleshooting.link.generated-index.description": {
+    "message": "Errors encountered during the build, with their causes and fixes.",
+    "description": "The generated-index page description for category 'Troubleshooting' in sidebar 'itSidebar'"
+  }
+}

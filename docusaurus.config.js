@@ -1,6 +1,10 @@
 // @ts-check
 import {themes as prismThemes} from 'prism-react-renderer';
 
+// 빌드 · 실행 중인 언어 (ko: 한국어, en: 영어)
+const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? 'ko';
+const isKorean = currentLocale === 'ko';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'SecureNomad',
@@ -22,7 +26,11 @@ const config = {
 
   i18n: {
     defaultLocale: 'ko',
-    locales: ['ko'],
+    locales: ['ko', 'en'],
+    localeConfigs: {
+      ko: {label: '한국어', htmlLang: 'ko-KR'},
+      en: {label: 'English', htmlLang: 'en-US'},
+    },
   },
 
   presets: [
@@ -35,7 +43,7 @@ const config = {
           sidebarPath: './sidebars.js',
           showLastUpdateTime: true,    // 문서 하단에 마지막 수정일 표시
         },
-        blog: {                        // Notes (날짜순 이슈 메모)
+        blog: isKorean && {            // Notes (날짜순 이슈 메모, 한국어 전용)
           path: 'notes',
           routeBasePath: 'notes',
           blogTitle: 'Notes',
@@ -96,7 +104,9 @@ const config = {
           {type: 'docSidebar', sidebarId: 'itSidebar', position: 'left', label: 'IT'},
           {type: 'docSidebar', sidebarId: 'securitySidebar', position: 'left', label: 'Security'},
           {type: 'docSidebar', sidebarId: 'aiSidebar', position: 'left', label: 'AI'},
-          {to: '/notes', label: 'Notes', position: 'left'},
+          // Notes는 한국어 화면에서만 표시
+          ...(isKorean ? [{to: '/notes', label: 'Notes', position: 'left'}] : []),
+          {type: 'localeDropdown', position: 'right'},
           {to: '/about', label: 'About', position: 'right'},
           {
             href: 'https://github.com/InseokJeon-Sec/SecureNomad',

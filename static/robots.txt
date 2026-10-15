@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://wiki.securenomad.kr/sitemap.xml
+Sitemap: https://wiki.securenomad.kr/en/sitemap.xml
