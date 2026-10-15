@@ -2,6 +2,7 @@
 title: IT Overview
 sidebar_label: Overview
 sidebar_position: 1
+slug: /it
 ---
 
 # IT

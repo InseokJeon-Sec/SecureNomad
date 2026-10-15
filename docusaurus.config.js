@@ -135,7 +135,15 @@ const config = {
         items: [
           {to: '/news', label: 'News', position: 'left'},
           {type: 'docSidebar', sidebarId: 'itSidebar', position: 'left', label: 'IT'},
-          {type: 'docSidebar', sidebarId: 'securitySidebar', position: 'left', label: 'Security'},
+          {
+            type: 'dropdown',
+            label: 'Security',
+            position: 'left',
+            items: [
+              {type: 'docSidebar', sidebarId: 'securitySidebar', label: 'Overview'},
+              {type: 'doc', docId: 'security/ai-for-security/overview', label: 'AI for Security'},
+            ],
+          },
           {to: '/notes', label: 'Notes', position: 'left'},
           {type: 'localeDropdown', position: 'right'},
           {to: '/about', label: 'Profile', position: 'right'},
@@ -148,7 +156,26 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} SecureNomad. Built with Docusaurus.`,
+        links: [
+          {
+            title: 'SecureNomad',
+            items: [
+              {label: 'News', to: '/news'},
+              {label: 'Notes', to: '/notes'},
+              {label: 'Profile', to: '/about'},
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {label: 'GitHub', href: 'https://github.com/InseokJeon-Sec/SecureNomad'},
+              {label: 'News RSS', to: 'pathname:///news/rss.xml'},
+              {label: 'Notes RSS', to: 'pathname:///notes/rss.xml'},
+              {label: '방문 통계 안내', to: '/privacy'},
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} SecureNomad · Built with Docusaurus`,
       },
       prism: {
         theme: prismThemes.github,
