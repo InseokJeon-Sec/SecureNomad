@@ -126,9 +126,7 @@ GitHub Desktop에서
 
 → [Troubleshooting: 배포 후 404](./troubleshooting/05-pages-404.md)
 
-## 이후: 개인 도메인 연결 (예정)
+## 이후: 커스텀 도메인 연결
 
-1. `static/CNAME` 파일에 도메인 한 줄 작성 (예: `wiki.example.com`)
-2. `docusaurus.config.js` → `url: 'https://wiki.example.com'`, `baseUrl: '/'`
-3. DNS에 CNAME 레코드 → `inseokjeon-sec.github.io`
-4. Settings → Pages → Custom domain 입력, **Enforce HTTPS** 체크
+이후 `wiki.securenomad.kr` 도메인을 연결하면서 사이트 주소와 `baseUrl` 이 변경됨.
+→ [06. 커스텀 도메인 연결](./06-custom-domain.md)
