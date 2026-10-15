@@ -67,7 +67,7 @@ const config = {
         },
         sitemap: {
           // 영어 사이트의 Notes는 한국어 글과 같은 내용이므로 영어 사이트맵에서 제외
-          ignorePatterns: isKorean ? [] : ['/en/notes', '/en/notes/**'],
+          ignorePatterns: isKorean ? [] : ['/en/notes', '/en/notes/**', '/en/news', '/en/news/**'],
           lastmod: 'date',             // 검색엔진에 문서 수정일 전달
           changefreq: 'weekly',
           priority: 0.5,
@@ -79,6 +79,36 @@ const config = {
         },
         theme: {
           customCss: './src/css/custom.css',
+        },
+      }),
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      /** @type {import('@docusaurus/plugin-content-blog').Options} */
+      ({
+        id: 'news',                    // 두 번째 블로그: 보안 뉴스 (주간 브리핑 등)
+        path: 'news',
+        routeBasePath: 'news',
+        blogTitle: 'News',
+        blogDescription: '주간 보안 브리핑과 보안 뉴스 정리',
+        blogSidebarTitle: isKorean ? '최근 뉴스' : 'Recent news',
+        blogSidebarCount: 'ALL',
+        postsPerPage: 10,
+        showReadingTime: false,
+        showLastUpdateTime: true,
+        authorsMapPath: 'authors.yml',
+        tags: 'tags.yml',
+        onInlineTags: 'warn',
+        onInlineAuthors: 'warn',
+        onUntruncatedBlogPosts: 'warn',
+        feedOptions: {
+          type: ['rss', 'atom'],
+          title: 'SecureNomad News',
+          description: '주간 보안 브리핑과 보안 뉴스 정리',
+          language: 'ko',
         },
       }),
     ],
@@ -106,6 +136,7 @@ const config = {
           {type: 'docSidebar', sidebarId: 'itSidebar', position: 'left', label: 'IT'},
           {type: 'docSidebar', sidebarId: 'securitySidebar', position: 'left', label: 'Security'},
           {type: 'docSidebar', sidebarId: 'aiSidebar', position: 'left', label: 'AI for Security'},
+          {to: '/news', label: 'News', position: 'left'},
           {to: '/notes', label: 'Notes', position: 'left'},
           {type: 'localeDropdown', position: 'right'},
           {to: '/about', label: 'Profile', position: 'right'},
