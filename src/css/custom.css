@@ -172,3 +172,17 @@ code {
   color: var(--ifm-color-emphasis-700);
   line-height: 1.6;
 }
+
+/* 블로그 사이드바 RSS 링크 */
+.blog-rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  text-decoration: none;
+}
+.blog-rss-link:hover {
+  color: var(--ifm-color-primary);
+}

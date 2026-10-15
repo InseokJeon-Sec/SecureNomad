@@ -147,11 +147,6 @@ const config = {
           {to: '/notes', label: 'Notes', position: 'left'},
           {type: 'localeDropdown', position: 'right'},
           {to: '/about', label: 'Profile', position: 'right'},
-          {
-            href: 'https://github.com/InseokJeon-Sec/SecureNomad',
-            label: 'GitHub',
-            position: 'right',
-          },
         ],
       },
       footer: {
