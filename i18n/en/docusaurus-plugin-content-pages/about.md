@@ -1,9 +1,9 @@
 ---
-title: About
-description: About the author of SecureNomad
+title: Profile
+description: Profile of the author of SecureNomad
 ---
 
-# About
+# Profile
 
 ## Inseok Jeon
 

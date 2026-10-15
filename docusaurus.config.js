@@ -43,15 +43,15 @@ const config = {
           sidebarPath: './sidebars.js',
           showLastUpdateTime: true,    // 문서 하단에 마지막 수정일 표시
         },
-        blog: isKorean && {            // Notes (날짜순 이슈 메모, 한국어 전용)
+        blog: {                        // Notes (날짜순 이슈 메모, 번역 없이 한국어로 표시)
           path: 'notes',
           routeBasePath: 'notes',
           blogTitle: 'Notes',
           blogDescription: '보안 · IT · AI 이슈를 그때그때 기록하는 메모',
-          blogSidebarTitle: '최근 노트',
+          blogSidebarTitle: isKorean ? '최근 노트' : 'Recent notes',
           blogSidebarCount: 'ALL',
           postsPerPage: 10,
-          showReadingTime: true,
+          showReadingTime: false,       // 예상 읽기 시간 표시 끄기
           showLastUpdateTime: true,
           authorsMapPath: 'authors.yml',
           tags: 'tags.yml',
@@ -66,6 +66,8 @@ const config = {
           },
         },
         sitemap: {
+          // 영어 사이트의 Notes는 한국어 글과 같은 내용이므로 영어 사이트맵에서 제외
+          ignorePatterns: isKorean ? [] : ['/en/notes', '/en/notes/**'],
           lastmod: 'date',             // 검색엔진에 문서 수정일 전달
           changefreq: 'weekly',
           priority: 0.5,
@@ -104,10 +106,9 @@ const config = {
           {type: 'docSidebar', sidebarId: 'itSidebar', position: 'left', label: 'IT'},
           {type: 'docSidebar', sidebarId: 'securitySidebar', position: 'left', label: 'Security'},
           {type: 'docSidebar', sidebarId: 'aiSidebar', position: 'left', label: 'AI'},
-          // Notes는 한국어 화면에서만 표시
-          ...(isKorean ? [{to: '/notes', label: 'Notes', position: 'left'}] : []),
+          {to: '/notes', label: 'Notes', position: 'left'},
           {type: 'localeDropdown', position: 'right'},
-          {to: '/about', label: 'About', position: 'right'},
+          {to: '/about', label: 'Profile', position: 'right'},
           {
             href: 'https://github.com/InseokJeon-Sec/SecureNomad',
             label: 'GitHub',

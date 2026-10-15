@@ -1,9 +1,9 @@
 ---
-title: About
-description: SecureNomad 운영자 소개
+title: Profile
+description: SecureNomad 운영자 프로필
 ---
 
-# About
+# Profile
 
 ## Inseok Jeon
 
