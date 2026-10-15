@@ -56,6 +56,7 @@ const config = {
       metadata: [
         {name: 'keywords', content: '정보보안, 보안, 침해사고 대응, 보안관제, SOC, OT 보안, 클라우드 보안, ISMS, ISO 27001, 네트워크 보안, IT'},
         {name: 'author', content: 'Inseok Jeon'},
+        {name: 'naver-site-verification', content: '0d19a96a355dc5842307a811d9a57ccf53438376'},
       ],
       colorMode: {
         respectPrefersColorScheme: true,
