@@ -1,19 +1,22 @@
 ---
-title: 07. 검색엔진 등록 (네이버)
+title: 07. 검색엔진 등록 (네이버 · 구글)
 sidebar_label: 07. 검색엔진 등록
 sidebar_position: 7
-description: robots.txt, sitemap, 메타 태그 설정과 네이버 서치어드바이저 사이트 등록
+description: robots.txt, sitemap, 메타 태그 설정과 네이버 서치어드바이저 · Google Search Console 사이트 등록
 ---
 
-# 07. 검색엔진 등록 (네이버)
+# 07. 검색엔진 등록 (네이버 · 구글)
 
-네이버 검색에 사이트가 수집·노출되도록 사이트 쪽 설정을 추가하고 네이버 서치어드바이저에 등록함.
+네이버 · 구글 검색에 사이트가 수집·노출되도록 사이트 쪽 설정을 추가하고 각 검색엔진의 웹마스터 도구에 등록함.
 
 ```text
 [사이트 준비]                         [네이버 서치어드바이저]
-robots.txt  ─ 수집 허용 + 사이트맵 위치    사이트 등록
-sitemap.xml ─ 수집 대상 페이지 목록   ─▶  소유 확인 (HTML 태그)
-메타 태그    ─ 설명·키워드·소유 확인        사이트맵 제출 / 수집 요청
+robots.txt  ─ 수집 허용 + 사이트맵 위치    소유 확인: HTML 메타 태그
+sitemap.xml ─ 수집 대상 페이지 목록   ─▶  사이트맵 제출 / 수집 요청
+메타 태그    ─ 설명·키워드·소유 확인
+                                      [Google Search Console]
+                                      소유 확인: DNS TXT (도메인 속성)
+                                      사이트맵 제출 / 색인 생성 요청
 ```
 
 ## 1. robots.txt
@@ -102,7 +105,63 @@ HTML 파일 업로드 방식도 가능하지만(`static/` 에 파일 추가), �
 | 검증 → robots.txt | 수집 허용 상태 확인 |
 | 요청 → 웹 페이지 수집 | 첫 화면 주소 수집 요청 |
 
-## 5. 확인
+## 5. Google Search Console 등록
+
+### 속성 유형 선택
+
+| 유형 | 인증 방법 | 범위 |
+|---|---|---|
+| **도메인** (선택) | DNS TXT 레코드 | `securenomad.kr` 전체 (모든 서브도메인, http/https) |
+| URL 접두어 | 메타 태그, HTML 파일 등 | 입력한 주소(`https://wiki.securenomad.kr`)만 |
+
+→ 사이트 파일 수정 없이 DNS만으로 인증되고, 이후 다른 서브도메인을 추가해도 그대로 적용되는 **도메인 속성** 선택
+
+### 소유권 확인
+
+1. `search.google.com/search-console` → **속성 추가**
+2. **도메인** 칸에 `securenomad.kr` 입력 (`wiki`, `https://` 없이)
+3. 안내된 `google-site-verification=...` 값 복사
+4. 가비아 DNS 관리툴 → DNS 설정 **[레코드 수정] → [레코드 추가]**
+
+| 타입 | 호스트 | 값/위치 |
+|---|---|---|
+| TXT | `@` | `google-site-verification=발급값` |
+
+5. Search Console에서 **확인**
+
+:::info 호스트 `@`
+`@` 는 루트 도메인(`securenomad.kr`) 자체를 의미함. GitHub 인증용 TXT(`_github-pages-challenge-...`)와 호스트가 달라 함께 등록해도 충돌하지 않음.
+:::
+
+현재 가비아 DNS 레코드 구성:
+
+| 타입 | 호스트 | 용도 |
+|---|---|---|
+| TXT | `_github-pages-challenge-사용자명` | GitHub Pages 도메인 인증 |
+| CNAME | `wiki` | GitHub Pages 연결 |
+| TXT | `@` | Google Search Console 인증 |
+
+### 등록 후 작업
+
+**사이트맵 제출**
+
+1. 왼쪽 메뉴 **색인 생성 → Sitemaps**
+2. `https://wiki.securenomad.kr/sitemap.xml` 입력 → **제출**
+3. 상태 **성공** 확인 (초기에는 "가져올 수 없음" 표시 후 변경될 수 있음)
+
+:::caution
+도메인 속성에서는 사이트맵 주소를 `wiki.` 를 포함한 **전체 URL**로 입력해야 함.
+:::
+
+**첫 화면 색인 생성 요청**
+
+1. 상단 **URL 검사** 창에 `https://wiki.securenomad.kr/` 입력
+2. "URL이 Google에 등록되어 있지 않음" 확인 (최초 등록 시 정상)
+3. **색인 생성 요청** → "색인 생성 요청됨" 확인
+
+나머지 페이지는 사이트맵을 통해 수집되므로 개별 요청은 생략함 (일일 요청 한도 있음).
+
+## 6. 확인
 
 배포 후 브라우저에서 직접 확인함.
 
@@ -110,7 +169,20 @@ HTML 파일 업로드 방식도 가능하지만(`static/` 에 파일 추가), �
 - `https://wiki.securenomad.kr/sitemap.xml`
 - 첫 화면에서 우클릭 → **페이지 소스 보기** → `naver-site-verification`, `description` 태그 확인
 
-검색 노출까지는 보통 며칠 ~ 몇 주 소요됨. 수집 여부는 네이버에서 `site:wiki.securenomad.kr` 로 검색해 확인함.
+검색 노출까지는 보통 며칠 ~ 몇 주 소요됨.
+
+| 확인 방법 | 위치 |
+|---|---|
+| 수집 여부 | 네이버 · 구글에서 `site:wiki.securenomad.kr` 검색 |
+| 네이버 수집 현황 | 서치어드바이저 → 리포트 |
+| 구글 색인 현황 | Search Console → 색인 생성 → 페이지 |
+
+### 등록 체크리스트
+
+- [x] robots.txt, sitemap.xml, 메타 태그 배포
+- [x] 네이버 서치어드바이저: 소유 확인, 사이트맵 제출, 수집 요청
+- [x] Google Search Console: 도메인 속성 소유 확인, 사이트맵 제출, 색인 생성 요청
+- [ ] Bing Webmaster Tools: Search Console에서 가져오기 (선택)
 
 ## 앞으로 문서 작성 시
 
