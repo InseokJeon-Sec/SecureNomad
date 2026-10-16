@@ -5,6 +5,43 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? 'ko';
 const isKorean = currentLocale === 'ko';
 
+import fs from 'node:fs';
+import path from 'node:path';
+
+// 첫 화면 '최근 업데이트'용: notes/news 폴더에서 최신 글을 읽어 전역 데이터로 주입
+function recentPostsPlugin(context) {
+  function read(dir, base, limit) {
+    const abs = path.join(context.siteDir, dir);
+    let files = [];
+    try { files = fs.readdirSync(abs); } catch (e) { return []; }
+    const items = files
+      .filter((f) => /^\d{4}-\d{2}-\d{2}-.+\.mdx?$/.test(f))
+      .map((f) => {
+        const m = f.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)\.mdx?$/);
+        const raw = fs.readFileSync(path.join(abs, f), 'utf8');
+        const tm = raw.match(/^title:\s*(.+?)\s*$/m);
+        let title = tm ? tm[1].trim() : m[4];
+        title = title.replace(/^['"]|['"]$/g, '');
+        return {
+          title,
+          date: `${m[1]}-${m[2]}-${m[3]}`,
+          permalink: `/${base}/${m[1]}/${m[2]}/${m[3]}/${m[4]}`,
+        };
+      });
+    items.sort((a, b) => (a.date < b.date ? 1 : -1));
+    return items.slice(0, limit);
+  }
+  return {
+    name: 'recent-posts',
+    async loadContent() {
+      return {news: read('news', 'news', 4), notes: read('notes', 'notes', 4)};
+    },
+    async contentLoaded({content, actions}) {
+      actions.setGlobalData(content);
+    },
+  };
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'SecureNomad',
@@ -85,6 +122,7 @@ const config = {
   ],
 
   plugins: [
+    recentPostsPlugin,
     [
       '@docusaurus/plugin-content-blog',
       /** @type {import('@docusaurus/plugin-content-blog').Options} */

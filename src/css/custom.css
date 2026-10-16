@@ -209,3 +209,80 @@ code {
 [data-theme='dark'] .badge--blue   { background: rgba(107,163,230,.22);color: #9ec3ef; }
 [data-theme='dark'] .badge--gray   { background: rgba(160,170,185,.2); color: #c2c9d4; }
 [data-theme='dark'] .badge--purple { background: rgba(155,100,220,.22);color: #c9a6ec; }
+
+/* ===== 첫 화면 히어로 ===== */
+.home-tagline {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 1rem;
+  color: var(--ifm-color-primary);
+  margin: -0.4rem 0 1.6rem;
+  letter-spacing: 0.02em;
+}
+
+/* 카드 아이콘 */
+.home-card__icon {
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.6rem;
+  display: inline-flex;
+}
+.home-card__icon svg { width: 26px; height: 26px; }
+
+/* ===== 최근 업데이트 ===== */
+.recent {
+  margin-top: 2.5rem;
+}
+.recent__heading {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.recent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.recent-col__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--ifm-color-primary);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+.recent-col__title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.recent-col__more {
+  font-size: 0.82rem;
+}
+.recent-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.recent-list li {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+.recent-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.2rem;
+  text-decoration: none !important;
+  color: var(--ifm-color-emphasis-800);
+}
+.recent-item:hover {
+  color: var(--ifm-color-primary);
+}
+.recent-item__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.recent-item__date {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-500);
+  font-variant-numeric: tabular-nums;
+}
