@@ -16,7 +16,8 @@ ARTEX는 현재 소스가 비공개이며, **허가 없는 대상에 대한 사�
 
 | 항목 | 내용 |
 |---|---|
-| 분류 | <span className="badge badge--red">자동 침투테스트</span> Autonomous Pentest |
+| 특화 | <span className="badge badge--tag">자동 침투테스트</span> Autonomous Pentest |
+| 분류 | <span className="badge badge--red">공격·진단</span> |
 | 제공자 | Autumn-27 (개인 개발자, 커뮤니티 오픈소스) |
 | 가격 | <span className="badge badge--green">오픈소스·무료</span> — 현재 비공개 전환 |
 | 대상 | <span className="badge badge--gray">보안 전문가</span> 일반 사용자용 아님 |

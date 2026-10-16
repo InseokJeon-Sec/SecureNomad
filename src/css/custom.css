@@ -286,3 +286,15 @@ code {
   color: var(--ifm-color-emphasis-500);
   font-variant-numeric: tabular-nums;
 }
+
+/* 특화(specialization) 태그 배지 - 외곽선형 */
+.badge--tag {
+  background: transparent;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-800);
+  font-weight: 500;
+}
+[data-theme='dark'] .badge--tag {
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-800);
+}
