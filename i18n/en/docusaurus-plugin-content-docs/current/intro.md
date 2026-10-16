@@ -10,7 +10,7 @@ import RecentPosts from '@site/src/components/RecentPosts';
 # SecureNomad
 
 <p className="home-intro">A space for organizing and sharing knowledge on security and IT.</p>
-<p className="home-tagline">&gt;_ IT · Security · AI for Security</p>
+<p className="home-tagline">&gt;_ IT · AI · Security</p>
 
 <div className="home-cards">
   <a className="home-card" href="/en/news">
@@ -22,6 +22,11 @@ import RecentPosts from '@site/src/components/RecentPosts';
     <span className="home-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M7 9l3 3-3 3M13 15h4" /></svg></span>
     <span className="home-card__title">IT →</span>
     <span className="home-card__desc">Systems, networks, dev environments, and the site build log</span>
+  </a>
+  <a className="home-card" href="/en/ai">
+    <span className="home-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 3a4 4 0 0 1 4 4 3 3 0 0 1 1 5.8V17a3 3 0 0 1-6 0 3 3 0 0 1-6 0v-4.2A3 3 0 0 1 6 7a4 4 0 0 1 4-4z"/><path d="M12 3v18M9 9h.01M15 9h.01"/></svg></span>
+    <span className="home-card__title">AI →</span>
+    <span className="home-card__desc">LLM, RAG, agents — understanding AI the easy way</span>
   </a>
   <a className="home-card" href="/en/security">
     <span className="home-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z" /><path d="M9 12l2 2 4-4" /></svg></span>

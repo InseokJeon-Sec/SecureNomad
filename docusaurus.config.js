@@ -174,6 +174,7 @@ const config = {
         items: [
           {to: '/news', label: 'News', position: 'left'},
           {type: 'docSidebar', sidebarId: 'itSidebar', position: 'left', label: 'IT'},
+          {type: 'docSidebar', sidebarId: 'aiSidebar', position: 'left', label: 'AI'},
           {
             type: 'dropdown',
             label: 'Security',
