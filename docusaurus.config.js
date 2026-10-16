@@ -162,7 +162,8 @@ const config = {
         {name: 'naver-site-verification', content: '0d19a96a355dc5842307a811d9a57ccf53438376'},
       ],
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'dark',
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'SecureNomad',
