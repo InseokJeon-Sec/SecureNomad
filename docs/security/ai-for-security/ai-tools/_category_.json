@@ -1,0 +1,9 @@
+{
+  "label": "AI 보안 도구",
+  "position": 1,
+  "collapsed": false,
+  "link": {
+    "type": "doc",
+    "id": "security/ai-for-security/ai-tools/overview"
+  }
+}

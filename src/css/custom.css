@@ -186,3 +186,26 @@ code {
 .blog-rss-link:hover {
   color: var(--ifm-color-primary);
 }
+
+/* ===== 라벨 배지 (AI 보안 도구 비교 등) ===== */
+.badge {
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  border-radius: 999px;
+  font-size: 0.78em;
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.badge--green  { background: #e3f4e9; color: #1a7f44; }
+.badge--amber  { background: #fbeedb; color: #92650f; }
+.badge--red    { background: #fbe3e3; color: #b3261e; }
+.badge--blue   { background: #e4edfa; color: #2f6fb3; }
+.badge--gray   { background: #ebedf0; color: #49515c; }
+.badge--purple { background: #efe6f8; color: #7b3fb8; }
+[data-theme='dark'] .badge--green  { background: rgba(38,160,86,.22);  color: #7fdca0; }
+[data-theme='dark'] .badge--amber  { background: rgba(201,150,30,.22); color: #f0c674; }
+[data-theme='dark'] .badge--red    { background: rgba(224,91,91,.22);  color: #f3a6a6; }
+[data-theme='dark'] .badge--blue   { background: rgba(107,163,230,.22);color: #9ec3ef; }
+[data-theme='dark'] .badge--gray   { background: rgba(160,170,185,.2); color: #c2c9d4; }
+[data-theme='dark'] .badge--purple { background: rgba(155,100,220,.22);color: #c9a6ec; }
