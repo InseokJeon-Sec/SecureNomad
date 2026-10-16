@@ -184,6 +184,7 @@ const config = {
               {type: 'doc', docId: 'security/ai-for-security/overview', label: 'AI for Security'},
             ],
           },
+          {type: 'docSidebar', sidebarId: 'topicsSidebar', position: 'left', label: 'Topics'},
           {to: '/notes', label: 'Notes', position: 'left'},
           {type: 'localeDropdown', position: 'right'},
           {to: '/about', label: 'Profile', position: 'right'},
