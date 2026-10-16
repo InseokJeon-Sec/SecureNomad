@@ -150,6 +150,25 @@ const config = {
         },
       }),
     ],
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: false,
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
+        pwaHead: [
+          {tagName: 'link', rel: 'icon', href: '/img/logo192.png'},
+          {tagName: 'link', rel: 'manifest', href: '/manifest.json'},
+          {tagName: 'meta', name: 'theme-color', content: '#2f6fb3'},
+          {tagName: 'meta', name: 'apple-mobile-web-app-capable', content: 'yes'},
+          {tagName: 'meta', name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'},
+          {tagName: 'link', rel: 'apple-touch-icon', href: '/img/logo192.png'},
+        ],
+      },
+    ],
   ],
 
   themeConfig:
