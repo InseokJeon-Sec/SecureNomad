@@ -33,6 +33,11 @@ import RecentPosts from '@site/src/components/RecentPosts';
     <span className="home-card__title">Security →</span>
     <span className="home-card__desc">Vulnerabilities, attack techniques, countermeasures, and AI for Security</span>
   </a>
+  <a className="home-card" href="/en/topics">
+    <span className="home-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 6c-2-1.3-5-1.8-8-1v13c3-.8 6-.3 8 1 2-1.3 5-1.8 8-1V5c-3-.8-6-.3-8 1z"/><path d="M12 6v13"/></svg></span>
+    <span className="home-card__title">Topics →</span>
+    <span className="home-card__desc">Study topic notes organized by domain (Korean)</span>
+  </a>
   <a className="home-card" href="/en/notes">
     <span className="home-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M5 4h10l4 4v12a0 0 0 0 1 0 0H5a0 0 0 0 1 0 0z" /><path d="M14 4v5h5M8 13h7M8 17h5" /></svg></span>
     <span className="home-card__title">Notes →</span>
