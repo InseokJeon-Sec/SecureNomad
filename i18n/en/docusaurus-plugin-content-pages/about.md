@@ -1,109 +1,61 @@
 ---
 title: Profile
-description: Profile of the author of SecureNomad
+description: Inseok Jeon — a security practitioner with 20 years in incident response, security monitoring, and governance, and an adjunct professor at Konkuk University.
 ---
 
-# Profile
+# Inseok Jeon
 
-## Inseok Jeon
+<p className="home-tagline">A security practitioner of 20 years, working across the field and the classroom</p>
 
-> For a security professional, the most important thing is **the balance between technical and managerial security.**
+<p>
+<span className="badge badge--gray">20 years in security</span>
+<span className="badge badge--blue">Adjunct Professor, Konkuk Univ.</span>
+<span className="badge badge--purple">CISSP · CISA</span>
+<span className="badge badge--green">8 security papers</span>
+<span className="badge badge--tag">Ph.D. coursework, Korea Univ.</span>
+</p>
 
-- Experience building and operating security across industries including OT, finance, and gaming
-- Pursues a balance of theory (graduate school adjunct professor), technology (security monitoring and incident response), and management (security governance and certification)
-- Author of 8 papers on information security (5 in KCI-indexed journals)
+I started in security with incident response and security monitoring, and today I lead security for a global manufacturing company. Since 2017 I have also taught master's and doctoral courses as an adjunct professor at Konkuk University's Graduate School of Information and Telecommunications. For a long time I have gone back and forth — turning problems I hit in the field into lectures, and bringing what I organize in lectures back to the field.
 
-## Experience
+What I value most is not leaning too far toward either technical or managerial security. Detection and response on one side, governance and certification on the other — both are the legs that hold up an organization's security.
 
-### IBM Korea · IBM Security / Security Manager
+## What I do now
 
-`Aug 2018 – Present`
+- **IBM Korea · IBM Security, Security Manager** — Security lead PM for a global manufacturing client. SOC and OT security operations, enterprise incident response, cloud and endpoint security, ISMS/ISO 27001 support.
+- **Konkuk University, Graduate School of Information and Telecommunications · Adjunct Professor** — Teaching cybersecurity response frameworks, cloud security, network security, and analysis of recent hacking cases at the master's and doctoral level.
 
-- Security lead PM for a global manufacturing client
-- SOC (Security Operation Center) operation and enhancement
-- OT security implementation, operation, and enhancement
-- Enterprise security incident response planning; incident response and recovery
-- Cloud and endpoint security operation; security assessments
-- Vulnerability assessment and penetration testing
-- Development and quality management of a remote SOC monitoring service model
-- Establishment of cloud service security processes
-- ISMS · PIMS · ISO 27001 certification support
+## The path here
 
-### Konkuk University, Graduate School of Information and Telecommunications · Adjunct Professor
+- **AhnLab CERT, Senior Researcher (9 years)** — Ran security monitoring as PM/QM for 25+ large sites across public, finance, gaming, and internet sectors. Intrusion detection and response, monitoring-framework consulting, and incident-response process design.
+- **Personal information protection officer (3.5 years)** — Established the privacy policy and the collection/use/disposal processes, ran employee training, and handled audits.
 
-`Sep 2017 – Present`
-
-- Teaching master's and doctoral courses
-  - Cybersecurity Response Framework
-  - Cloud Security
-  - Network Security
-  - Recent Internet Hacking Cases and Analysis Techniques
-
-### AhnLab · CERT (Computer Emergency Response Team) / Senior Researcher
-
-`Sep 2009 – Aug 2018 (9 years)`
-
-- Intrusion detection and response (FW, IDS, IPS, WAF, DDoS)
-- Network configuration and incident handling; dedicated outage response as operations shift lead
-- VPN (L2L, IPSec, SSL) configuration and management
-- PM and QM for remote security monitoring of 25+ large sites in the public, finance, gaming, and internet sectors
-- Security monitoring framework consulting and incident response process design
-- Security monitoring business proposals (RFP analysis, proposal writing, presentations)
-- Team security officer: ISMS · PIMS · ISO 27001 certification support, internal network separation, asset management, vulnerability assessment, and internal audits
-
-### Dongin Safety Co., Ltd. · General Affairs Team / Assistant Manager
-
-`Apr 2006 – Sep 2009 (3 years 6 months)`
-
-- Personal information protection officer
-  - Established the privacy policy
-  - Designed and managed processes for collection, use, retention, provision, and disposal of personal information
-  - Delivered privacy training to employees
-- Website development and maintenance
-- In-house HR program development (VB)
-- Audit support for the Ministry of Employment and Labor and Korea Workers' Compensation & Welfare Service
-
-## Education
+## Research · Education
 
 - Korea University, Graduate School of Information Security — Ph.D. coursework completed (Information Security)
-- Konkuk University, Graduate School of Information and Telecommunications — M.S. (Information Security)
-  - Thesis: Personal Information Protection Level Measurement Model Using ISMS
-- B.S. (Multimedia)
+- Konkuk University — M.S. (Information Security)
+- 8 papers (5 in KCI-indexed journals) — healthcare ransomware response, smart-factory security training curricula, a SIEM vulnerability-detection model, telemedicine risk assessment, supply-chain risk management, DevOps security, and more
 
-## Certifications
+## Credentials
 
 | Certification | Issuer |
 |---|---|
 | CISSP | ISC2 |
-| CISA (Certified Information Systems Auditor) | ISACA |
+| CISA | ISACA |
 | ISO 27001 Lead Auditor | IRCA |
 | AWS Certified Cloud Practitioner | AWS |
 
-## Publications
+## Activities · Talks
 
-- How to Cope with Ransomware in the Healthcare Industry · Journal of the Korea Institute of Information Security & Cryptology, Vol.28 No.1 (2018)
-- Curriculum Development for Smart Factory Information Security Awareness Training · Journal of the Korea Institute of Information Security & Cryptology, Vol.26 No.5 (2016)
-- Using the SIEM Software Vulnerability Detection Model Proposed · Journal of the Korea Institute of Information Security & Cryptology, Vol.25 No.4 (2015)
-- Telemedicine Security Risk Evaluation Using Attack Tree · Journal of the Korea Institute of Information Security & Cryptology, Vol.25 No.4 (2015)
-- A Study on Supply Chain Risk Management of Automotive · Journal of the Korea Institute of Information Security & Cryptology, Vol.25 No.4 (2015)
-- Integrated Management of Development and Operations (DevOps) in a Non-Stop Environment Considering Security · Review of KIISC, Vol.25 No.1 (2015)
-
-## Activities
-
-| Period | Activity |
-|---|---|
-| Apr 2022 – Dec 2023 | Expert member (Metaverse), Seoul Metropolitan Government IT New Technology Governance Group |
-| Mar 2019 – Dec 2019 | Mentor, Hanium mentoring program |
-| Sep 2015 – Mar 2018 | SecureHUB security pro bono (web vulnerability assessment and web shell detection for public organizations) |
-| Jan 2014 – Jun 2023 | Secretary of the Steering Committee, Smart Medical Security Forum (standards drafting, talks) |
-
-## Talks · Seminars
-
-- Speaker, Secure Korea 2017 Conference
-- Speaker, Smart Healthcare Information Security Conference 2018 · 2019
-- Online lectures: Personal Information Protection; Security Incident Cases and Security Monitoring Strategy
+- Expert member (Metaverse), Seoul Metropolitan Government IT New Technology Governance Group (2022–2023)
+- Secretary, Steering Committee, Smart Medical Security Forum — standards drafting and talks (2014–2023)
+- SecureHUB security pro bono — web vulnerability assessment for public organizations (2015–2018)
+- Mentor, Hanium mentoring program (2019)
+- Speaker at Secure Korea 2017 and the Smart Healthcare Information Security Conference 2018·2019
 
 ## Contact
 
+Feel free to reach out by email about new opportunities or collaboration.
+
 - Email: [wilcois@naver.com](mailto:wilcois@naver.com)
-- GitHub: [InseokJeon-Sec](https://github.com/InseokJeon-Sec)
+
+{/* LinkedIn and a profile photo to be added later */}

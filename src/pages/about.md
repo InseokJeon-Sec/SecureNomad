@@ -1,109 +1,61 @@
 ---
 title: Profile
-description: SecureNomad 운영자 프로필
+description: Inseok Jeon — 침해대응·보안관제·보안 거버넌스 20년의 보안 실무자이자 건국대 정보통신대학원 겸임교수.
 ---
 
-# Profile
+# Inseok Jeon
 
-## Inseok Jeon
+<p className="home-tagline">보안 현장과 강의실을 함께 지켜온 20년차 보안 실무자</p>
 
-> 보안 담당자에게는 **기술적 보안과 관리적 보안의 균형**이 가장 중요함
+<p>
+<span className="badge badge--gray">보안 실무 20년</span>
+<span className="badge badge--blue">건국대 겸임교수</span>
+<span className="badge badge--purple">CISSP · CISA</span>
+<span className="badge badge--green">정보보호 논문 8편</span>
+<span className="badge badge--tag">고려대 정보보호 박사 수료</span>
+</p>
 
-- OT·금융·게임 등 다양한 산업군의 보안 구축 및 운영 경험 보유
-- 이론(대학원 겸임교수) · 기술(보안관제·침해대응) · 관리(보안 거버넌스·인증)의 균형을 지향함
-- 정보보안 분야 논문 8편 작성 (KCI급 5편)
+침해사고 대응과 보안관제로 보안 일을 시작해, 지금은 글로벌 제조 기업의 보안을 총괄하고 있습니다. 2017년부터는 건국대학교 정보통신대학원에서 겸임교수로 석·박사 과정을 가르칩니다. 현장에서 부딪힌 문제를 강의로 정리하고, 강의에서 정리한 내용을 다시 현장에 적용하는 일을 오래 반복해 왔습니다.
 
-## 경력
+기술적 보안과 관리적 보안 어느 한쪽에 치우치지 않는 것을 가장 중요하게 생각합니다. 탐지·대응 같은 기술도, 거버넌스·인증 같은 관리도 결국 한 조직의 보안을 지탱하는 두 다리라고 보기 때문입니다.
 
-### 한국IBM · IBM Security / Security Manager
+## 지금 하는 일
 
-`2018.08 ~ 현재`
+- **한국IBM · IBM Security, Security Manager** — 글로벌 제조 기업의 보안 총괄 PM. SOC·OT 보안 운영, 전사 침해사고 대응, 클라우드·엔드포인트 보안, ISMS·ISO 27001 대응.
+- **건국대학교 정보통신대학원 · 겸임교수** — 사이버 보안 대응 체계, 클라우드 보안, 네트워크 보안, 최신 해킹 사례 분석을 석·박사 과정에서 강의.
 
-- 글로벌 제조업 대상 보안 총괄 PM 수행
-- SOC(Security Operation Center) 운영 및 고도화
-- OT 보안 구축 · 운영 및 고도화
-- 전사 보안사고 대응 계획 수립, 침해사고 대응 및 복구
-- 클라우드 · 엔드포인트 보안 운영, 보안성 평가
-- 취약점 진단 및 침투테스트
-- SOC 원격관제 서비스 모델 개발 및 품질 관리
-- 클라우드 서비스 보안 프로세스 구축
-- ISMS · PIMS · ISO 27001 인증 대응
+## 거쳐온 길
 
-### 건국대학교 정보통신대학원 · 겸임교수
+- **AhnLab CERT, 선임연구원 (9년)** — 공공·금융·게임·인터넷 기업 25여 개 대형 사이트의 보안관제를 PM·QM으로 담당. 침해 탐지·대응, 관제 체계 구축 컨설팅, 침해사고 대응 프로세스 수립.
+- **개인정보 보호 담당 (3년 6개월)** — 개인정보 처리방침과 수집·이용·파기 프로세스 수립, 임직원 교육, 감사 대응.
 
-`2017.09 ~ 현재`
-
-- 석 · 박사과정 강의 담당
-  - 사이버 보안 대응 체계
-  - 클라우드 보안
-  - 네트워크 보안
-  - 최신 인터넷 해킹 사례 및 분석 기법
-
-### AhnLab · CERT(침해사고대응팀) / 선임연구원
-
-`2009.09 ~ 2018.08 (9년)`
-
-- 침해 탐지 및 대응 (FW, IDS, IPS, WAF, DDoS)
-- 네트워크 구성 및 장애 대응, 운영조장으로 장애 대응 전담
-- VPN(L2L, IPSec, SSL) 구성 및 관리
-- 공공기관 · 금융사 · 게임사 · 인터넷 기업 등 25여 개 대형 사이트 원격 보안관제 PM · QM
-- 보안관제 체계 구축 컨설팅 및 침해사고 대응 프로세스 수립
-- 보안관제 사업 제안 (RFP 분석, 제안서 작성, 제안 발표)
-- 팀 보안 담당: ISMS · PIMS · ISO 27001 인증 대응, 사내 망분리, 자산 관리, 취약점 진단 및 내부 감사
-
-### 동인안전㈜ · 총무팀 / 대리
-
-`2006.04 ~ 2009.09 (3년 6개월)`
-
-- 개인정보 보호 담당
-  - 개인정보 처리방침 수립
-  - 수집 · 이용 · 보유 · 제공 · 파기 프로세스 수립 및 관리
-  - 임직원 개인정보 보호 교육
-- 홈페이지 제작 및 유지 관리
-- 사내 인사 프로그램 개발 (VB)
-- 고용노동부 · 근로복지공단 감사 대응 지원
-
-## 학력
+## 연구 · 학력
 
 - 고려대학교 정보보호대학원 박사 수료 (정보보안)
 - 건국대학교 정보통신대학원 석사 (정보보안)
-  - 학위논문: Personal Information Protection Level Measurement Model Using ISMS
+- 정보보호학회논문지 등에 논문 8편 (KCI급 5편) — 의료 랜섬웨어 대응, 스마트팩토리 보안 교육과정, SIEM 취약점 탐지 모델, 원격의료 위험평가, 공급망 위험관리, DevOps 보안 등
 
-
-## 자격증
+## 자격
 
 | 자격증 | 발급 기관 |
 |---|---|
 | CISSP | ISC2 |
-| CISA (국제공인정보시스템감사사) | ISACA |
+| CISA | ISACA |
 | ISO 27001 Lead Auditor | IRCA |
 | AWS Certified Cloud Practitioner | AWS |
 
-## 논문
+## 대외 활동 · 강연
 
-- How to Cope with Ransomware in the Healthcare Industry · 정보보호학회논문지 Vol.28 No.1 (2018)
-- Curriculum Development for Smart Factory Information Security Awareness Training · 정보보호학회논문지 Vol.26 No.5 (2016)
-- Using the SIEM Software Vulnerability Detection Model Proposed · 정보보호학회논문지 Vol.25 No.4 (2015)
-- Telemedicine Security Risk Evaluation Using Attack Tree · 정보보호학회논문지 Vol.25 No.4 (2015)
-- A Study on Supply Chain Risk Management of Automotive · 정보보호학회논문지 Vol.25 No.4 (2015)
-- 보안을 고려한 무중단 환경에서 개발운영조직 통합관리(DevOps) · 정보보호학회지 Vol.25 No.1 (2015)
+- 서울특별시 IT신기술 거버넌스단 메타버스 분야 전문위원 (2022–2023)
+- 스마트의료보안포럼 운영위원회 간사 — 표준안 작성, 강연 (2014–2023)
+- SecureHUB 보안 프로보노 — 공공 대상 웹 취약점 진단 (2015–2018)
+- 한이음 멘토링 프로젝트 멘토 (2019)
+- Secure Korea 2017, 스마트의료 정보보호 컨퍼런스 2018·2019 발표
 
-## 대외활동
+## 연락
 
-| 기간 | 활동 |
-|---|---|
-| 2022.04 ~ 2023.12 | 서울특별시 IT신기술 거버넌스단 메타버스 분야 전문위원 |
-| 2019.03 ~ 2019.12 | 한이음 멘토링 프로젝트 멘토 |
-| 2015.09 ~ 2018.03 | SecureHUB 보안 프로보노 (공공 대상 웹 취약점 진단, 웹셸 탐지 지원) |
-| 2014.01 ~ 2023.06 | 스마트의료보안포럼 운영위원회 간사 (표준안 작성, 강연) |
-
-## 강연 · 세미나
-
-- Secure Korea 2017 컨퍼런스 발표
-- 스마트의료 정보보호 컨퍼런스 2018 · 2019 발표
-- 온라인 강의: 개인정보보호, 침해사고 사례 및 보안관제 전략
-
-## 연락처
+새로운 기회나 협업 제안은 이메일로 편하게 연락 주세요.
 
 - Email: [wilcois@naver.com](mailto:wilcois@naver.com)
-- GitHub: [InseokJeon-Sec](https://github.com/InseokJeon-Sec)
+
+{/* LinkedIn, 프로필 사진 등은 추후 업데이트 */}
