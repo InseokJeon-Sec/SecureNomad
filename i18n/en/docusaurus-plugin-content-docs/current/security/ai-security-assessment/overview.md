@@ -56,6 +56,7 @@ AI enters an organization in many forms, each with different threats and control
 | 04. Assessment methodology | **How** to assess (process, check domains) |
 | 05. Safe-usage guide | **How** to use it (organization, user, technical, developer) |
 | 06. Checklist & review form | A ready-to-use checklist for practice |
+| 07. Standards detail & map | Per-standard detail + a **map** of how they relate + original links (deep dive) |
 
 ## V. Conclusion
 

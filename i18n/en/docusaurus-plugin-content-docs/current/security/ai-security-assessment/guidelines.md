@@ -10,6 +10,10 @@ tags: [AI-security, guidelines, compliance]
 
 An AI security assessment should rest on **recognized criteria**, not gut feeling. Here are the international and domestic documents most referenced in practice.
 
+:::tip To study deeper
+Detailed explanations of each standard and a **map of how the standards relate** are in [07. Standards detail & map](./standards-deep-dive.md).
+:::
+
 :::tip Big picture
 - Need a **threat checklist** → OWASP LLM Top 10, MITRE ATLAS
 - Need a **risk-management system** → NIST AI RMF, ISO/IEC 42001·23894
