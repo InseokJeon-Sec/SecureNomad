@@ -7,6 +7,10 @@ slug: /it
 
 # IT
 
-Documents on IT topics.
+Notes on IT infrastructure, development environments, and operations.
 
-- [Docusaurus Setup](./docusaurus-setup/01-environment.md): How this site was built
+## Sections
+
+- **[Docusaurus Setup](./docusaurus-setup/01-environment.md)** — A record of building this site on a Windows PC and deploying it to GitHub Pages, with troubleshooting.
+
+> Other IT topics (networking, systems, cloud, etc.) will be added as they accumulate.
