@@ -202,6 +202,7 @@ const config = {
               {type: 'docSidebar', sidebarId: 'securitySidebar', label: 'Overview'},
               {type: 'doc', docId: 'security/ai-for-security/overview', label: 'AI for Security'},
               {type: 'doc', docId: 'security/ai-security-assessment/overview', label: 'Securing AI'},
+              {type: 'doc', docId: 'security/pki-certificates/overview', label: 'PKI · Certificates'},
             ],
           },
           {type: 'docSidebar', sidebarId: 'topicsSidebar', position: 'left', label: 'Topics'},
