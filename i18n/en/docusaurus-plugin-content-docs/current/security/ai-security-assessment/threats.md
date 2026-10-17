@@ -27,6 +27,8 @@ The starting point of a security assessment is knowing **"what can go wrong."** 
 
 - Source: [OWASP LLM Top 10 (2025)](https://genai.owasp.org/llm-top-10/)
 
+> For per-item where-it-arises/check/defend detail, see [08. OWASP LLM Top 10 — practitioner detail](./08-owasp-llm-top10.md).
+
 ### Three to watch especially
 
 **① LLM01 Prompt injection** — the most fundamental threat, hard to fully solve.

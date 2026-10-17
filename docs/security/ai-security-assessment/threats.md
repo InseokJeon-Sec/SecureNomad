@@ -27,6 +27,8 @@ tags: [AI보안, 위협모델, OWASP]
 
 - 원문: [OWASP LLM Top 10 (2025)](https://genai.owasp.org/llm-top-10/)
 
+> 항목별 발생 지점·점검·대응 상세는 [08. OWASP LLM Top 10 상세](./08-owasp-llm-top10.md) 참고.
+
 ### 특히 주의할 3가지
 
 **① LLM01 프롬프트 인젝션** — 가장 근본적이고 완전한 해결이 어려운 위협.
