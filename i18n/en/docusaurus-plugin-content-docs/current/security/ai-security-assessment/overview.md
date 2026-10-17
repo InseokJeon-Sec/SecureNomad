@@ -60,4 +60,4 @@ AI enters an organization in many forms, each with different threats and control
 
 ## V. Conclusion
 
-An AI security assessment is not "don't use AI" but **"have the evidence and controls to use it safely."** The next document looks at the domestic and international guidelines that set those criteria.
+An AI security assessment is not "don't use AI" but **"have the evidence and controls to use it safely."**

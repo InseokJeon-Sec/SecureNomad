@@ -2,48 +2,35 @@
 title: 06. Prompting Basics
 sidebar_label: 06. Prompting
 sidebar_position: 1
-description: The concepts of prompt, context, and token limits, plus principles for writing prompts that get good answers
+description: The concepts of prompt, context, and token limits, and prompt-writing principles
 ---
 
 # 06. Prompting Basics
 
-A **prompt** is the entire input you give an LLM (instructions, question, context). Using AI well ultimately comes down to **writing good prompts**.
+A **prompt** is the entire input to an LLM (instruction, context, question).
 
-## Three core concepts
+## Core concepts
 
-| Concept | Meaning |
+| Concept | Definition |
 |---|---|
-| **Prompt** | The entire input to the model (instruction + context + question) |
-| **Context window** | The limit on **how many tokens the model can see at once**. Input + output combined |
-| **Token** | The processing unit ([see 03](../foundations/03-how-llm-works.md)). The basis for cost/limits |
+| Prompt | The entire input to the model |
+| Context window | The token limit processable at once (input + output) |
+| Token | The processing unit ([03](../foundations/03-how-llm-works.md)); the basis for cost/limits |
 
-:::info When you exceed the context window
-If a conversation grows past the limit, the model **forgets the earlier content.** For long documents, summarize, include only the needed parts, or use [RAG](./07-rag.md) to fetch pieces on the fly.
-:::
+Exceeding the context window drops earlier content. Handle long documents by summarizing, excerpting, or [RAG](./07-rag.md).
 
-## Principles of a good prompt
+## Principles
 
 | Principle | Bad | Good |
 |---|---|---|
-| **Be specific** | "Tell me about security" | "Explain the OWASP Top 10 for beginners, 2 lines each" |
-| **Give role/context** | "Review this" | "You are a security reviewer. Point out vulnerabilities in the code below, by severity" |
-| **Specify format** | "Compare" | "As a table, columns: tool, pros, cons" |
-| **Provide examples (few-shot)** | — | "In this format: [example 1] [example 2]" |
-| **Elicit steps** | "Just the answer" | "Think step by step and give reasons" |
-
-## Common patterns
-
-- **Assign a role**: "You are an expert in ○○"
-- **Impose constraints**: "under 300 characters," "code only," "in polite form"
-- **Require evidence**: "cite sources, and say you don't know if you don't"
-- **Iterate**: don't expect perfection at once; refine based on the answer — "shorter," "add an example"
+| Specificity | "Tell me about security" | "Explain the OWASP Top 10, 2 lines each" |
+| Role/context | "Review this" | "As a security reviewer, list vulnerabilities by severity" |
+| Format | "Compare" | "As a table, columns: tool, pros, cons" |
+| Examples | — | "In this format: [example 1][example 2]" |
+| Elicit steps | "Just the answer" | "Step by step with reasons" |
 
 ## Security note
 
-:::warning Don't put sensitive info in prompts
-What you enter into a cloud LLM is transmitted externally. Don't paste **real accounts, keys, internal code, or personal data** as-is. If truly necessary, anonymize it or use a [local LLM](../advanced/12-local-llm.md).
+:::warning No sensitive info in prompts
+Cloud-LLM input is transmitted externally. Do not paste real accounts, keys, internal code, or personal data. Anonymize if needed, or use a [local LLM](../advanced/12-local-llm.md).
 :::
-
-## Next
-
-How do you supply the "recent/internal knowledge" that prompts alone can't? → [07. RAG](./07-rag.md)

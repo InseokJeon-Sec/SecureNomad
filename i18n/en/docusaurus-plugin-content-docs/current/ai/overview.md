@@ -3,17 +3,16 @@ title: AI Basics
 sidebar_label: Overview
 sidebar_position: 0
 slug: /ai
-description: What an LLM is and how it works, through RAG, embeddings, and agents — AI organized from the ground up, the easy way
+description: AI knowledge material from the definition and operation of LLMs through RAG, embeddings, and agents
 ---
 
 # AI Basics
 
-A step-by-step walkthrough of today's hottest topic, **AI (especially LLMs, large language models)**, starting from the concepts.
-No math — the focus is on helping people with an IT/security background "understand the principles."
+AI (especially LLMs) organized from the concepts. No math; the focus is on understanding the principles.
 
-:::tip What this section is
-- **AI Basics (here)**: understand *AI technology itself* — what an LLM is, how it works
-- **[AI for Security](/en/security/ai-for-security/overview)**: using AI *for security*
+:::info Section split
+- **AI Basics (here)**: AI technology itself — the definition and operation of LLMs
+- **[AI for Security](/en/security/ai-for-security/overview)**: using AI for security
 :::
 
 ## Learning path
@@ -21,9 +20,9 @@ No math — the focus is on helping people with an IT/security background "under
 ### Foundations — big picture & how it works
 1. [Terminology](/en/ai/foundations/terms) — AI / ML / deep learning / generative AI
 2. [What is an LLM](/en/ai/foundations/what-is-llm)
-3. [How an LLM works](/en/ai/foundations/how-llm-works) — tokens, next-word prediction
+3. [How an LLM works](/en/ai/foundations/how-llm-works) — tokens, next-token prediction
 4. [How it's trained](/en/ai/foundations/training) — pretraining · fine-tuning · RLHF
-5. [Hallucination & limits](/en/ai/foundations/hallucination) — why it gets things wrong
+5. [Hallucination & limits](/en/ai/foundations/hallucination)
 
 ### Using — prompting & RAG
 6. [Prompting basics](/en/ai/using/prompting)
@@ -37,17 +36,13 @@ No math — the focus is on helping people with an IT/security background "under
 12. [Local LLM](/en/ai/advanced/local-llm)
 
 ### Deep Dive — technical detail
-A detailed, formula/structure-level look at LLM internals and RAG. (Best read after the concepts.)
-
-- [Tokenizers & BPE (deep dive)](/en/ai/deep-dive/tokenizer) — subword splitting, why Korean uses more tokens
-- [Attention & Transformer (deep dive)](/en/ai/deep-dive/attention) — Q·K·V, Scaled Dot-Product, multi-head, causal masking
-- [Sampling & decoding (deep dive)](/en/ai/deep-dive/sampling) — temperature · top-k · top-p · repetition suppression
-- [RAG internals (deep dive)](/en/ai/deep-dive/rag-internals) — chunking · embeddings · vector similarity · ANN · reranking · context injection
-- [Fine-tuning & LoRA (deep dive)](/en/ai/deep-dive/finetuning-lora) — how PEFT · LoRA · QLoRA work
-- [Inference optimization (deep dive)](/en/ai/deep-dive/inference-optimization) — KV cache · quantization · FlashAttention · batching
+- [Tokenizers & BPE](/en/ai/deep-dive/tokenizer) — subword splitting
+- [Attention & Transformer](/en/ai/deep-dive/attention) — Q·K·V, Scaled Dot-Product, multi-head
+- [Sampling & decoding](/en/ai/deep-dive/sampling) — temperature · top-k · top-p
+- [RAG internals](/en/ai/deep-dive/rag-internals) — chunking · embeddings · ANN · reranking
+- [Fine-tuning & LoRA](/en/ai/deep-dive/finetuning-lora) — PEFT · LoRA · QLoRA
+- [Inference optimization](/en/ai/deep-dive/inference-optimization) — KV cache · quantization · batching
 
 ### Reference
 13. [Model & provider landscape](/en/ai/reference/model-landscape)
 14. [Glossary](/en/ai/reference/glossary)
-
-> Read in order for the big picture of "what AI is," or pick only the topics you need.

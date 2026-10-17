@@ -79,4 +79,4 @@ Each threat becomes a **check question** at assessment time. (Detailed checklist
 | Unbounded consumption | Token/request rate limits, cost alarms? |
 
 ## V. Conclusion
-Knowing the threats reveals the **assessment items**. Using OWASP LLM Top 10 as the "skeleton of the checklist" and MITRE ATLAS as "real attack scenarios" yields a balanced threat model. The next document weaves these into an actual **assessment process**.
+Knowing the threats reveals the **assessment items**. Using OWASP LLM Top 10 as the "skeleton of the checklist" and MITRE ATLAS as "real attack scenarios" yields a balanced threat model.

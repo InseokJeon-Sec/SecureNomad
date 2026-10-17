@@ -121,4 +121,4 @@ Key messages:
 | Finance sector | FSI guidance | Industry-specific |
 
 ## V. Conclusion
-Standards are not a "choice" but a **combination**. Typically you put a **threat checklist (OWASP/ATLAS)** on top of a **risk-management system (NIST/ISO)**, and map the **applicable laws (AI Framework Act, PIPA, EU AI Act)** as compliance criteria to design the assessment. The next document looks at the threat model in detail.
+Standards are not a "choice" but a **combination**. Typically you put a **threat checklist (OWASP/ATLAS)** on top of a **risk-management system (NIST/ISO)**, and map the **applicable laws (AI Framework Act, PIPA, EU AI Act)** as compliance criteria to design the assessment.

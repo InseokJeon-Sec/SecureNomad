@@ -2,45 +2,42 @@
 title: 01. Terminology — AI, ML, Deep Learning, Generative AI
 sidebar_label: 01. Terminology
 sidebar_position: 1
-description: How AI, machine learning, deep learning, generative AI, and LLMs relate to each other, all in one place
+description: The nesting and distinctions among AI, ML, deep learning, generative AI, and LLMs
 ---
 
 # 01. Terminology
 
-In the news, AI, machine learning, deep learning, generative AI, and LLM are used interchangeably. These terms are in a **nested (subset) relationship**.
+AI, machine learning, deep learning, generative AI, and LLM are in a **nesting relationship**.
 
 ```text
-AI (artificial intelligence)  ── any technology that mimics human intelligence
- └ Machine learning           ── AI that "learns" rules from data by itself
-    └ Deep learning           ── ML that learns with deep artificial neural networks
-       └ Generative AI        ── deep learning that creates new content (text, images, etc.)
-          └ LLM               ── large models that handle 'language' (e.g., GPT, Claude)
+AI               ── any technology mimicking human intelligence
+ └ Machine learning ── AI that learns rules from data
+    └ Deep learning  ── ML using deep neural networks
+       └ Generative AI ── deep learning that generates new content
+          └ LLM        ── large models that handle language (GPT, Claude, …)
 ```
 
-## One by one
-
-| Term | Meaning | Examples |
+| Term | Definition | Example |
 |---|---|---|
-| **AI** | All technology mimicking intelligent human behavior | Chess programs, recommendation algorithms |
-| **Machine Learning (ML)** | Rather than hand-coding rules, **learn rules from data** | Spam classification, demand forecasting |
-| **Deep Learning (DL)** | Learn with deep **artificial neural networks** modeled on brain neurons | Image recognition, speech recognition |
-| **Generative AI** | Beyond classification/prediction, **generate new content** | Writing, image generation |
-| **LLM** | A huge generative-AI model that handles **language** | ChatGPT, Claude, Gemini |
+| **AI** | Technology mimicking intelligent behavior | Chess engine, recommendation algorithm |
+| **Machine learning (ML)** | Learns rules from data rather than hand-coding them | Spam classification, demand forecasting |
+| **Deep learning (DL)** | Learning based on neural networks | Image/speech recognition |
+| **Generative AI** | Generates content beyond classification/prediction | Text/image generation |
+| **LLM** | A large generative model for language | ChatGPT, Claude, Gemini |
 
-## Rule-based vs machine learning (the key difference)
+## Rule-based vs machine learning
 
-The biggest difference between the old way and ML is **"who makes the rules."**
+The key difference is **who makes the rules — a human, or learning from data.**
 
-| | Rule-based (traditional) | Machine learning |
+| | Rule-based | Machine learning |
 |---|---|---|
-| Rules | Hand-coded by humans | Learned automatically from data |
-| Spam example | A human writes a rule like "if the subject contains 'AD', it's spam" | Show tens of thousands of spam/ham emails and it figures out the pattern itself |
-| Limitation | Rules explode as cases multiply | Learns complex patterns given enough data |
+| Rules | Hand-coded | Learned from data |
+| Spam | Write a rule like "subject contains 'AD' → spam" | Learn patterns from many spam/ham emails |
+| Limit | Rules explode as cases multiply | Learns complex patterns given data |
 
-In security terms, rule-based is closer to **signature detection** (known patterns), ML to **anomaly detection** (learning normal/abnormal from data).
+In security terms, rule-based maps to **signature detection**, ML to **anomaly detection**.
 
 ## Summary
 
-- From broad to narrow: **AI ⊃ ML ⊃ Deep Learning ⊃ Generative AI ⊃ LLM**
-- These days "AI" usually means **generative AI / LLMs**.
-- From the next document we look at LLMs in detail. → [02. What is an LLM](./02-what-is-llm.md)
+- Nesting: **AI ⊃ ML ⊃ deep learning ⊃ generative AI ⊃ LLM**
+- "AI" today usually means generative AI / LLMs.

@@ -89,4 +89,4 @@ What certificate-based communication (TLS) provides:
 | **Authentication** | Verify the peer's identity with a certificate + digital signature |
 
 ## VI. Conclusion
-A certificate is a device that **binds a public key to an identity and has a CA vouch for it with a signature**, and its operation rests on **asymmetric crypto + hashing + digital signatures**. The next document looks at the actual structure (X.509) of a certificate.
+A certificate is a device that **binds a public key to an identity and has a CA vouch for it with a signature**, and its operation rests on **asymmetric crypto + hashing + digital signatures**.

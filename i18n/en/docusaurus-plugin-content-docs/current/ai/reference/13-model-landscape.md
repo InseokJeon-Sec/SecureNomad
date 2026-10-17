@@ -2,41 +2,28 @@
 title: 13. Model & Provider Landscape
 sidebar_label: 13. Model Landscape
 sidebar_position: 1
-description: The big picture of major LLM providers and open/closed models — criteria for choosing
+description: The closed/open model split and criteria for choosing
 ---
 
 # 13. Model & Provider Landscape
 
-LLMs split broadly into **closed (commercial API)** and **open (public weights)** models.
+LLMs split into **closed (commercial API)** and **open (public weights)**.
 
-## Two branches
-
-| Type | Traits | Representative examples |
+| Type | Traits | Examples |
 |---|---|---|
-| **Closed (commercial)** | Used via API, top-tier performance, weights not public | OpenAI (GPT), Anthropic (Claude), Google (Gemini) |
-| **Open (public weights)** | Can be downloaded and run directly, easy to localize/customize | Meta (Llama), Mistral, Alibaba (Qwen), etc. |
+| Closed | API use, top-tier performance, weights not public | OpenAI (GPT), Anthropic (Claude), Google (Gemini) |
+| Open | Download and run/customize directly | Meta (Llama), Mistral, Alibaba (Qwen) |
 
-:::info What "open-source model" means
-Here 'open' mainly means the **model weights are public** so you can download and use them. License terms differ per model, so check before commercial use.
-:::
+"Open" mainly means the weights are public and downloadable. License terms differ per model; check before commercial use.
 
-## Criteria when choosing
+## Criteria
 
-| Criterion | Question |
+| Criterion | Check |
 |---|---|
-| **Performance** | Is it enough for this task (varies by task: coding, reasoning, Korean, etc.) |
-| **Data handling** | Does input go outside → if sensitive, open/local ([see 12](../advanced/12-local-llm.md)) |
-| **Cost** | Usage-based billing vs self-hosting |
-| **Context window** | How much you can put in at once |
-| **License** | Terms for commercial use/redistribution |
+| Performance | Enough for the task (coding, reasoning, Korean, etc.) |
+| Data handling | Does input leave externally → if sensitive, open/local ([12](../advanced/12-local-llm.md)) |
+| Cost | Usage-based vs self-hosting |
+| Context window | How much fits at once |
+| License | Commercial-use/redistribution terms |
 
-## Trends
-
-- Model competition moves fast, so **rankings/prices change constantly.** Rather than fixating on the current #1, it matters to develop a sense for picking **"the model that fits my task/constraints"** at each moment.
-- As open models' performance rises quickly, mixed strategies like **sensitive work on a local open model + general work on the cloud** are becoming common.
-
-## Summary
-
-- A trade-off between closed (performance/convenience) ↔ open (privacy/freedom)
-- Choose by **data sensitivity + task nature + cost**.
-- The latest comparisons always change, so treat this document as "the big picture" only.
+Rankings and prices change constantly, so choose the model that fits the task/constraints rather than the current #1. A mix — local open models for sensitive work, cloud for general work — is common.
