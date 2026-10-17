@@ -26,5 +26,93 @@
   "sidebar.itSidebar.category.Troubleshooting.link.generated-index.description": {
     "message": "Errors encountered during the build, with their causes and fixes.",
     "description": "The generated-index page description for category 'Troubleshooting' in sidebar 'itSidebar'"
+  },
+  "sidebar.aiSidebar.category.기초 — 큰 그림과 동작 원리": {
+    "message": "Foundations — Big Picture & How It Works",
+    "description": "The label for category '기초 — 큰 그림과 동작 원리' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.활용 — 프롬프트·RAG": {
+    "message": "Using — Prompting & RAG",
+    "description": "The label for category '활용 — 프롬프트·RAG' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.확장 — 에이전트·로컬 LLM": {
+    "message": "Advanced — Agents & Local LLM",
+    "description": "The label for category '확장 — 에이전트·로컬 LLM' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.심화 — 기술 상세": {
+    "message": "Deep Dive — Technical Detail",
+    "description": "The label for category '심화 — 기술 상세' in sidebar 'aiSidebar'"
+  },
+  "sidebar.aiSidebar.category.참고 — 모델 지형·용어": {
+    "message": "Reference — Model Landscape & Glossary",
+    "description": "The label for category '참고 — 모델 지형·용어' in sidebar 'aiSidebar'"
+  },
+  "sidebar.securitySidebar.category.AI for Security": {
+    "message": "AI for Security",
+    "description": "The label for category 'AI for Security' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.AI for Security.link.generated-index.title": {
+    "message": "AI for Security",
+    "description": "The generated-index page title for category 'AI for Security' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.AI for Security.link.generated-index.description": {
+    "message": "A record of using AI (Claude) as a tool for security work and learning.",
+    "description": "The generated-index page description for category 'AI for Security' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.AI 보안 도구": {
+    "message": "AI Security Tools",
+    "description": "The label for category 'AI 보안 도구' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.AI 취약점 진단 실습": {
+    "message": "AI Vulnerability Assessment Lab",
+    "description": "The label for category 'AI 취약점 진단 실습' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.AI 취약점 진단 실습.link.generated-index.title": {
+    "message": "Vulnerability assessment labs using AI",
+    "description": "The generated-index page title for category 'AI 취약점 진단 실습' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.AI 취약점 진단 실습.link.generated-index.description": {
+    "message": "A learning record of assessing web vulnerabilities in an authorized local lab, interpreting and organizing the process and results with AI (Claude). The focus is on understanding principles and countermeasures, not attack automation.",
+    "description": "The generated-index page description for category 'AI 취약점 진단 실습' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.Securing AI (AI 보안성 평가)": {
+    "message": "Securing AI",
+    "description": "The label for category 'Securing AI (AI 보안성 평가)' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.Securing AI (AI 보안성 평가).link.generated-index.title": {
+    "message": "Securing AI",
+    "description": "The generated-index page title for category 'Securing AI (AI 보안성 평가)' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.Securing AI (AI 보안성 평가).link.generated-index.description": {
+    "message": "Domestic and international guidelines, threat models, assessment methodology, and safe-usage guidance for safely using the AI an organization adopts (LLM services, in-house RAG, copilots, AI agents).",
+    "description": "The generated-index page description for category 'Securing AI (AI 보안성 평가)' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.PKI · 인증서": {
+    "message": "PKI · Certificates",
+    "description": "The label for category 'PKI · 인증서' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.PKI · 인증서.link.generated-index.title": {
+    "message": "PKI · Certificates",
+    "description": "The generated-index page title for category 'PKI · 인증서' in sidebar 'securitySidebar'"
+  },
+  "sidebar.securitySidebar.category.PKI · 인증서.link.generated-index.description": {
+    "message": "The theory and practice of public-key infrastructure (PKI) and X.509 certificates — cryptography and signatures, certificate structure, root certificates and chains of trust, TLS authentication logic, lifecycle/renewal/revocation, and hands-on OpenSSL.",
+    "description": "The generated-index page description for category 'PKI · 인증서' in sidebar 'securitySidebar'"
+  },
+  "sidebar.topicsSidebar.category.소프트웨어공학": {
+    "message": "Software Engineering",
+    "description": "The label for category '소프트웨어공학' in sidebar 'topicsSidebar'"
+  },
+  "sidebar.topicsSidebar.category.데이터베이스": {
+    "message": "Database",
+    "description": "The label for category '데이터베이스' in sidebar 'topicsSidebar'"
+  },
+  "sidebar.topicsSidebar.category.보안": {
+    "message": "Security",
+    "description": "The label for category '보안' in sidebar 'topicsSidebar'"
+  },
+  "sidebar.topicsSidebar.category.신기술": {
+    "message": "Emerging Tech",
+    "description": "The label for category '신기술' in sidebar 'topicsSidebar'"
   }
 }
