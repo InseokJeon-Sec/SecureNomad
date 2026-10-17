@@ -36,6 +36,16 @@ description: LLM이 무엇이고 어떻게 동작하는지, RAG·임베딩·에�
 11. [멀티모달](./advanced/11-multimodal.md)
 12. [로컬 LLM](./advanced/12-local-llm.md)
 
+### 심화 — 기술 상세
+LLM 내부 계산과 RAG 동작을 수식·구조 수준에서 자세히 다룹니다. (개념을 먼저 본 뒤 읽는 것을 권장)
+
+- [토크나이저와 BPE (심화)](./deep-dive/tokenizer.md) — 서브워드 분할, 한국어가 토큰을 더 쓰는 이유
+- [어텐션과 트랜스포머 (심화)](./deep-dive/attention.md) — Q·K·V, Scaled Dot-Product, 멀티헤드, 인과 마스킹
+- [샘플링과 디코딩 (심화)](./deep-dive/sampling.md) — temperature·top-k·top-p·반복 억제
+- [RAG 내부 동작 (심화)](./deep-dive/rag-internals.md) — 청킹·임베딩·벡터 유사도·ANN·리랭킹·컨텍스트 주입
+- [파인튜닝과 LoRA (심화)](./deep-dive/finetuning-lora.md) — PEFT·LoRA·QLoRA의 동작 원리
+- [추론 최적화 (심화)](./deep-dive/inference-optimization.md) — KV 캐시·양자화·FlashAttention·배칭
+
 ### 참고
 13. [모델·제공자 지형](./reference/13-model-landscape.md)
 14. [용어 사전](./reference/14-glossary.md)

@@ -1,0 +1,10 @@
+{
+  "label": "PKI · 인증서",
+  "position": 4,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "PKI · 인증서",
+    "description": "공개키 기반구조(PKI)와 X.509 인증서의 이론과 실무 — 암호·서명 원리, 인증서 구조, Root 인증서와 신뢰 체인, TLS 인증 로직, 수명주기·갱신·폐기, OpenSSL 실무까지 정리합니다."
+  }
+}
