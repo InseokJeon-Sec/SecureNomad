@@ -201,6 +201,7 @@ const config = {
             items: [
               {type: 'docSidebar', sidebarId: 'securitySidebar', label: 'Overview'},
               {type: 'doc', docId: 'security/ai-for-security/overview', label: 'AI for Security'},
+              {type: 'doc', docId: 'security/ai-security-assessment/overview', label: 'Securing AI'},
             ],
           },
           {type: 'docSidebar', sidebarId: 'topicsSidebar', position: 'left', label: 'Topics'},
