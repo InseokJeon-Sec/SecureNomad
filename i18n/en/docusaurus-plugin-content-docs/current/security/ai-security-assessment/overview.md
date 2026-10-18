@@ -58,6 +58,7 @@ AI enters an organization in many forms, each with different threats and control
 | 06. Checklist & review form | A ready-to-use checklist for practice |
 | 07. Standards detail & map | Per-standard detail + a **map** of how they relate + original links (deep dive) |
 | 08. OWASP LLM Top 10 | Each of the 10 risks — where it arises, how to check, how to defend (practitioner detail) |
+| 09. MITRE ATLAS | The AI attack tactic/technique knowledge base (ATT&CK-style), practitioner detail |
 
 ## V. Conclusion
 

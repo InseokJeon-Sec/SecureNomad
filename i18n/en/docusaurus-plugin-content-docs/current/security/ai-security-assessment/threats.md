@@ -45,6 +45,8 @@ The starting point of a security assessment is knowing **"what can go wrong."** 
 
 [MITRE ATLAS](https://atlas.mitre.org/) organizes attacks against AI systems into an ATT&CK-style **Tactic × Technique** matrix. Being case-based, it covers "observed attacks," not "theoretical threats."
 
+> For the tactic/technique structure and practical use in detail, see [09. MITRE ATLAS — practitioner detail](./09-mitre-atlas.md).
+
 Example tactic flow:
 
 ```text

@@ -45,6 +45,8 @@ tags: [AI보안, 위협모델, OWASP]
 
 [MITRE ATLAS](https://atlas.mitre.org/)는 AI 시스템을 겨냥한 공격을 ATT&CK 방식의 **전술(Tactic) × 기법(Technique)** 매트릭스로 정리합니다. 실제 사례 기반이라 "이론상 위협"이 아니라 "관측된 공격"을 다룹니다.
 
+> 전술·기법 구조와 실무 활용 상세는 [09. MITRE ATLAS 상세](./09-mitre-atlas.md) 참고.
+
 대표 전술 흐름(예시):
 
 ```text
