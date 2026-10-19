@@ -11,6 +11,7 @@ slug: /security
 
 ## 구성
 
+- **[SOC · 보안관제](/security/soc/overview)** — 보안관제센터 운영. Tier·24x7 교대, 탐지 파이프라인, 지표·품질관리(대규모 원격관제 관점).
 - **[AI for Security](/security/ai-for-security/overview)** — AI를 보안 업무의 도구로 활용한 기록. AI 보안 도구 비교(ARTEX·PentestGPT·XBOW 등)와 취약점 진단 실습(XSS·SQLi).
 - **[Securing AI (AI 보안성 평가)](/security/ai-security-assessment/overview)** — AI 사용 자체를 안전하게 만드는 법. 국내외 가이드라인, 위협 모델, 평가 방법론, 안전한 사용 가이드, 체크리스트.
 - **[PKI · 인증서](/security/pki-certificates/overview)** — 인증서의 이론과 실무. 암호·디지털 서명, X.509 구조, Root·신뢰 체인, TLS 인증 로직, 수명주기·갱신, OpenSSL.

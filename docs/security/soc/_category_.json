@@ -1,0 +1,6 @@
+{
+  "label": "SOC · 보안관제",
+  "position": 2,
+  "collapsed": false,
+  "link": { "type": "doc", "id": "security/soc/overview" }
+}

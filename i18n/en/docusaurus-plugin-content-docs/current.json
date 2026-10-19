@@ -114,5 +114,9 @@
   "sidebar.topicsSidebar.category.신기술": {
     "message": "Emerging Tech",
     "description": "The label for category '신기술' in sidebar 'topicsSidebar'"
+  },
+  "sidebar.securitySidebar.category.SOC · 보안관제": {
+    "message": "SOC · Security Monitoring",
+    "description": "The label for category 'SOC · 보안관제' in sidebar 'securitySidebar'"
   }
 }

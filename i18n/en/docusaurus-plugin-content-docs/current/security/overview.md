@@ -11,6 +11,7 @@ Security documents organized into three tracks. Jump to the one you want below.
 
 ## Tracks
 
+- **[SOC · Security Monitoring](/en/security/soc/overview)** — Running a security operations center: tiers/24x7 shifts, the detection pipeline, metrics and quality management (large-scale remote-monitoring view).
 - **[AI for Security](/en/security/ai-for-security/overview)** — Using AI as a tool for security work. AI security-tool comparisons (ARTEX, PentestGPT, XBOW, etc.) and vulnerability assessment labs (XSS, SQLi).
 - **[Securing AI](/en/security/ai-security-assessment/overview)** — Making the use of AI itself safe. Domestic/international guidelines, threat models, assessment methodology, safe-usage guidance, and checklists.
 - **[PKI · Certificates](/en/security/pki-certificates/overview)** — The theory and practice of certificates. Cryptography and digital signatures, X.509 structure, root/chain of trust, TLS authentication logic, lifecycle/renewal, and OpenSSL.
