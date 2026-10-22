@@ -360,3 +360,13 @@ code {
   color: var(--ifm-color-emphasis-700);
   margin-bottom: 1.6rem;
 }
+
+/* ===== 상단 Private 링크 (외부 링크 아이콘 대신 자물쇠) ===== */
+.navbar-private-link svg {
+  display: none;
+}
+.navbar-private-link::before {
+  content: '🔒';
+  margin-right: 0.3rem;
+  font-size: 0.85em;
+}

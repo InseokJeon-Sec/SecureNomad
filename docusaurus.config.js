@@ -210,6 +210,12 @@ const config = {
           {to: '/notes', label: 'Notes', position: 'left'},
           {type: 'localeDropdown', position: 'right'},
           {to: '/about', label: 'Profile', position: 'right'},
+          {
+            href: 'https://securenomad-private.pages.dev',
+            label: 'Private',
+            position: 'right',
+            className: 'navbar-private-link',
+          },
         ],
       },
       footer: {
