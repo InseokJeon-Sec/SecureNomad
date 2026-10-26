@@ -37,7 +37,27 @@ The key difference is **who makes the rules — a human, or learning from data.*
 
 In security terms, rule-based maps to **signature detection**, ML to **anomaly detection**.
 
+## Security perspective
+
+Each layer means something different for security. Read alongside the threats, the nesting looks like this.
+
+| Layer | What it means for security | Representative threats |
+|---|---|---|
+| Machine learning | Widens detection from rules to learning | Classifier evasion via adversarial input, false positives/negatives |
+| Deep learning | The model itself becomes a target | Adversarial examples, model extraction, backdoors |
+| Generative AI | The ability to produce content is abused | Deepfakes, automated phishing / social engineering |
+| LLM | External input becomes the execution context | Prompt injection, sensitive-data leakage, excessive agency |
+
+In security, AI splits into three views.
+
+- **AI for Security** — AI as a tool for defense and assessment. → [AI for Security](/en/security/ai-for-security/overview)
+- **Securing AI** — making the use of AI itself safe (threat models, assessment, guidance). → [Securing AI](/en/security/ai-security-assessment/overview)
+- **AI as Threat** — adversaries abusing AI (autonomous intrusion, attack automation).
+
+It is the same technology seen from attack, defense, or protection, and the three views interlock.
+
 ## Summary
 
 - Nesting: **AI ⊃ ML ⊃ deep learning ⊃ generative AI ⊃ LLM**
 - "AI" today usually means generative AI / LLMs.
+- In security, this distinction separates **the type of threat and where to respond**. As you go deeper, the attack surface shifts toward external input (prompts) and execution privileges.
