@@ -62,6 +62,8 @@ Example techniques: Model Extraction, Evasion via Adversarial Example, training-
 
 Splitting threats into "layers" helps cover the assessment scope fully.
 
+![Threats by layer — data, model, application, infrastructure, operations](/img/security/threats-layers-en.svg)
+
 | Layer | Example threats | Related OWASP |
 |---|---|---|
 | **Data** | Training/RAG data poisoning, sensitive data included | LLM04, LLM08 |

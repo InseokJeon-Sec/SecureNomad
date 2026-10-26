@@ -13,10 +13,7 @@ Operation is three steps: **tokenize → predict the next token → repeat.**
 
 An LLM processes text in **tokens**, not characters or words. A token is roughly a word or part of a word.
 
-```text
-"Security matters"  →  [Secur] [ity] [ matters]   (splitting varies by model)
-"security"          →  [sec] [urity]
-```
+![Tokenization example — a word is not always one token](/img/ai/tokenize-en.svg)
 
 English is ~1 word ≈ 1–1.5 tokens; Korean splits more finely. Cost and length limits are all based on **token count** (the context window in [06. Prompting](../using/06-prompting.md)).
 
@@ -35,12 +32,6 @@ A high `temperature` also selects lower-ranked tokens (more varied); a low one i
 
 The base structure is the **Transformer**, whose core is **attention**. Attention decides which tokens in the context to weight when predicting the next token. In "withdrew money from the **bank**" vs "sat on the river **bank**," the meaning of 'bank' is read differently from surrounding tokens. The 2017 Transformer is the basis of current LLMs.
 
-```text
-[next-token prediction]
-   ▲   attention: weight important tokens in context
-[N Transformer layers]  ← more abstract meaning layer by layer
-   ▲
-[token embeddings]  ← each token to a numeric vector (→ 08. Embeddings)
-```
+![Transformer and attention — from token embeddings to next-token prediction](/img/ai/attention-en.svg)
 
 See [Attention & Transformer (deep dive)](../deep-dive/attention.md) for the computation.

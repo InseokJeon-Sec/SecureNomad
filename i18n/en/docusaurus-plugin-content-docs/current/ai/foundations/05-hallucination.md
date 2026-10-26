@@ -11,6 +11,8 @@ An LLM confidently generates plausible but wrong content. This is **hallucinatio
 
 ## Causes
 
+![How hallucination arises — generation by probability, not lookup](/img/ai/hallucination-flow-en.svg)
+
 - It tries to fill blanks naturally even when it doesn't know, because "a plausible statement" may be learned as more probable than "I don't know."
 - It produces nonexistent papers, precedents, functions, or URLs in correct form only.
 - Confidence and accuracy are unrelated; a confident tone can still be wrong.

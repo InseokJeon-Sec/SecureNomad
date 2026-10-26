@@ -9,11 +9,7 @@ description: LLM 완성의 3단계 — 사전학습, 파인튜닝, RLHF
 
 LLM은 보통 **3단계**로 완성된다.
 
-```text
-① 사전학습(Pre-training)   방대한 텍스트로 세상의 패턴을 학습
-② 파인튜닝(Fine-tuning)    질문-답변 등 특정 방식으로 조정
-③ RLHF                    사람 선호에 맞춰 조정
-```
+![LLM 학습 3단계 — 사전학습 · 파인튜닝 · RLHF](/img/ai/training-ko.svg)
 
 ## 1. 사전학습
 

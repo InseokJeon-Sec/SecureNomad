@@ -11,6 +11,8 @@ An LLM (large language model) is trained on large-scale text to **estimate the p
 
 Its essential operation is a single thing — **next-token prediction** — and sentences are produced by repeating it one token at a time.
 
+![Next-token prediction — probability distribution over candidate tokens](/img/ai/next-token-en.svg)
+
 ## What "large" means
 
 Two axes are large.

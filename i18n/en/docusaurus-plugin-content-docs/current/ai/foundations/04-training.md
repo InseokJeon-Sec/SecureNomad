@@ -9,11 +9,7 @@ description: The three stages that complete an LLM — pretraining, fine-tuning,
 
 An LLM is usually completed in **three stages**.
 
-```text
-① Pre-training   learn the patterns of the world from vast text
-② Fine-tuning    adjust to a specific form, such as question-answer
-③ RLHF           adjust to human preferences
-```
+![Three training stages — pre-training · fine-tuning · RLHF](/img/ai/training-en.svg)
 
 ## 1. Pre-training
 

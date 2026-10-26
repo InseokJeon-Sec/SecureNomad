@@ -19,6 +19,8 @@ A **prompt** is the entire input to an LLM (instruction, context, question).
 
 Exceeding the context window drops earlier content. Handle long documents by summarizing, excerpting, or [RAG](./07-rag.md).
 
+![Context window — input+output over the limit drops earliest content](/img/ai/context-window-en.svg)
+
 ## Principles
 
 | Principle | Bad | Good |

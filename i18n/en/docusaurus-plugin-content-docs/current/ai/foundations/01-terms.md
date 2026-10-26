@@ -15,13 +15,7 @@ You can also watch this as a video (in Korean).
 
 AI, machine learning, deep learning, generative AI, and LLM are in a **nesting relationship**.
 
-```text
-AI               ── any technology mimicking human intelligence
- └ Machine learning ── AI that learns rules from data
-    └ Deep learning  ── ML using deep neural networks
-       └ Generative AI ── deep learning that generates new content
-          └ LLM        ── large models that handle language (GPT, Claude, …)
-```
+![Nesting of AI, ML, deep learning, generative AI, and LLM](/img/ai/nesting-en.svg)
 
 | Term | Definition | Example |
 |---|---|---|
