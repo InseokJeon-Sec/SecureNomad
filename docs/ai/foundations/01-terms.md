@@ -5,7 +5,13 @@ sidebar_position: 1
 description: AI·머신러닝·딥러닝·생성형 AI·LLM의 포함 관계와 차이 정리
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 01. 용어 정리
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="FTbxcQ0UpPI" title="AI·머신러닝·딥러닝·생성형 AI·LLM 차이 한 번에 정리 (보안 관점) | AI 바로 알기 #1" />
 
 AI·머신러닝·딥러닝·생성형 AI·LLM은 **포함 관계**다.
 

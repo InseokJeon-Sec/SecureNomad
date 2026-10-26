@@ -5,7 +5,13 @@ sidebar_position: 1
 description: The nesting and distinctions among AI, ML, deep learning, generative AI, and LLMs
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 01. Terminology
+
+You can also watch this as a video (in Korean).
+
+<YouTube id="FTbxcQ0UpPI" title="AI vs ML vs DL vs LLM — one-take overview (security view) | AI 바로 알기 #1" />
 
 AI, machine learning, deep learning, generative AI, and LLM are in a **nesting relationship**.
 
