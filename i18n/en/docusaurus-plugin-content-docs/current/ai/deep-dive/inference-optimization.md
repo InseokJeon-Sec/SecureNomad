@@ -8,6 +8,11 @@ tags: [AI, inference, quantization, KV-cache, deep-dive]
 
 # Inference Optimization (Technical Deep Dive)
 
+:::tip Go deeper — AI System Design Guide (translation)
+A deeper, production/interview-oriented treatment of this topic → [Inference Pipeline](../system-design/01-foundations/06-inference-pipeline.md)
+:::
+
+
 :::note Prerequisite
 This goes deeper into the `O(n²)` cost and KV cache seen in the [attention doc](./attention.md). It covers the serving-stage techniques for running a model **fast and cheap**.
 :::

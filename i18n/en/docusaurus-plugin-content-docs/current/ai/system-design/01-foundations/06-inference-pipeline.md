@@ -489,6 +489,11 @@ For interactive applications, stream tokens as they are generated:
 
 ```python
 # Server
+
+:::tip Start with the basics
+New to this topic? See SecureNomad's intro doc [Inference Optimization (Technical Deep Dive)](../../deep-dive/inference-optimization.md) first.
+:::
+
 async def generate_stream(prompt: str):
     for token in model.generate_iter(prompt):
         yield f"data: {json.dumps({'token': token})}\n\n"

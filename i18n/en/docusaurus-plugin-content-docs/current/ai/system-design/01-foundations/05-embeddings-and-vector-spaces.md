@@ -61,6 +61,11 @@ Transformer-based models produce context-dependent embeddings:
 
 ```python
 # Static embedding (Word2Vec)
+
+:::tip Start with the basics
+New to this topic? See SecureNomad's intro doc [08. Embeddings and Vector DB](../../using/08-embeddings.md) first.
+:::
+
 embed("bank") = [0.1, 0.3, ...]  # Same vector always
 
 # Contextual embedding (BERT)

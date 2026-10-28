@@ -7,6 +7,11 @@ description: Tokens, next-token prediction, and the role of the Transformer and 
 
 # 03. How an LLM Works
 
+:::tip Go deeper — AI System Design Guide (translation)
+A deeper, production/interview-oriented treatment of this topic → [LLM Internals](../system-design/01-foundations/01-llm-internals.md)
+:::
+
+
 Operation is three steps: **tokenize → predict the next token → repeat.**
 
 ## 1. Tokens

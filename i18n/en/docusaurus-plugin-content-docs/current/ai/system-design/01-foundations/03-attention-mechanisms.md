@@ -49,6 +49,11 @@ Attention uses three projections of the input:
 ```python
 # Input: x of shape [batch, seq_len, d_model]
 
+:::tip Start with the basics
+New to this topic? See SecureNomad's intro doc [Attention and Transformer (Technical Deep Dive)](../../deep-dive/attention.md) first.
+:::
+
+
 Q = x @ W_q  # [batch, seq_len, d_k]
 K = x @ W_k  # [batch, seq_len, d_k]
 V = x @ W_v  # [batch, seq_len, d_v]

@@ -230,6 +230,11 @@ Without scaling, as dimension d grows, dot products grow proportionally. Large d
 
 ```python
 # Without scaling (problematic for large d)
+
+:::tip Start with the basics
+New to this topic? See SecureNomad's intro doc [03. How an LLM Works](../../foundations/03-how-llm-works.md) first.
+:::
+
 d = 512
 q = np.random.randn(d)
 k = np.random.randn(d)

@@ -8,6 +8,11 @@ tags: [AI, transformer, attention, deep-dive]
 
 # Attention and Transformer (Technical Deep Dive)
 
+:::tip Go deeper — AI System Design Guide (translation)
+A deeper, production/interview-oriented treatment of this topic → [Attention Mechanisms](../system-design/01-foundations/03-attention-mechanisms.md)
+:::
+
+
 :::note Prerequisite
 Assuming you've seen the big picture of "tokens → next-token prediction" in [03. How an LLM works](/en/ai/foundations/how-llm-works), this document covers the **actual computation inside**. Formulas are written in code blocks.
 :::

@@ -270,6 +270,11 @@ class LMHead(nn.Module):
 
 ```python
 # During generation
+
+:::tip Start with the basics
+New to this topic? See SecureNomad's intro doc [Attention and Transformer (Technical Deep Dive)](../../deep-dive/attention.md) first.
+:::
+
 logits = lm_head(hidden_states[:, -1, :])  # Last position only
 next_token = sample(logits)
 

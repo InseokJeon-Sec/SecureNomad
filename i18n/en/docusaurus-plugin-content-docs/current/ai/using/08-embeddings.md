@@ -7,6 +7,11 @@ description: Embeddings that turn meaning into vectors, and the vector DB that s
 
 # 08. Embeddings and Vector DB
 
+:::tip Go deeper — AI System Design Guide (translation)
+A deeper, production/interview-oriented treatment of this topic → [Embeddings and Vector Spaces](../system-design/01-foundations/05-embeddings-and-vector-spaces.md)
+:::
+
+
 Two elements underpin RAG's retrieval: **embeddings** and the **vector DB**.
 
 ## Embeddings

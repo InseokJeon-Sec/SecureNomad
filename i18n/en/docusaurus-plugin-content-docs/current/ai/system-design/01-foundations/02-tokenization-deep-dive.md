@@ -155,6 +155,11 @@ GPT-2 introduced byte-level BPE:
 
 ```python
 # Character-level: Needs explicit handling of characters
+
+:::tip Start with the basics
+New to this topic? See SecureNomad's intro doc [Tokenizers and BPE (Technical Deep Dive)](../../deep-dive/tokenizer.md) first.
+:::
+
 text = "cafe"  # Unknown character might become [UNK]
 
 # Byte-level: Works with any text (no UNK needed)

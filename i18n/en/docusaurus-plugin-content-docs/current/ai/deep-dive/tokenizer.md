@@ -8,6 +8,11 @@ tags: [AI, tokenizer, BPE, deep-dive]
 
 # Tokenizers and BPE (Technical Deep Dive)
 
+:::tip Go deeper — AI System Design Guide (translation)
+A deeper, production/interview-oriented treatment of this topic → [Tokenization Deep Dive](../system-design/01-foundations/02-tokenization-deep-dive.md)
+:::
+
+
 :::note Prerequisite
 Assuming you've seen the concept of "tokens" in [03. How an LLM works](/en/ai/foundations/how-llm-works), this document covers **how tokens are actually produced**. It is the entrance to all computation ([attention](./attention.md)).
 :::

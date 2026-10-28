@@ -8,6 +8,11 @@ tags: [AI, 토크나이저, BPE, 심화]
 
 # 토크나이저와 BPE (기술 심화)
 
+:::tip 더 깊이 — AI 시스템 디자인 가이드(번역)
+이 주제를 프로덕션·인터뷰 관점에서 더 깊이 다룬 번역 문서 → [토큰화 심층 분석](../system-design/01-foundations/02-tokenization-deep-dive.md)
+:::
+
+
 :::note 전제
 [03. 동작 원리](../foundations/03-how-llm-works.md)에서 "토큰"의 개념을 봤다는 가정하에, 이 문서는 **토큰이 실제로 어떻게 만들어지는지**를 다룹니다. 모든 계산([어텐션](./attention.md))의 입구에 해당합니다.
 :::

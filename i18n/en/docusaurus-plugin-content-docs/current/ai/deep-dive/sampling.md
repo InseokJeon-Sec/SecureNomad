@@ -8,6 +8,11 @@ tags: [AI, sampling, decoding, temperature, deep-dive]
 
 # Sampling and Decoding (Technical Deep Dive)
 
+:::tip Go deeper — AI System Design Guide (translation)
+A deeper, production/interview-oriented treatment of this topic → [Inference Pipeline (sampling)](../system-design/01-foundations/06-inference-pipeline.md)
+:::
+
+
 :::note Prerequisite
 At the final step in the [attention doc](./attention.md), the model produces `logits → softmax → next-token probability distribution`. This document covers **how a token is actually chosen** from that distribution (the decoding strategy).
 :::

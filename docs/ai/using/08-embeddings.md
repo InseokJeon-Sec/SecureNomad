@@ -7,6 +7,11 @@ description: 의미를 벡터로 바꾸는 임베딩과 이를 저장·검색하
 
 # 08. 임베딩과 벡터 DB
 
+:::tip 더 깊이 — AI 시스템 디자인 가이드(번역)
+이 주제를 프로덕션·인터뷰 관점에서 더 깊이 다룬 번역 문서 → [임베딩과 벡터 공간](../system-design/01-foundations/05-embeddings-and-vector-spaces.md)
+:::
+
+
 RAG의 검색을 떠받치는 두 요소가 **임베딩**과 **벡터 DB**다.
 
 ## 임베딩

@@ -10,6 +10,11 @@ description: 트랜스포머, MoE, 어텐션 수식, RoPE, GQA, KV 캐시, 그�
 
 # LLM 내부 구조
 
+:::tip 입문 먼저
+개념이 처음이라면 SecureNomad 입문 문서 [03. LLM은 어떻게 동작하나](../../foundations/03-how-llm-works.md)를 먼저 보세요.
+:::
+
+
 현대 LLM의 아키텍처 핵심을 다룬다: 트랜스포머, MoE, 어텐션 수식, RoPE, GQA, KV 캐시, 그리고 2026년 모델 설계를 이끄는 추론 최적(inference-optimal) 스케일링 전환.
 
 이 장은 대규모 언어 모델의 핵심 개념을 다룬다. 이 내부 구조를 이해해야 AI 시스템에 대한 아키텍처 결정을 올바르게 내릴 수 있다. 이런 아키텍처 선택이 실제로 어떤 영향을 미치는지는 [추론 최적화](https://github.com/ombharatiya/ai-system-design-guide/tree/main/04-inference-optimization)(KV 캐시, PagedAttention), [모델 분류 체계](https://github.com/ombharatiya/ai-system-design-guide/blob/main/02-model-landscape/01-model-taxonomy.md)(프로덕션에서의 MoE 모델)를 참고하고, MoE·RoPE·ALiBi·GQA·MLA의 정의는 [용어집](https://github.com/ombharatiya/ai-system-design-guide/blob/main/GLOSSARY.md)을 참고하라.
