@@ -5,7 +5,13 @@ sidebar_position: 2
 description: The definition and essential operation of an LLM, and common misconceptions
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 02. What is an LLM
+
+This page is also available as a video.
+
+<YouTube id="MOGWlcYsoRM" title="How an LLM generates text — tokens, probability, hallucination (security view) | AI Essentials #2" />
 
 An LLM (large language model) is trained on large-scale text to **estimate the probability distribution of the next token** given a token sequence. ChatGPT, Claude, and Gemini are LLMs.
 

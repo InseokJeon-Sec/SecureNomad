@@ -5,7 +5,13 @@ sidebar_position: 2
 description: 대규모 언어 모델(LLM)의 정의와 동작 본질, 흔한 오해
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 02. LLM이란 무엇인가
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="MOGWlcYsoRM" title="LLM은 어떻게 '말'을 만드나 — 토큰·확률·환각 한 번에 정리 (보안 관점) | AI 바로 알기 #2" />
 
 LLM(대규모 언어 모델)은 대규모 텍스트로 학습되어, **주어진 토큰 열 다음 토큰의 확률분포를 추정**하는 모델이다. ChatGPT·Claude·Gemini가 이에 해당한다.
 
