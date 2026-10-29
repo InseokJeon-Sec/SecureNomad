@@ -5,7 +5,13 @@ sidebar_position: 1
 description: The concepts of prompt, context, and token limits, and prompt-writing principles
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 06. Prompting Basics
+
+This page is also available as a video.
+
+<YouTube id="qd1d0sPy1Ps" title="How a single prompt breaks an AI — prompt injection and 4 defense principles (security view) | AI Essentials #3" />
 
 A **prompt** is the entire input to an LLM (instruction, context, question).
 

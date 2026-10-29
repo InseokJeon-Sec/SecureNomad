@@ -5,7 +5,13 @@ sidebar_position: 1
 description: 프롬프트·컨텍스트·토큰 한도 개념과 프롬프트 작성 원칙
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 06. 프롬프트 기초
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="qd1d0sPy1Ps" title="프롬프트 한 줄로 AI가 뚫린다 — 프롬프트 인젝션과 방어 4원칙 (보안 관점) | AI 바로 알기 #3" />
 
 **프롬프트**는 LLM에 주는 입력 전체(지시·맥락·질문)다.
 
