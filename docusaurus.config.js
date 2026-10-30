@@ -34,15 +34,8 @@ function recentPostsPlugin(context) {
   return {
     name: 'recent-posts',
     async loadContent() {
-      // Analysis는 번역 대상이므로 영어 빌드에서는 번역본 제목을 읽는다 (없으면 원문)
-      const locale = context.i18n.currentLocale;
-      const analysisDir = locale === 'en' &&
-        fs.existsSync(path.join(context.siteDir, 'i18n/en/docusaurus-plugin-content-blog-analysis'))
-        ? 'i18n/en/docusaurus-plugin-content-blog-analysis'
-        : 'analysis';
       return {
         news: read('news', 'news', 4),
-        analysis: read(analysisDir, 'analysis', 4),
         notes: read('notes', 'notes', 4),
       };
     },
@@ -161,37 +154,6 @@ const config = {
       }),
     ],
     [
-      '@docusaurus/plugin-content-blog',
-      /** @type {import('@docusaurus/plugin-content-blog').Options} */
-      ({
-        id: 'analysis',                // 세 번째 블로그: 사건 1건을 현업 시각으로 분석 (ko + en 번역)
-        path: 'analysis',
-        routeBasePath: 'analysis',
-        blogTitle: 'Analysis',
-        blogDescription: isKorean
-          ? '보안 사건 하나를 관제·대응 실무 관점에서 깊게 분석한다'
-          : 'In-depth analysis of individual security incidents from a security operations perspective',
-        blogSidebarTitle: isKorean ? '최근 분석' : 'Recent analysis',
-        blogSidebarCount: 'ALL',
-        postsPerPage: 10,
-        showReadingTime: true,
-        showLastUpdateTime: true,
-        authorsMapPath: 'authors.yml',
-        tags: 'tags.yml',
-        onInlineTags: 'warn',
-        onInlineAuthors: 'warn',
-        onUntruncatedBlogPosts: 'warn',
-        feedOptions: {
-          type: ['rss', 'atom'],
-          title: 'SecureNomad Analysis',
-          description: isKorean
-            ? '보안 사건 심층 분석'
-            : 'In-depth security incident analysis',
-          language: isKorean ? 'ko' : 'en',
-        },
-      }),
-    ],
-    [
       '@docusaurus/plugin-pwa',
       {
         debug: false,
@@ -233,7 +195,6 @@ const config = {
         },
         items: [
           {to: '/news', label: 'News', position: 'left'},
-          {to: '/analysis', label: 'Analysis', position: 'left'},
           {type: 'docSidebar', sidebarId: 'itSidebar', position: 'left', label: 'IT'},
           {type: 'docSidebar', sidebarId: 'aiSidebar', position: 'left', label: 'AI'},
           {
