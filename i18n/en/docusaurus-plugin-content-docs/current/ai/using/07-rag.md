@@ -5,7 +5,13 @@ sidebar_position: 2
 description: The definition, need, operation, and trade-offs of RAG
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 07. RAG (Retrieval-Augmented Generation)
+
+This page is also available as a video.
+
+<YouTube id="ZLZ-oE99TOg" title="Is it safe to attach your data to an AI with RAG — knowledge poisoning and 4 defense principles (security view) | AI Essentials #4" />
 
 **RAG** retrieves relevant material before answering, provides it (augmented), and generates the answer grounded in it. It references external source documents instead of knowledge internal to the model's parameters.
 

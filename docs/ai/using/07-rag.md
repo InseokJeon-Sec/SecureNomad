@@ -5,7 +5,13 @@ sidebar_position: 2
 description: RAG의 정의, 필요성, 동작, 장단점
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 07. RAG (검색 증강 생성)
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="ZLZ-oE99TOg" title="RAG로 내 데이터를 붙이면 안전할까 — 지식 포이즈닝과 방어 4원칙 (보안 관점) | AI 바로 알기 #4" />
 
 **RAG(Retrieval-Augmented Generation)** 는 답변 전에 관련 자료를 검색(Retrieval)해 함께 제공(Augmented)하고, 그 근거로 답을 생성(Generation)하는 방식이다. 모델 파라미터에 내재된 지식 대신 외부 근거 문서를 참조한다.
 
