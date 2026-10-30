@@ -61,7 +61,7 @@ Seeing where each item arises in the pipeline reveals the control points.
 - **Concept**: passing output to other systems without validation, enabling downstream attacks like XSS, SQLi, command execution.
 - **Where it arises**: feeding LLM output directly into HTML rendering, DB queries, shell/code execution.
 - **Check**: is output validated/encoded before going downstream? Are there code/query execution paths?
-- **Defend**: don't trust output, context-appropriate encoding/parameterization, sandboxing, allowlists. (Same as web output-handling principles → [XSS](/en/security/ai-for-security/ai-pentest/xss), [SQLi](/en/security/ai-for-security/ai-pentest/sqli))
+- **Defend**: don't trust output, context-appropriate encoding/parameterization, sandboxing, allowlists. (Same as web output-handling principles → [XSS](/en/lab/ai-pentest/xss), [SQLi](/en/lab/ai-pentest/sqli))
 
 ### LLM06 · Excessive Agency
 - **Concept**: an agent with too much autonomy/permission/tool access can take harmful actions.

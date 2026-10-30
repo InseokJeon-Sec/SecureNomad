@@ -8,7 +8,7 @@ description: 자동 AI 침투 테스트 상용 서비스 XBOW를 도구 관점�
 # XBOW
 
 :::caution 분석 목적 안내
-도구 파악을 위한 분석이며, **허가된 대상에만** 사용해야 한다. → [실습 원칙과 범위](../ai-pentest/00-approach-and-ethics.md)
+도구 파악을 위한 분석이며, **허가된 대상에만** 사용해야 한다. → [실습 원칙과 범위](../../../lab/ai-pentest/00-approach-and-ethics.md)
 :::
 
 ## 한눈에

@@ -61,7 +61,7 @@ OWASP **Top 10 for LLM Applications(2025)** 는 LLM 애플리케이션의 대표
 - **개념**: 검증 없이 출력을 다른 시스템에 전달해 XSS·SQLi·명령 실행 등 다운스트림 공격을 유발.
 - **발생 지점**: LLM 출력을 HTML 렌더링, DB 쿼리, 쉘·코드 실행에 그대로 투입.
 - **점검**: 출력을 다운스트림에 넘길 때 검증·인코딩을 거치는가? 코드·쿼리 실행 경로가 있는가?
-- **대응**: 출력을 신뢰하지 않음, 컨텍스트별 인코딩·파라미터화, 샌드박스, 허용목록. (웹 보안의 출력 처리 원칙과 동일 → [XSS](/security/ai-for-security/ai-pentest/xss), [SQLi](/security/ai-for-security/ai-pentest/sqli))
+- **대응**: 출력을 신뢰하지 않음, 컨텍스트별 인코딩·파라미터화, 샌드박스, 허용목록. (웹 보안의 출력 처리 원칙과 동일 → [XSS](/lab/ai-pentest/xss), [SQLi](/lab/ai-pentest/sqli))
 
 ### LLM06 · 과도한 권한 (Excessive Agency)
 - **개념**: 에이전트가 과도한 자율성·권한·도구 접근을 가져 유해 행동이 가능.

@@ -9,7 +9,7 @@ description: LLM 멀티 에이전트 기반 자동 침투 테스트 도구 ARTEX
 
 :::caution 분석 목적 안내
 이 문서는 ARTEX라는 도구를 **파악하기 위한 분석**이다. 구하는 법, 설치·설정, 공격 수행 방법은 다루지 않는다.
-ARTEX는 현재 소스가 비공개이며, **허가 없는 대상에 대한 사용은 불법**이다. → [실습 원칙과 범위](../ai-pentest/00-approach-and-ethics.md)
+ARTEX는 현재 소스가 비공개이며, **허가 없는 대상에 대한 사용은 불법**이다. → [실습 원칙과 범위](../../../lab/ai-pentest/00-approach-and-ethics.md)
 :::
 
 ## 한눈에

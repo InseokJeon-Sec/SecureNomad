@@ -267,7 +267,7 @@ Windows 백업 프로그램 AOMEI Backupper의 업데이트 파일이 5~7월 사
 - 비교 학습: MCP 공식 사양의 stdio·Streamable HTTP 전송 차이, 다른 MCP 클라이언트의 서버 등록 승인 방식
 
 :::warning
-실습은 반드시 격리된 로컬 랩에서만 한다. 인터넷에 노출된 Langflow 인스턴스를 대상으로 시험하지 않는다. 실습 원칙은 [AI 취약점 진단 실습](/security/ai-for-security/ai-pentest/approach-and-ethics)을 따른다.
+실습은 반드시 격리된 로컬 랩에서만 한다. 인터넷에 노출된 Langflow 인스턴스를 대상으로 시험하지 않는다. 실습 원칙은 [AI 취약점 진단 실습](/lab/ai-pentest/approach-and-ethics)을 따른다.
 :::
 
 **관련 개념**
@@ -291,7 +291,7 @@ Windows 백업 프로그램 AOMEI Backupper의 업데이트 파일이 5~7월 사
 - 실습은 개인 무료 테넌트(Microsoft 365 개발자 프로그램 등)에 테스트 앱을 만들어 권한 부여와 로그를 직접 확인하는 수준으로 한다.
 
 :::warning
-점검과 실습은 본인이 관리 권한을 가진 테스트 테넌트에서만 한다. 다른 조직의 테넌트나 실제 고객 환경에는 시도하지 않는다. 실습 원칙은 [AI 취약점 진단 실습](/security/ai-for-security/ai-pentest/approach-and-ethics)을 따른다.
+점검과 실습은 본인이 관리 권한을 가진 테스트 테넌트에서만 한다. 다른 조직의 테넌트나 실제 고객 환경에는 시도하지 않는다. 실습 원칙은 [AI 취약점 진단 실습](/lab/ai-pentest/approach-and-ethics)을 따른다.
 :::
 
 **관련 개념**

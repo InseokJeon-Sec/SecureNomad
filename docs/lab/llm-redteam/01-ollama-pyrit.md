@@ -1,14 +1,14 @@
 ---
-title: 05. AI(LLM) 취약점 진단 랩 (Ollama + PyRIT)
-sidebar_label: 05. AI 랩 (PyRIT)
-sidebar_position: 6
+title: 01. AI(LLM) 취약점 진단 랩 (Ollama + PyRIT)
+sidebar_label: 01. AI 랩 (PyRIT)
+sidebar_position: 1
 description: Ollama로 로컬 LLM을 띄우고 Microsoft PyRIT로 프롬프트 인젝션·탈옥·시스템 프롬프트 유출을 자동 시도·채점·리포트까지 실습하는 격리 환경 구성
 ---
 
-# 05. AI(LLM) 취약점 진단 랩 (Ollama + PyRIT)
+# 01. AI(LLM) 취약점 진단 랩 (Ollama + PyRIT)
 
 웹 취약점을 다룬 방식 그대로, 이번엔 **LLM 자체**를 진단 대상으로 삼는다.
-프롬프트 인젝션·탈옥(jailbreak)·유해 응답 유도·시스템 프롬프트 유출을 자동으로 시도하고, 그 결과를 **채점·리포트**한다. 기준표는 **OWASP Top 10 for LLM Applications**를 쓴다. (→ [09. MITRE ATLAS](../../ai-security-assessment/09-mitre-atlas.md), [00. 실습 원칙과 범위](./00-approach-and-ethics.md))
+프롬프트 인젝션·탈옥(jailbreak)·유해 응답 유도·시스템 프롬프트 유출을 자동으로 시도하고, 그 결과를 **채점·리포트**한다. 기준표는 **OWASP Top 10 for LLM Applications**를 쓴다. (→ [09. MITRE ATLAS](../../security/ai-security-assessment/09-mitre-atlas.md), [00. 실습 원칙과 범위](../ai-pentest/00-approach-and-ethics.md))
 
 ![AI 취약점 진단 랩 구조](/img/security/lab-ai-pyrit-ko.svg)
 
@@ -90,7 +90,7 @@ asyncio.run(run())
 | 시스템 프롬프트 유출 | LLM07 |
 | 유해·민감 정보 노출 | LLM02 |
 
-전체 기준표는 [08. OWASP LLM Top 10](../../ai-security-assessment/08-owasp-llm-top10.md)을 참고한다.
+전체 기준표는 [08. OWASP LLM Top 10](../../security/ai-security-assessment/08-owasp-llm-top10.md)을 참고한다.
 
 ## 6. 안전·범위
 
@@ -104,6 +104,6 @@ asyncio.run(run())
 - 채점 결과를 **OWASP LLM Top 10 항목별 대응책**으로 정리
 - 웹 랩(04)과 LLM 랩(05) 결과를 한 장의 위협 맵으로 묶기
 
-## 이전
+## 관련
 
-- [04. 웹 취약점 진단 랩 (Kali + HexStrike + Juice Shop)](./04-lab-web-hexstrike.md)
+- [04. 웹 취약점 진단 랩 (Kali + HexStrike + Juice Shop)](../ai-pentest/04-lab-web-hexstrike.md)

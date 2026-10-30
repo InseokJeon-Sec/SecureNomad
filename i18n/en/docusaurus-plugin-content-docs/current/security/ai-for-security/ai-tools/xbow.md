@@ -8,7 +8,7 @@ description: An analysis of XBOW, a commercial autonomous AI penetration-testing
 # XBOW
 
 :::caution About this analysis
-This is analysis to understand the tool, and it must be used **only against authorized targets**. → [Approach & scope](../ai-pentest/00-approach-and-ethics.md)
+This is analysis to understand the tool, and it must be used **only against authorized targets**. → [Approach & scope](../../../lab/ai-pentest/00-approach-and-ethics.md)
 :::
 
 ## At a glance

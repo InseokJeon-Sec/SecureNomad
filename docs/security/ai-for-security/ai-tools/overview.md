@@ -44,5 +44,5 @@ AI 도구에 코드·로그·대상 정보를 입력하면 그 데이터가 **�
 :::caution
 <span className="badge badge--red">공격·진단</span> 분류의 도구는 **반드시 허가된 환경에서만** 사용해야 한다.
 이 문서는 도구를 파악하기 위한 분석이며, 구하는 법·설치·공격 수행법은 다루지 않는다.
-→ [실습 원칙과 범위](../ai-pentest/00-approach-and-ethics.md)
+→ [실습 원칙과 범위](../../../lab/ai-pentest/00-approach-and-ethics.md)
 :::

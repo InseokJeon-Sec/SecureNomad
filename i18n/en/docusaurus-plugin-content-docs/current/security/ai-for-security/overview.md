@@ -10,4 +10,4 @@ description: Using AI as a tool for security - vulnerability assessment, interpr
 A record of **using AI (Claude) as a tool for security work and learning**.
 The focus is on using AI as a **tool for security** rather than discussing AI technology itself.
 
-- **[AI Vulnerability Assessment Lab](/security/ai-for-security/ai-pentest/approach-and-ethics)**: Assessing web vulnerabilities in authorized local environments and interpreting and organizing the process and results with AI
+- **[AI Vulnerability Assessment Lab](/lab/ai-pentest/approach-and-ethics)**: Assessing web vulnerabilities in authorized local environments and interpreting and organizing the process and results with AI

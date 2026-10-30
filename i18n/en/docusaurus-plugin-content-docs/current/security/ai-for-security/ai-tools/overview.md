@@ -44,5 +44,5 @@ When you feed code, logs, or target info into an AI tool, whether that data is *
 :::caution
 Tools in the <span className="badge badge--red">Offense/Assessment</span> category must be used **only in authorized environments**.
 This document is analysis to understand the tools; it does not cover how to obtain, install, or carry out attacks.
-→ [Approach & scope](../ai-pentest/00-approach-and-ethics.md)
+→ [Approach & scope](../../../lab/ai-pentest/00-approach-and-ethics.md)
 :::

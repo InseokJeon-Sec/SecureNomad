@@ -1,14 +1,14 @@
 ---
-title: 05. AI (LLM) Assessment Lab (Ollama + PyRIT)
-sidebar_label: 05. AI Lab (PyRIT)
-sidebar_position: 6
+title: 01. AI (LLM) Assessment Lab (Ollama + PyRIT)
+sidebar_label: 01. AI Lab (PyRIT)
+sidebar_position: 1
 description: An isolated lab that serves a local LLM with Ollama and uses Microsoft PyRIT to attempt prompt injection, jailbreaks, and system-prompt leakage, then scores and reports the results
 ---
 
-# 05. AI (LLM) Assessment Lab (Ollama + PyRIT)
+# 01. AI (LLM) Assessment Lab (Ollama + PyRIT)
 
 Same approach as the web lab, but now the **LLM itself** is the target.
-Automatically attempt prompt injection, jailbreaks, harmful-output elicitation, and system-prompt leakage, then **score and report** the results. The rubric is the **OWASP Top 10 for LLM Applications**. (→ [09. MITRE ATLAS](../../ai-security-assessment/09-mitre-atlas.md), [00. Approach & scope](./00-approach-and-ethics.md))
+Automatically attempt prompt injection, jailbreaks, harmful-output elicitation, and system-prompt leakage, then **score and report** the results. The rubric is the **OWASP Top 10 for LLM Applications**. (→ [09. MITRE ATLAS](../../security/ai-security-assessment/09-mitre-atlas.md), [00. Approach & scope](../ai-pentest/00-approach-and-ethics.md))
 
 ![AI assessment lab architecture](/img/security/lab-ai-pyrit-en.svg)
 
@@ -90,7 +90,7 @@ Keep the same system as the web lab. Map each attempt to the rubric.
 | System-prompt leakage | LLM07 |
 | Harmful / sensitive disclosure | LLM02 |
 
-For the full rubric, see [08. OWASP LLM Top 10](../../ai-security-assessment/08-owasp-llm-top10.md).
+For the full rubric, see [08. OWASP LLM Top 10](../../security/ai-security-assessment/08-owasp-llm-top10.md).
 
 ## 6. Safety & scope
 
@@ -104,6 +104,6 @@ For the full rubric, see [08. OWASP LLM Top 10](../../ai-security-assessment/08-
 - Turn scoring results into **per-item OWASP LLM Top 10 mitigations**
 - Combine web-lab (04) and LLM-lab (05) results into one threat map
 
-## Previous
+## Related
 
-- [04. Web Assessment Lab (Kali + HexStrike + Juice Shop)](./04-lab-web-hexstrike.md)
+- [04. Web Assessment Lab (Kali + HexStrike + Juice Shop)](../ai-pentest/04-lab-web-hexstrike.md)

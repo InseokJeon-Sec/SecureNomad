@@ -9,7 +9,7 @@ description: An analysis of ARTEX, an LLM multi-agent autonomous penetration-tes
 
 :::caution About this analysis
 This document is an **analysis to understand** the tool called ARTEX. It does not cover how to obtain, install/configure, or carry out attacks.
-ARTEX's source is currently closed, and **use against unauthorized targets is illegal**. → [Approach & scope](../ai-pentest/00-approach-and-ethics.md)
+ARTEX's source is currently closed, and **use against unauthorized targets is illegal**. → [Approach & scope](../../../lab/ai-pentest/00-approach-and-ethics.md)
 :::
 
 ## At a glance

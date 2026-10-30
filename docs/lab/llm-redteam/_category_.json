@@ -1,0 +1,10 @@
+{
+  "label": "LLM 레드팀 실습",
+  "position": 3,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "LLM 레드팀 실습 (AI 취약점 진단)",
+    "description": "로컬 LLM(Ollama)을 대상으로 PyRIT로 프롬프트 인젝션·탈옥·시스템 프롬프트 유출을 시도하고 그 결과를 채점·리포트하는 격리 실습입니다. 공격 자동화가 아니라 탐지·방어와 OWASP LLM Top 10 대응에 초점을 둡니다."
+  }
+}
