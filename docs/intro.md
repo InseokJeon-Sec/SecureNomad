@@ -33,6 +33,11 @@ import RecentPosts from '@site/src/components/RecentPosts';
     <span className="home-card__title">Security →</span>
     <span className="home-card__desc">취약점 · 공격 기법 · 대응 방법, AI for Security</span>
   </a>
+  <a className="home-card" href="/lab/ai-pentest/approach-and-ethics">
+    <span className="home-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M9 3h6"/><path d="M10 3v6l-5 9a1.5 1.5 0 0 0 1.3 2.2h11.4A1.5 1.5 0 0 0 19 18l-5-9V3"/><path d="M8 15h8"/></svg></span>
+    <span className="home-card__title">Lab →</span>
+    <span className="home-card__desc">격리 랩에서 직접 해보는 취약점 진단 · LLM 레드팀 실습</span>
+  </a>
   <a className="home-card" href="/topics">
     <span className="home-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 6c-2-1.3-5-1.8-8-1v13c3-.8 6-.3 8 1 2-1.3 5-1.8 8-1V5c-3-.8-6-.3-8 1z"/><path d="M12 6v13"/></svg></span>
     <span className="home-card__title">Topics →</span>

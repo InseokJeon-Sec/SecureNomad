@@ -12,7 +12,6 @@ description: Inseok Jeon — 침해대응·보안관제·보안 거버넌스 20�
 <span className="badge badge--blue">건국대 겸임교수</span>
 <span className="badge badge--purple">CISSP · CISA</span>
 <span className="badge badge--green">정보보호 논문 8편</span>
-<span className="badge badge--tag">고려대 정보보호 박사 수료</span>
 </p>
 
 침해사고 대응과 보안관제로 보안 일을 시작해, 지금은 글로벌 제조 기업의 보안을 총괄하고 있습니다. 2017년부터는 건국대학교 정보통신대학원에서 겸임교수로 석·박사 과정을 가르칩니다. 현장에서 부딪힌 문제를 강의로 정리하고, 강의에서 정리한 내용을 다시 현장에 적용하는 일을 오래 반복해 왔습니다.
@@ -31,7 +30,6 @@ description: Inseok Jeon — 침해대응·보안관제·보안 거버넌스 20�
 
 ## 연구 · 학력
 
-- 고려대학교 정보보호대학원 박사 수료 (정보보안)
 - 건국대학교 정보통신대학원 석사 (정보보안)
 - 정보보호학회논문지 등에 논문 8편 (KCI급 5편) — 의료 랜섬웨어 대응, 스마트팩토리 보안 교육과정, SIEM 취약점 탐지 모델, 원격의료 위험평가, 공급망 위험관리, DevOps 보안 등
 

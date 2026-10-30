@@ -12,7 +12,6 @@ description: Inseok Jeon — a security practitioner with 20 years in incident r
 <span className="badge badge--blue">Adjunct Professor, Konkuk Univ.</span>
 <span className="badge badge--purple">CISSP · CISA</span>
 <span className="badge badge--green">8 security papers</span>
-<span className="badge badge--tag">Ph.D. coursework, Korea Univ.</span>
 </p>
 
 I started in security with incident response and security monitoring, and today I lead security for a global manufacturing company. Since 2017 I have also taught master's and doctoral courses as an adjunct professor at Konkuk University's Graduate School of Information and Telecommunications. For a long time I have gone back and forth — turning problems I hit in the field into lectures, and bringing what I organize in lectures back to the field.
@@ -31,7 +30,6 @@ What I value most is not leaning too far toward either technical or managerial s
 
 ## Research · Education
 
-- Korea University, Graduate School of Information Security — Ph.D. coursework completed (Information Security)
 - Konkuk University — M.S. (Information Security)
 - 8 papers (5 in KCI-indexed journals) — healthcare ransomware response, smart-factory security training curricula, a SIEM vulnerability-detection model, telemedicine risk assessment, supply-chain risk management, DevOps security, and more
 
