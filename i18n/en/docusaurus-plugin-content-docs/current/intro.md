@@ -38,6 +38,11 @@ import RecentPosts from '@site/src/components/RecentPosts';
     <span className="home-card__title">Lab →</span>
     <span className="home-card__desc">Hands-on vulnerability assessment and LLM red-teaming in an isolated lab</span>
   </a>
+  <a className="home-card" href="/en/certs/overview">
+    <span className="home-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="9" r="5"/><path d="M9 13.2L7 21l5-3 5 3-2-7.8"/></svg></span>
+    <span className="home-card__title">Certs →</span>
+    <span className="home-card__desc">AWS certification study notes — starting with SAA-C03</span>
+  </a>
   <a className="home-card" href="/en/topics">
     <span className="home-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 6c-2-1.3-5-1.8-8-1v13c3-.8 6-.3 8 1 2-1.3 5-1.8 8-1V5c-3-.8-6-.3-8 1z"/><path d="M12 6v13"/></svg></span>
     <span className="home-card__title">Topics →</span>
