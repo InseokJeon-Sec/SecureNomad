@@ -210,6 +210,7 @@ const config = {
             ],
           },
           {type: 'docSidebar', sidebarId: 'labSidebar', position: 'left', label: 'Lab'},
+          {type: 'docSidebar', sidebarId: 'certsSidebar', position: 'left', label: 'Certs'},
           {type: 'docSidebar', sidebarId: 'topicsSidebar', position: 'left', label: 'Topics'},
           {to: '/notes', label: 'Notes', position: 'left'},
           {type: 'localeDropdown', position: 'right'},

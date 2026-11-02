@@ -1,0 +1,10 @@
+{
+  "label": "AWS SAA-C03",
+  "position": 2,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "AWS Certified Solutions Architect – Associate (SAA-C03)",
+    "description": "SAA-C03 시험의 4개 도메인별 공부 항목을 정리합니다. 아키텍처 설계 관점에서 보안·복원력·성능·비용을 다룹니다."
+  }
+}
