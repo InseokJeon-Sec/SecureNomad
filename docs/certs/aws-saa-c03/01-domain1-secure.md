@@ -10,7 +10,7 @@ description: SAA-C03 Domain 1 — IAM 접근 제어와 네트워크·보안 서�
 시험 비중이 가장 큰 도메인이다. 외우기보다 **"이 요구사항에는 어떤 서비스/구성이 맞는가"** 를 연결하는 힘을 묻는다. 그래서 각 서비스가 **무슨 문제를 푸는지**, 그리고 **비슷한 서비스와 어떻게 갈리는지**를 이해하는 게 핵심이다.
 
 :::note 이 문서의 구성
-**1.1 IAM → 1.2 네트워크·보안 서비스 → 1.3 데이터 보호(암호화)** 를 모두 다루고, 마지막에 **연습문제(해설 포함)** 로 자가 점검한다. 이 문서 하나로 Domain 1을 커버하는 것을 목표로 한다.
+**1.1 IAM → 1.2 네트워크·보안 서비스 → 1.3 데이터 보호(암호화) → 1.4 감사·거버넌스·추가 접근 통제** 를 모두 다루고, 마지막에 **연습문제 35개(해설 포함)** 로 자가 점검한다. 이 문서 하나로 Domain 1을 커버하는 것을 목표로 한다.
 :::
 
 ---
@@ -231,6 +231,46 @@ KMS의 핵심 개념이다. 데이터를 **데이터 키(DEK)** 로 암호화하
 
 ---
 
+## 1.4 감사·거버넌스와 추가 접근 통제
+
+시험에서 "누가 무엇을 했는지 추적", "규정 위반 구성 탐지", "S3 공개 유출 방지" 같은 요구가 자주 나온다. 아래가 그 단골 서비스들이다.
+
+### 감사·추적 — 누가 무엇을 했나
+
+- **CloudTrail**: 계정의 **모든 API 호출을 기록**한다. "누가 이 리소스를 지웠나/바꿨나"를 추적하는 기본 도구. 로그는 S3에 저장하고, **다중 리전·조직 트레일**로 전 계정을 한 번에 커버한다. 변조 방지를 위해 **별도 계정·버킷**에 보관하고 로그 파일 무결성 검증을 켠다.
+- **AWS Config**: 리소스의 **구성 상태와 변경 이력**을 기록하고, **Config Rules**로 "암호화 안 된 EBS가 있나", "퍼블릭 S3가 있나" 같은 **컴플라이언스를 지속 평가**한다. 위반 시 자동 교정(remediation)도 가능.
+- **CloudTrail(누가 호출했나)과 Config(무엇이 어떻게 구성됐나)는 짝**으로 외운다.
+- **VPC Flow Logs**: VPC·서브넷·ENI의 **트래픽 메타데이터**를 기록한다. 네트워크 조사와 GuardDuty 입력에 쓰인다.
+
+### S3 접근 통제 (단골)
+
+- **Block Public Access(BPA)**: 버킷·계정 단위로 **퍼블릭 노출을 원천 차단**. 기본으로 켜져 있다. "S3 공개 유출 방지"의 1순위 답.
+- **버킷 정책 vs ACL**: 접근 제어는 **버킷 정책(및 IAM)** 을 쓴다. ACL은 레거시이고, 교차계정·세밀 제어는 버킷 정책으로.
+- **사전서명 URL(presigned URL)**: 비공개 객체를 **일정 시간만** 접근하도록 임시 URL을 발급한다. "비공개 파일을 특정 사용자에게 한시적으로 제공" → presigned URL.
+- **S3 Access Points**: 공유 버킷에 애플리케이션별 접근 정책을 분리해 준다.
+
+### IAM 심화 — 조건 키와 MFA
+
+- **조건 키(Condition)** 로 세밀하게 제어한다: `aws:SourceIp`(특정 IP에서만), `aws:MultiFactorAuthPresent`(MFA 했을 때만), `aws:SecureTransport`(TLS만), `aws:PrincipalOrgID`(우리 조직 계정만).
+- **민감 작업에 MFA 강제**: 정책 Condition에 `aws:MultiFactorAuthPresent: true`를 넣는다.
+- **점검 도구**: IAM Access Analyzer(외부 노출 권한), 자격 증명 보고서, Access Advisor(마지막 사용 시점).
+
+### 리소스 공유·신원
+
+- **AWS RAM(Resource Access Manager)**: 서브넷·Transit Gateway·프라이빗 CA 등을 **계정 간 공유**한다.
+- **Cognito 구분**: **사용자 풀(User Pool)** = 앱 로그인·회원 관리(**인증**), **자격 증명 풀(Identity Pool)** = 로그인 결과를 **임시 AWS 자격 증명**으로 교환(**인가**). 둘을 함께 쓰기도 한다.
+- **STS 세션**: AssumeRole로 받은 임시 자격 증명은 **만료 시간**이 있다(기본·최대값 설정 가능).
+
+:::tip 1.4 시험 포인트
+- **누가 호출했나 → CloudTrail**, **구성이 규정에 맞나 → AWS Config**.
+- **S3 공개 차단 → Block Public Access**, 접근 제어는 **버킷 정책**(ACL 아님).
+- **비공개 객체 한시 접근 → presigned URL**.
+- **특정 IP·MFA·TLS·조직 제한 → Condition 키**(`aws:SourceIp` / `MultiFactorAuthPresent` / `SecureTransport` / `PrincipalOrgID`).
+- **계정 간 리소스 공유 → RAM**. **Cognito 사용자 풀(인증) vs 자격 증명 풀(임시 자격 증명)**.
+:::
+
+---
+
 ## 연습문제 (Domain 1)
 
 실제 시험처럼 "요구사항 → 적합한 구성"을 고르는 연습이다. 먼저 스스로 답을 정한 뒤 해설을 펼쳐 확인한다.
@@ -395,4 +435,124 @@ KMS의 핵심 개념이다. 데이터를 **데이터 키(DEK)** 로 암호화하
 어딘가에 **명시적 Deny**가 있거나(SCP·버킷 정책·Permission Boundary 포함), 상위 **SCP가 범위를 막고** 있을 가능성이 높다. 평가 로직상 **명시적 Deny는 어떤 Allow보다 우선**한다.
 </details>
 
-> 20문항을 막힘없이 설명할 수 있으면 Domain 1은 충분히 준비된 것이다. 틀린 문항은 위 본문의 해당 절로 돌아가 다시 본다.
+**Q21.** 누군가 운영 환경의 S3 버킷을 삭제했다. "누가, 언제, 어떤 API로" 했는지 확인하려면?
+
+<details>
+<summary>정답·해설</summary>
+
+**AWS CloudTrail**을 본다. 계정의 모든 API 호출(누가·언제·무엇을)을 기록한다. 네트워크 트래픽(VPC Flow Logs)이나 구성 상태(Config)와 혼동하지 말 것.
+</details>
+
+**Q22.** 조직 내에 **암호화되지 않은 EBS 볼륨**이나 **퍼블릭 S3 버킷**이 생기면 지속적으로 탐지하고, 가능하면 자동 교정하고 싶다.
+
+<details>
+<summary>정답·해설</summary>
+
+**AWS Config + Config Rules.** 리소스 구성을 규칙으로 지속 평가하고 위반 시 자동 교정(remediation)까지 할 수 있다. "누가 호출했나"는 CloudTrail, "구성이 규정에 맞나"는 Config.
+</details>
+
+**Q23.** 실수로 인한 **S3 퍼블릭 노출을 계정 전체에서 원천 차단**하려 한다.
+
+<details>
+<summary>정답·해설</summary>
+
+**S3 Block Public Access(BPA)** 를 계정·버킷 단위로 켠다. 개별 버킷 정책 실수와 무관하게 퍼블릭 접근을 막는다.
+</details>
+
+**Q24.** 비공개 S3 객체를, 로그인 없는 특정 사용자에게 **10분 동안만** 다운로드하게 하려 한다.
+
+<details>
+<summary>정답·해설</summary>
+
+**사전서명 URL(presigned URL)** 을 발급한다. 만료 시간이 있는 임시 URL로, 버킷을 공개하지 않고도 한시적 접근을 준다.
+</details>
+
+**Q25.** IAM 사용자가 EC2 종료 같은 민감 작업을 할 때 **반드시 MFA를 한 상태**에서만 허용하려 한다.
+
+<details>
+<summary>정답·해설</summary>
+
+정책 **Condition에 `aws:MultiFactorAuthPresent: true`** 를 넣는다. MFA 인증된 세션에서만 그 작업이 허용된다.
+</details>
+
+**Q26.** 특정 작업을 **회사 사무실 IP 대역에서 접속했을 때만** 허용하려 한다.
+
+<details>
+<summary>정답·해설</summary>
+
+정책 Condition에 **`aws:SourceIp`** 로 허용 IP 대역을 지정한다. (조직 계정만 허용이면 `aws:PrincipalOrgID`.)
+</details>
+
+**Q27.** 여러 AWS 계정이 **같은 서브넷·Transit Gateway를 공유**해서 쓰게 하려 한다.
+
+<details>
+<summary>정답·해설</summary>
+
+**AWS RAM(Resource Access Manager)** 으로 계정 간 리소스를 공유한다. 계정마다 중복 생성하지 않는다.
+</details>
+
+**Q28.** 모바일 앱에서 **이메일/소셜 로그인으로 회원을 관리**하고, 로그인한 사용자에게 **임시 AWS 자격 증명**으로 S3 접근까지 주려 한다. 각각 무엇을 쓰나?
+
+<details>
+<summary>정답·해설</summary>
+
+로그인·회원 관리는 **Cognito 사용자 풀(User Pool, 인증)**, 로그인 결과를 임시 AWS 자격 증명으로 바꾸는 것은 **Cognito 자격 증명 풀(Identity Pool, 인가)** 이다. 둘을 함께 쓴다.
+</details>
+
+**Q29.** 교차 계정 접근과 세밀한 조건이 필요한 S3 접근 제어를 설정하려 한다. 버킷 ACL과 버킷 정책 중?
+
+<details>
+<summary>정답·해설</summary>
+
+**버킷 정책(및 IAM).** ACL은 레거시이며 세밀·교차계정 제어에 적합하지 않다. AWS도 버킷 정책/IAM 사용을 권장한다.
+</details>
+
+**Q30.** 프라이빗 서브넷에서 비정상 네트워크 흐름을 조사하려고 **트래픽 메타데이터(출발지/목적지/포트/허용·거부)** 를 남기려 한다.
+
+<details>
+<summary>정답·해설</summary>
+
+**VPC Flow Logs**를 켠다. ENI·서브넷·VPC 단위 트래픽 메타데이터를 기록하며, GuardDuty의 입력으로도 쓰인다.
+</details>
+
+**Q31.** CloudTrail 로그가 **공격자에 의해 삭제·변조되는 것**을 막고 싶다.
+
+<details>
+<summary>정답·해설</summary>
+
+로그를 **별도(로그 전용) 계정의 S3 버킷**에 모으고, 버킷에 MFA Delete·객체 잠금·엄격한 정책을 적용하며, **로그 파일 무결성 검증**을 켠다. 운영 계정 관리자도 지우지 못하게 분리하는 게 핵심.
+</details>
+
+**Q32.** 어떤 IAM 역할이 실제로는 쓰지 않는 **과도한 권한**을 갖고 있는지 정리하려 한다.
+
+<details>
+<summary>정답·해설</summary>
+
+**IAM Access Advisor**(마지막 사용 시점)로 미사용 권한을 찾고, **Access Analyzer**로 외부·교차계정 노출을 점검한다. 최소 권한으로 좁힌다.
+</details>
+
+**Q33.** 하나의 대형 공유 버킷을 여러 팀/애플리케이션이 쓰는데, **각자 다른 접근 정책**을 깔끔하게 적용하려 한다.
+
+<details>
+<summary>정답·해설</summary>
+
+**S3 Access Points**를 사용한다. 버킷 하나에 애플리케이션별 접근 지점·정책을 분리해 관리한다.
+</details>
+
+**Q34.** 애플리케이션이 교차 계정 역할을 맡아 작업하는데, 자격 증명이 **영구적이지 않고 일정 시간 뒤 만료**되길 원한다.
+
+<details>
+<summary>정답·해설</summary>
+
+**STS AssumeRole로 받은 임시 자격 증명**은 본래 만료 시간이 있다(세션 기간 설정 가능). 장기 액세스 키 대신 이 방식을 쓰는 것이 안전하다.
+</details>
+
+**Q35.** 전 계정에서 "모든 S3 버킷은 전송 중 암호화(TLS)만 허용"을 강제하려 한다. 버킷 정책에서?
+
+<details>
+<summary>정답·해설</summary>
+
+버킷 정책에서 **`aws:SecureTransport`가 `false`인 요청을 Deny**한다(즉 HTTP 접근 차단). 여러 계정에 일괄 적용하려면 조직 차원 가드레일(SCP)과 함께 쓴다.
+</details>
+
+> 35문항을 막힘없이 설명할 수 있으면 Domain 1은 충분히 준비된 것이다. 틀린 문항은 위 본문의 해당 절로 돌아가 다시 본다.
