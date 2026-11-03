@@ -5,7 +5,13 @@ sidebar_position: 1
 description: 도구를 사용하는 에이전트, 함수 호출, 표준 연결 규약 MCP
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 10. AI 에이전트 · 툴 · MCP
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="xCV3_N71UH0" title="AI가 '말'을 넘어 '행동'하면? — 에이전트와 MCP, 그리고 커지는 위험 (보안 관점) | AI 바로 알기 #5" />
 
 기본 LLM은 질문에 답하는 수동적 모델이다. 여기에 도구를 부여해 스스로 작업을 수행하게 한 것이 **AI 에이전트**다.
 

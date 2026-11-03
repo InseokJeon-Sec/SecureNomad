@@ -5,7 +5,11 @@ sidebar_position: 1
 description: Agents that use tools, function calling, and the standard connection protocol MCP
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 10. AI Agents · Tools · MCP
+
+<YouTube id="xCV3_N71UH0" title="When AI moves beyond words to action — Agents, MCP, and the growing risk (security view) | AI 바로 알기 #5" />
 
 A base LLM is a passive model that answers questions. Giving it tools so it performs tasks on its own makes an **AI agent**.
 
