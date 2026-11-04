@@ -5,7 +5,11 @@ sidebar_position: 2
 description: Multimodal AI that handles images, audio, and documents beyond text
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 11. Multimodal
+
+<YouTube id="ptnSW_lSzxM" title="When images and audio become AI input — Multimodal and instructions hidden in images (security view) | AI 바로 알기 #6" />
 
 **Multimodal** AI understands/generates several modalities together — images, audio, documents, video — in addition to text.
 

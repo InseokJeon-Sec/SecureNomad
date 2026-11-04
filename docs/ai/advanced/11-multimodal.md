@@ -5,7 +5,13 @@ sidebar_position: 2
 description: 텍스트 외 이미지·음성·문서를 함께 다루는 멀티모달 AI
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 11. 멀티모달
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="ptnSW_lSzxM" title="이미지·음성이 AI의 입력이 되면? — 멀티모달과 '이미지 속에 숨긴 지시' (보안 관점) | AI 바로 알기 #6" />
 
 **멀티모달** AI는 텍스트에 더해 이미지·음성·문서·영상 등 여러 형태(modality)를 함께 이해·생성한다.
 
