@@ -5,7 +5,11 @@ sidebar_position: 4
 description: Comparison of the three ways to inject knowledge/behavior, and how to choose
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 09. Fine-tuning vs RAG vs Prompting
+
+<YouTube id="Px_tmq-Xx1I" title="Fine-tuning a model on your own data — what gets permanently baked in (security view) | AI 바로 알기 #7" />
 
 There are three ways to make AI behave as intended; they don't compete — they serve different purposes.
 

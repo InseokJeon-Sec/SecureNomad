@@ -5,7 +5,13 @@ sidebar_position: 4
 description: 지식·행동을 주입하는 세 방법의 비교와 선택 기준
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 09. 파인튜닝 vs RAG vs 프롬프트
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="Px_tmq-Xx1I" title="내 데이터로 AI를 '길들이면'? — 파인튜닝과 '학습 데이터에 새겨지는 위험' (보안 관점) | AI 바로 알기 #7" />
 
 AI를 원하는 대로 동작시키는 방법은 세 가지이며, 경쟁이 아니라 용도가 다르다.
 
