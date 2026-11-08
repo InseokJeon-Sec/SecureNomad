@@ -11,18 +11,18 @@ description: AWS 자격증 학습 로드맵 — SAA-C03를 시작으로 AI Pract
 
 ## 학습 순서
 
-1. **AWS Certified Solutions Architect – Associate (SAA-C03)** ← 현재 진행 중
-2. **AWS Certified AI Practitioner**
-3. **Generative AI Developer – Professional**
-4. **AWS Certified Security – Specialty**
+1. **AWS Certified Solutions Architect – Associate (SAA-C03)** ✅ 완료
+2. **AWS Certified AI Practitioner (AIF-C01)** ✅ 완료
+3. **Generative AI Developer – Professional (AIP-C01)** ⚪ 예정
+4. **AWS Certified Security – Specialty (SCS-C02)** ⚪ 예정
 
 ## 진행 현황
 
 | 자격증 | 상태 | 비고 |
 | --- | --- | --- |
-| SAA-C03 | 🟡 정리 중 (항목 스캐폴딩 완료) | 4개 도메인 공부 항목 지도 작성 |
-| AI Practitioner | ⚪ 예정 | SAA 이후 |
+| SAA-C03 | 🟢 완료 | 4개 도메인 + 보충(변두리 서비스) + 시나리오 모의고사 |
+| AI Practitioner (AIF-C01) | 🟢 완료 | 5개 도메인 개념 정리 + 연습문제 |
 | Generative AI Developer – Pro | ⚪ 예정 | — |
 | Security – Specialty | ⚪ 예정 | — |
 
-> 각 항목은 먼저 **공부 항목(목차)** 을 만들고, 이후 세부 정리를 채워 나갑니다.
+> SAA-C03와 AI Practitioner는 **정리본만으로 시험 준비**가 가능하도록 개념 + 연습문제까지 채웠습니다. 나머지 두 트랙은 추후 진행합니다.

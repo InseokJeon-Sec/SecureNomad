@@ -1,12 +1,17 @@
 ---
-title: 00. AWS Certified AI Practitioner
+title: 00. Exam Overview
 sidebar_label: 00. Overview
 sidebar_position: 1
-description: AWS Certified AI Practitioner study items (planned)
+description: AWS Certified AI Practitioner (AIF-C01) exam format and study roadmap
 ---
 
-# AWS Certified AI Practitioner
+# AWS Certified AI Practitioner (AIF-C01)
 
-> **Planned** — notes begin after SAA-C03. Menu placeholder for now.
+> Full study content is in the Korean version.
 
-See the [Certification Roadmap](../overview) for status.
+- Exam: 65 questions (50 scored), 90 min, pass 700/1000, USD 100, 3-year validity
+- Domain 1: Fundamentals of AI and ML (20%)
+- Domain 2: Fundamentals of Generative AI (24%)
+- Domain 3: Applications of Foundation Models (28%)
+- Domain 4: Guidelines for Responsible AI (14%)
+- Domain 5: Security, Compliance, and Governance for AI Solutions (14%)
