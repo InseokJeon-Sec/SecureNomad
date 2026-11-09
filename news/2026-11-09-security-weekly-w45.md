@@ -306,7 +306,7 @@ GitHub 소스에서 `npm run build`를 돌리면 GitLab을 데드드롭으로 �
 - 탐지: 비정상적으로 긴 비밀번호 시도와 키 전용 계정의 비밀번호 인증 성공을 `sshd` 로그에서 찾는 규칙을 써 본다. `PasswordAuthentication no` 설정이 왜 사실상 완화책인지도 정리한다.
 
 :::warning
-재현은 반드시 격리된 로컬 랩에서만 한다. 인터넷에 연결되지 않은 가상 머신이나 로컬 전용 네트워크의 컨테이너만 대상으로 하고, 외부 SSH 서버에는 어떤 시도도 하지 않는다. 실습 원칙은 [AI 취약점 진단 실습](/ai/ai-pentest/approach-and-ethics)을 따른다.
+재현은 반드시 격리된 로컬 랩에서만 한다. 인터넷에 연결되지 않은 가상 머신이나 로컬 전용 네트워크의 컨테이너만 대상으로 하고, 외부 SSH 서버에는 어떤 시도도 하지 않는다. 실습 원칙은 [AI 취약점 진단 실습](/lab/ai-pentest/approach-and-ethics)을 따른다.
 :::
 
 **관련 개념**
@@ -329,7 +329,7 @@ GitHub 소스에서 `npm run build`를 돌리면 GitLab을 데드드롭으로 �
 - 자기 저장소의 워크플로에서 `pull_request_target` 사용처를 찾고, 11월 9일·16일 시험 차단 때 실패 여부를 확인한다. `pull_request`와 `workflow_run` 조합으로 바꿀 수 있는지 검토한다.
 
 :::warning
-악성 gem 샘플을 내려받아 설치하지 않는다. 설치 훅 실습은 직접 만든 무해한 gem으로, 네트워크가 끊긴 격리된 로컬 랩의 가상 머신에서만 한다. 실습 원칙은 [AI 취약점 진단 실습](/ai/ai-pentest/approach-and-ethics)을 따른다.
+악성 gem 샘플을 내려받아 설치하지 않는다. 설치 훅 실습은 직접 만든 무해한 gem으로, 네트워크가 끊긴 격리된 로컬 랩의 가상 머신에서만 한다. 실습 원칙은 [AI 취약점 진단 실습](/lab/ai-pentest/approach-and-ethics)을 따른다.
 :::
 
 **관련 개념**
