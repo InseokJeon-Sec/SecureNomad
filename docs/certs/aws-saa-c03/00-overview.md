@@ -39,6 +39,9 @@ description: SAA-C03 시험 형식, 도메인 비중, 공부 로드맵과 전체
 - [Domain 2 — 복원력 아키텍처 설계](./domain2-resilient)
 - [Domain 3 — 고성능 아키텍처 설계](./domain3-high-performing)
 - [Domain 4 — 비용 최적화 아키텍처 설계](./domain4-cost-optimized)
+- [05. 보충 — 빈출 변두리 서비스](./supplement)
+- [06. 시나리오 모의고사](./practice-exam)
+- [07. 서비스·용어 한 줄 사전](./glossary)
 
 :::tip 작성 현황
 네 도메인 모두 **개념 정리 + 연습문제(해설 포함)** 까지 완성되었습니다 — Domain 1: 35문제 · Domain 2: 32문제 · Domain 3: 34문제 · Domain 4: 30문제 (총 131문제). 각 문서 하나로 해당 도메인을 커버하도록 구성했습니다.

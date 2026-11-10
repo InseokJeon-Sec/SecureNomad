@@ -7,6 +7,10 @@ description: AIF-C01 Domain 3 — 프롬프트 엔지니어링·RAG·파인튜�
 
 # Domain 3 — 파운데이션 모델의 활용 (28%)
 
+:::tip 모르는 서비스·용어가 나오면
+처음 나오는 서비스·모델·약어는 괄호로 짧게 설명을 달았다. 전체 목록과 한 줄 뜻은 **[한 줄 사전](./06-glossary.md)** 에서 한 번에 찾을 수 있다.
+:::
+
 **비중이 가장 큰 도메인**이다. FM을 실제로 **어떻게 활용·커스터마이징·평가하는가**를 묻는다. 프롬프트 → RAG → 파인튜닝의 선택, 추론 파라미터, 평가 방법, 그리고 Bedrock의 기능이 핵심이다.
 
 :::note 이 문서의 구성
@@ -34,7 +38,7 @@ description: AIF-C01 Domain 3 — 프롬프트 엔지니어링·RAG·파인튜�
 판단 순서: **프롬프트로 해결 → 지식 부족이면 RAG → 스타일·전문성 필요하면 파인튜닝.**
 
 - **RAG(검색 증강 생성)**: 질문을 임베딩해 **벡터DB**에서 관련 문서를 찾아 프롬프트에 붙인다. 환각·지식한계를 줄이고 출처를 댈 수 있다.
-- **벡터 저장소 옵션(AWS)**: OpenSearch(벡터), Aurora/RDS(pgvector), Neptune, 그리고 Bedrock Knowledge Bases가 이를 묶어 관리.
+- **벡터 저장소 옵션(AWS)**: OpenSearch(벡터), Aurora/RDS(pgvector = PostgreSQL 벡터 검색 확장), Neptune, 그리고 Bedrock Knowledge Bases가 이를 묶어 관리.
 - **파인튜닝 종류**: 지도 파인튜닝, **도메인 적응(continued pre-training)**. 데이터 품질·프라이버시가 관건(학습 데이터가 모델에 영구히 남는다).
 
 ## 3.3 추론 파라미터 — 출력 성향 조절

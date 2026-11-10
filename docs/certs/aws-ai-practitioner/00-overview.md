@@ -46,6 +46,7 @@ AWS의 **입문(Foundational) 등급 AI 자격증**이다. 코드를 짜게 하�
 - [Domain 3 — 파운데이션 모델의 활용](./domain3-foundation-models)
 - [Domain 4 — 책임 있는 AI](./domain4-responsible-ai)
 - [Domain 5 — 보안·규정 준수·거버넌스](./domain5-security-governance)
+- [06. 서비스·모델·용어 한 줄 사전](./glossary)
 
 :::tip 참고
 이 트랙은 유튜브 'AI 바로 알기' 시리즈와 개념이 많이 겹친다(토큰·프롬프트·RAG·파인튜닝·멀티모달·환각 등). 영상으로 개념을 잡고 이 문서로 AWS 서비스 매핑을 더하면 효율적이다.
