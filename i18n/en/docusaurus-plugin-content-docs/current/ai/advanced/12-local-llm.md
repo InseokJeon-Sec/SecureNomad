@@ -5,7 +5,11 @@ sidebar_position: 3
 description: The concept, trade-offs, and security meaning of running an LLM in your own environment
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 12. Local LLM
+
+<YouTube id="woci61Mrm8A" title="Running AI on your own PC — local LLMs, open weights, and 'the model is a supply chain too' (security view) | AI 바로 알기 #9" />
 
 A **local LLM** runs on your own PC/in-house server rather than an external service.
 

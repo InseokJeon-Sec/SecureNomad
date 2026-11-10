@@ -5,7 +5,13 @@ sidebar_position: 3
 description: 내 환경에서 직접 실행하는 로컬 LLM의 개념·장단점·보안 의미
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 12. 로컬 LLM
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="woci61Mrm8A" title="AI를 내 PC에서 직접 돌리면? — 로컬 LLM·오픈웨이트와 '모델도 공급망이다' (보안 관점) | AI 바로 알기 #9" />
 
 **로컬 LLM**은 외부 서비스가 아니라 내 PC·사내 서버에서 직접 실행하는 모델이다.
 
