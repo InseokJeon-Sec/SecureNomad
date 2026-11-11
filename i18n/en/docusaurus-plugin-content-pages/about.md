@@ -20,13 +20,13 @@ What I value most is not leaning too far toward either technical or managerial s
 
 ## What I do now
 
-- **IBM Korea · IBM Security, Security Manager** — Security lead PM for a global manufacturing client. SOC and OT security operations, enterprise incident response, cloud and endpoint security, ISMS/ISO 27001 support.
-- **Konkuk University, Graduate School of Information and Telecommunications · Adjunct Professor** — Teaching cybersecurity response frameworks, cloud security, network security, and analysis of recent hacking cases at the master's and doctoral level.
+- **IBM Korea · IBM Security, Security Manager (2018–present)** — Security lead PM for a global manufacturing client. SOC and OT security operations, enterprise incident response, cloud and endpoint security, ISMS/ISO 27001 support.
+- **Konkuk University, Graduate School of Information and Telecommunications · Adjunct Professor (2017–present)** — Teaching cybersecurity response frameworks, cloud security, network security, and analysis of recent hacking cases at the master's and doctoral level.
 
 ## The path here
 
-- **AhnLab CERT, Senior Researcher (9 years)** — Ran security monitoring as PM/QM for 25+ large sites across public, finance, gaming, and internet sectors. Intrusion detection and response, monitoring-framework consulting, and incident-response process design.
-- **Personal information protection officer (3.5 years)** — Established the privacy policy and the collection/use/disposal processes, ran employee training, and handled audits.
+- **AhnLab CERT, Senior Researcher (2009–2018, 9 years)** — Ran security monitoring as PM/QM for 25+ large sites across public, finance, gaming, and internet sectors. Intrusion detection and response, monitoring-framework consulting, and incident-response process design.
+- **Personal information protection officer (2006–2009, 3.5 years)** — Established the privacy policy and the collection/use/disposal processes, ran employee training, and handled audits.
 
 ## Research · Education
 
