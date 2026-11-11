@@ -5,7 +5,13 @@ sidebar_position: 5
 description: 흩어진 AI 보안 위협을 한 장으로 — AI 공격면, OWASP LLM Top 10, 레이어별 책임과 전 구간 방어 원칙
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 14. AI 보안 위협 지도
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="3HBdkTJiZuY" title="AI 보안 위협, 한 장의 지도로 총정리 — OWASP LLM Top 10 | AI 바로 알기 #10" />
 
 이 시리즈에서 우리는 편마다 AI 보안 위협을 하나씩 만났다 — 프롬프트 인젝션, 지식 포이즈닝, 과도한 권한, 숨긴 지시, 공급망까지. 문제는 이것들이 **흩어져 있어서** "우리 AI는 무엇을 점검해야 하나"를 한눈에 보기 어려웠다는 점이다. 이 문서는 그 위협들을 **한 장의 지도**로 묶고, 널리 쓰이는 표준 분류인 **OWASP LLM Top 10**으로 AI의 공격면을 정리한다.
 

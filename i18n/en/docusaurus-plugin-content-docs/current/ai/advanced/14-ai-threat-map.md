@@ -5,7 +5,13 @@ sidebar_position: 5
 description: Scattered AI security threats on one page — the AI attack surface, OWASP LLM Top 10, per-layer responsibility, and end-to-end defense principles
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 14. AI Threat Map
+
+This page is also available as a video.
+
+<YouTube id="3HBdkTJiZuY" title="AI Threat Map — OWASP LLM Top 10 | AI Essentials #10" />
 
 Across this series we met AI security threats one at a time — prompt injection, knowledge poisoning, excessive agency, hidden instructions, the supply chain. The problem was that they were **scattered**, making it hard to see at a glance "what do we need to check in our AI?" This page pulls those threats into **one map** and organizes the AI attack surface using the widely used standard taxonomy, **OWASP LLM Top 10**.
 
