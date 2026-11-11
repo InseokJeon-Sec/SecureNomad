@@ -54,6 +54,6 @@ description: Inseok Jeon — 침해대응·보안관제·보안 거버넌스 20�
 
 새로운 기회나 협업 제안은 이메일로 편하게 연락 주세요.
 
-- Email: [wilcois@naver.com](mailto:wilcois@naver.com)
+- Email: [securenomad@naver.com](mailto:securenomad@naver.com)
 
 {/* LinkedIn, 프로필 사진 등은 추후 업데이트 */}

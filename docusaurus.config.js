@@ -225,7 +225,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} SecureNomad · Built with Docusaurus<br/>Contact: <a class="footer__link-item" href="mailto:wilcois@naver.com">wilcois@naver.com</a> · <a class="footer__link-item" href="/privacy">Analytics Notice</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} SecureNomad · Built with Docusaurus<br/>Contact: <a class="footer__link-item" href="mailto:securenomad@naver.com">securenomad@naver.com</a> · <a class="footer__link-item" href="/privacy">Analytics Notice</a>`,
       },
       prism: {
         theme: prismThemes.github,

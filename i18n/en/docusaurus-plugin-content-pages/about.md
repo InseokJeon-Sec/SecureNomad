@@ -54,6 +54,6 @@ What I value most is not leaning too far toward either technical or managerial s
 
 Feel free to reach out by email about new opportunities or collaboration.
 
-- Email: [wilcois@naver.com](mailto:wilcois@naver.com)
+- Email: [securenomad@naver.com](mailto:securenomad@naver.com)
 
 {/* LinkedIn and a profile photo to be added later */}
