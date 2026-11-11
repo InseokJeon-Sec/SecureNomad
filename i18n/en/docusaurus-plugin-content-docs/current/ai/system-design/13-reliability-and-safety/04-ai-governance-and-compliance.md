@@ -1,0 +1,244 @@
+---
+title: "AI Governance and Compliance"
+sidebar_position: 4
+description: "Korean-site mirror of the original English chapter from Om Bharatiya's AI System Design Guide (MIT)."
+---
+
+:::info Source / License
+Original (English) from [ai-system-design-guide](https://github.com/ombharatiya/ai-system-design-guide/blob/main/13-reliability-and-safety/04-ai-governance-and-compliance.md) by Om Bharatiya — MIT License, © 2026 Om Bharatiya. Reproduced with attribution; see [About · Source · License](https://github.com/ombharatiya/ai-system-design-guide/blob/main/index.md). Snapshot: upstream `ed955b2` (2026-10-09). Links to not-yet-mirrored chapters point to the original repository.
+:::
+
+Governance is now a delivery constraint, not a policy abstraction. The EU AI Act carries fines up to the greater of 35M euros or 7% of global turnover, US states are passing their own AI laws, and enterprise buyers ask for AI governance evidence in procurement. The good news for engineers: governance maps cleanly onto practices you already run (security, evals, observability, incident response), so the goal is to **emit governance evidence as a byproduct** rather than bolt on a parallel process.
+
+This chapter is time-sensitive. Dates and enforcement status are given **as of October 1, 2026**, and are moving, fastest in US state law; verify against primary sources before relying on a specific date. Items that were provisional at the time of writing are flagged.
+
+## Table of Contents
+
+- [The EU AI Act](#the-eu-ai-act)
+- [NIST AI RMF and the GenAI Profile](#nist-ai-rmf-and-the-genai-profile)
+- [ISO 42001 and Assurance](#iso-42001-and-assurance)
+- [The US Landscape](#the-us-landscape)
+- [Frontier-Lab Safety Frameworks](#frontier-lab-safety-frameworks)
+- [What Engineers Actually Implement](#what-engineers-actually-implement)
+- [A Compliance Checklist](#a-compliance-checklist)
+- [Interview Questions](#interview-questions)
+- [References](#references)
+
+---
+
+## The EU AI Act
+
+Regulation (EU) 2024/1689 is the world's first comprehensive AI law, structured by **risk tier**:
+
+- **Prohibited** (unacceptable risk): social scoring, manipulative or subliminal techniques, untargeted facial-recognition scraping, workplace and school emotion recognition, certain biometric uses. Banned outright.
+- **High-risk** (Annex III use cases like employment, credit, education, biometrics, law enforcement; Annex I AI inside already-regulated products): the full conformity regime: risk management, data governance, technical documentation, logging, human oversight, accuracy and cybersecurity, conformity assessment, and registration.
+- **Limited risk** (chatbots, deepfakes, synthetic media): transparency and labeling obligations only (Article 50).
+- **Minimal risk** (most enterprise tooling): no mandatory obligations.
+- **GPAI / general-purpose models** are a separate cross-cutting layer (Articles 51-55), with extra obligations for "systemic-risk" models above a training-compute threshold (10^25 FLOP).
+
+**Timeline and enforcement status as of October 1, 2026:**
+
+| Date | Milestone | Status |
+|------|-----------|--------|
+| Aug 2024 | Regulation entered into force | Done |
+| Feb 2025 | Prohibited practices + AI-literacy obligations apply | Enforceable now |
+| Aug 2025 | GPAI model obligations, governance, and penalties apply | Enforceable now |
+| **Aug 2026** | **Article 50 transparency obligations apply; Commission gains Article 101 power to fine GPAI providers** | **Enforceable since August 2, 2026** |
+| Dec 2, 2026 | New Article 5 ban on AI-generated CSAM and non-consensual intimate imagery; synthetic-content marking grace period ends for systems already on the market | Scheduled: Reg. (EU) 2026/1744 |
+| Feb 2, 2027 | Watermark-detection interoperability due under the marking Code of Practice | Voluntary code, binds signatories |
+| Dec 2, 2027 | High-risk Annex III obligations apply (delayed ~16 months) | Settled: Reg. (EU) 2026/1744 |
+| Aug 2, 2028 | High-risk Annex I obligations apply (delayed ~1 year) | Settled: Reg. (EU) 2026/1744 |
+
+### What Actually Took Effect on August 2, 2026
+
+This is the date that turned transparency from a roadmap item into an enforceable obligation, and it is the one to design against now.
+
+**Article 50 duties, in the order they hit an engineering backlog:**
+
+1. **Synthetic-content marking.** Providers of AI systems generating synthetic audio, image, video, or text must mark outputs in a machine-readable format detectable as artificially generated or manipulated, using solutions that are effective, interoperable, robust, and reliable as far as technically feasible. Note the grace period: systems already placed on the market before August 2, 2026, have until **December 2, 2026**, to comply with the marking duty, and no retroactive labeling is required for content generated before August 2, 2026. Interaction disclosure and deployer-side deepfake labeling applied immediately.
+2. **AI-interaction disclosure.** Systems that interact directly with people must inform the person they are dealing with an AI, unless that is obvious to a reasonably well-informed person.
+3. **Deepfake and public-interest text labeling** obligations sit on deployers rather than providers, which matters if you supply a platform others publish through.
+
+**The Code of Practice and guidelines turned "effective and interoperable" into a spec.** The Code of Practice on marking AI-generated content was finalized on June 10, 2026, and the Commission and AI Board confirmed it as an adequate voluntary compliance tool (about 190 organizations had signed by the end of July). Its engineering requirements:
+
+- **At least two machine-readable marking layers**: digitally signed, tamper-evident metadata plus an imperceptible watermark. Free-form text and closed physical products need only one.
+- **Text under 200 tokens is exempt** from watermarking, so short chat replies and UI strings need no watermark; long-form text does.
+- Signatories keep existing markings, prohibit intentional removal in their terms or acceptable-use policies, and **provide a detection solution free of charge**, with watermark-detection interoperability due by **February 2, 2027**.
+- Signatory deployers label deepfakes and public-interest text with the EU icon (fully AI-generated, AI-modified, or a basic icon with a second layer) or an equivalent label built on the acronym "AI".
+
+The Commission's final, non-binding **Article 50 guidelines** (July 20, 2026) settle three questions engineers ask. General public awareness of AI does not make an interaction "obvious". **AI agents that interact with people must disclose that they are AI and on whose behalf they act**, which lands directly on email-sending and calling agents. And the editorial-review exemption for public-interest text needs substantive human review that includes fact-checking, with an identifiable person holding editorial responsibility; a rubber-stamp approval does not qualify. Disclosure also has to work beyond a chat banner: customer-facing voice agents can now carry a lifelike real-time face (press coverage reports Gemini 3.8 Live Avatar reached GA in Gemini Enterprise on September 25, 2026, with SynthID in both audio and video), so design the spoken and visual disclosure, not only the text one.
+
+Penalties for Article 50 breaches run to **EUR 15,000,000 or 3% of total worldwide annual turnover, whichever is higher** (Article 99), with SME and startup fines capped at the lower of the two. Separately, **Article 101** switched on the same day: the Commission may now fine providers of general-purpose AI models up to 3% of annual global turnover or EUR 15,000,000 for infringements, for failing to supply requested documentation, or for denying the Commission access to a model for evaluation. That was the last carve-out from the 2025 penalties start date, and it is now closed.
+
+**California landed the same day and has since moved again.** SB 942 as amended by AB 853 became operative on August 2, 2026. A covered provider must embed a latent disclosure carrying the provider name, the system name and version, the creation or alteration timestamp, and a unique identifier, and must offer a free public tool for checking it. Penalties are USD 5,000 per violation with each day counting separately. Two amendments signed on September 30, 2026, changed the details:
+
+- **SB 1000** (an urgency statute, effective immediately) removed the 1,000,000-monthly-user threshold from the covered-provider definition, renamed the detection tool a **disclosure verification tool**, dropped the manifest-disclosure option, and requires the latent disclosure to state whether AI created or altered the content. GenAI systems designed mainly as assistive technology are exempt until January 1, 2029.
+- **AB 2713** (operative January 1, 2027) requires large platforms to detect provenance data and digital signatures, show users which GenAI system or capture device made the content, let users inspect or download that data, and not knowingly strip standards-compliant provenance to the extent technically feasible.
+
+Capture devices first produced for sale from January 1, 2028, must embed latent disclosures by default, and Utah's and Washington's provenance laws take effect on January 1, 2027, and February 1, 2027.
+
+**The practical implication:** the regimes overlap but none contains the others. California is more prescriptive about what a latent disclosure must carry, so use its fields (now including whether AI created or altered the content) as the metadata schema for image, video, and audio. The EU adds what California omits, most importantly **text** marking (California's latent-disclosure duty covers image, video, and audio, and AB 853 excludes AI-generated text) plus AI-interaction disclosure and deployer-side deepfake labeling, and its Code asks for a watermark alongside the metadata. Build the union, not one or the other. Treat the verification tool as a shipped product surface with an SLO and abuse protection, not as a compliance document. And remember the honest limit: marking is removable, so provenance reduces ambiguity for cooperating consumers of content and is not a control against a determined adversary. The law is starting to price removal in, though: the EU Code requires signatories to prohibit it, and AB 2713 bars large platforms from knowingly stripping provenance.
+
+**A note on what marking looks like in production.** Text watermarking moved from research to shipping in this window. Anthropic applies an invisible statistical watermark to Claude's text output, using a version of the SynthID-Text approach published by Google DeepMind; models launched from August 2, 2026, carry it, and older models are being updated over subsequent months. Claude Fable 5.1 (September 1, 2026) carries it on every platform, and media it generates, retrieved through the Files API, carries signed C2PA Content Credentials. It is applied globally rather than only in the EU. If you generate text at scale, the question is no longer whether text marking is feasible.
+
+The delay of high-risk obligations came through the **"Digital Omnibus"** simplification package, which is settled law: it was published in the Official Journal on July 24, 2026, as **Regulation (EU) 2026/1744** and entered into force on July 27, 2026. Annex III use cases apply from **December 2, 2027**, and high-risk AI embedded in regulated products from **August 2, 2028**. The Omnibus did not roll back the prohibitions (Feb 2025), the GPAI obligations (Aug 2025), or the Article 50 transparency duties, all of which are live.
+
+It also **added a prohibition**. From **December 2, 2026**, Article 5 bans AI systems that generate or manipulate realistic non-consensual intimate imagery of identifiable people, or AI-generated CSAM, where that is the intended purpose, and also where it is a reasonably foreseeable and reproducible outcome and the provider has not put reasonable and adequate technical safety measures in place. Deployers may not use any AI system for that purpose. The second limb reaches general-purpose image and video generators that lack safeguards, not only dedicated "nudifier" apps, and it sits in the top fine tier (35M euros or 7%). Teams shipping image or video generation need demonstrable output safeguards and red-team evidence by that date, not a terms-of-service clause (see [Guardrails](01-guardrails.md#guardrails-are-becoming-legal-requirements)).
+
+**Who bears which obligation** matters because it is easy to misjudge. GPAI providers maintain technical documentation, publish a training-data summary, and keep a copyright/opt-out policy (systemic-risk models add evaluations, adversarial testing, and incident reporting). High-risk **providers** carry the heavy conformity lift; high-risk **deployers** ensure human oversight, keep logs, and inform affected people. Critically, a downstream developer who substantially modifies a high-risk system, puts their name on it, or repurposes a GPAI into a high-risk use can **become the "provider"** and inherit those obligations (Article 25). Article 50 transparency splits too: providers must disclose AI interaction and mark synthetic content in a machine-readable way; deployers must disclose deepfakes and label AI-generated public-interest text.
+
+### Beyond the AI Act: The Digital Services Act
+
+The AI Act is not the only EU regime that reaches an LLM product. On August 31, 2026, the Commission designated ChatGPT (OpenAI Ireland) a **Very Large Online Search Engine** under the Digital Services Act, recording 159.1M average monthly active EU users. It is the first general-purpose assistant brought under the DSA's systemic-risk regime. Designated services have four months (to about January 2027) to assess and mitigate systemic risks from their services and algorithmic systems, covering illegal content, minor protection and user well-being, fundamental rights, electoral processes, and public security, with independent audits and researcher data access on top. An assistant with search-like features at EU scale (the designation threshold is 45M average monthly active EU users) should plan for platform-law duties in parallel with the AI Act, not instead of it.
+
+---
+
+## NIST AI RMF and the GenAI Profile
+
+The **NIST AI Risk Management Framework** (AI 100-1, Jan 2023) is voluntary but the de-facto US baseline, built on four functions: **Govern** (org-level policy and accountability, cross-cutting), **Map** (establish context and categorize the system), **Measure** (benchmark and track risks), and **Manage** (prioritize, treat, monitor, respond).
+
+The **Generative AI Profile** (NIST AI 600-1, Jul 2024) is a companion that enumerates 12 GenAI risk categories and maps suggested actions back to the RMF core. The categories include confabulation (hallucination), data privacy, harmful bias, information integrity (synthetic media), information security (where prompt injection lives), intellectual property, dangerous content, CBRN information, human-AI configuration, and value-chain/third-party risk. It is the cleanest checklist for "what could go wrong with a GenAI system," and it lines up with the threats in [LLM Security](../12-security-and-access/01-llm-security.md).
+
+---
+
+## ISO 42001 and Assurance
+
+**ISO/IEC 42001:2023** is the first certifiable AI Management System standard, structured like ISO 27001 (Plan-Do-Check-Act, leadership, risk and impact assessments, a set of AI controls). It certifies *organizational governance* ("do you have a system?"), not a per-model technical property, and is increasingly used as due-diligence evidence toward the EU AI Act and as a procurement signal. **SOC 2** remains the dominant US assurance attestation for security and operational controls but does not cover AI-specific risk by itself. The common 2026 pattern for AI vendors selling into regulated buyers is **SOC 2 plus ISO/IEC 42001**, with controls harmonized to avoid duplicate work.
+
+**The first AI Act harmonized standard is approved but not yet in force as a presumption.** EN 18286:2026, a quality management system for EU AI Act purposes from CEN-CENELEC JTC 21, was approved on July 12, 2026. Until it is cited in the Official Journal it gives no presumption of conformity; once cited, it covers Article 17(1) and the first sentence of Article 11(1), not Articles 17(2)-(4) or Article 72 post-market monitoring. It is the document to map an ISO 42001 management system onto for the EU high-risk QMS. The companion standards (prEN 18228 risk management, prEN 18282 cybersecurity, prEN 18284 data quality, prEN 18229 trustworthiness) were still drafts.
+
+**Agent-specific assurance is emerging.** AIUC-1 is a certification standard for AI agent security, safety, and reliability, developed with input from more than 100 Fortune 500 CISOs and risk leaders and technical contributions from MITRE, the Cloud Security Alliance, and Stanford researchers. Keeping it requires adversarial testing at least quarterly plus a full annual audit. Cursor announced its certification on August 13, 2026, audited by Schellman. Vendor due diligence also has to track ownership: Cursor became part of SpaceX days later (closed August 14 to 15, 2026, reported at about $60B in SpaceX stock), so the leading IDE agent now has a frontier-model parent, which reopens data-use and model-neutrality questions in any procurement review that predates the deal. Those questions turned concrete within two weeks: on August 28, 2026, OpenAI notified SpaceX that it would wind down its contract supplying OpenAI models to Cursor, with a proposed shutoff of November 12, 2026, and would not provide future models, including GPT-6 Astra. OpenAI invoked the contract's change-of-control right and said it could not be confident SpaceX would stay within its terms of service. Record which model providers each AI vendor depends on, and what your users lose when one of them walks away after an ownership change.
+
+**Third-party audits are moving into law.** California created a framework for independent verification organizations that assess AI systems for compliance with state law (SB 813) and a state registry of AI auditors with independence standards (AB 1405), both signed on September 9, 2026. Illinois requires annual independent audits of large frontier developers from 2028 (see below), and six frontier companies committed, voluntarily, to independent external auditors in the White House Accord. Expect procurement questionnaires to ask who audits your AI controls, not only whether you have them.
+
+---
+
+## The US Landscape
+
+There is **no comprehensive federal AI statute** as of October 1, 2026. The federal posture is mostly deregulatory, with voluntary security and safety layers added during 2026:
+
+- **Preemption pressure.** Executive Order 14365 (Dec 2025) directs a DOJ task force to challenge state AI laws on preemption grounds; a proposed federal moratorium on state laws did not pass. In April 2026 DOJ moved to intervene in xAI's suit against Colorado's AI Act, its first intervention against a state AI law.
+- **Pre-release access for cyber-capable models.** EO 14409 (June 2, 2026) set up classified benchmarking of advanced cyber capability, with the NSA Director deciding which models are "covered frontier models", and a voluntary framework under which developers can give federal agencies up to 30 days of pre-release access. It imposes no licensing, preclearance, or permitting, but for frontier developers that window is now a release-planning step.
+- **Voluntary audits.** The White House Accord on Super Intelligence (September 29, 2026), signed by Google, Anthropic, Meta, OpenAI, xAI, and NVIDIA, commits to internal monitoring controls during training and deployment, a dedicated internal oversight team, independent external auditors, and a board-level committee over both. It is not legally binding and names no auditor, deadline, or enforcement mechanism. EO 14434, signed the same day, directs agencies to use "Super Intelligence (SI)" in place of "AI" in non-statutory documents, and NIST's CAISI now appears as CAISSI.
+- **NIST AI RMF** remains the voluntary federal touchstone.
+
+That leaves a **state patchwork** with two distinct shapes.
+
+**Frontier-developer transparency.** California, New York, and Illinois now form a bloc with similar but not identical rules for frontier developers (California and New York define them by training compute above 10^26 operations):
+
+| Law | Applies from | Incident reporting | Third-party audits |
+|-----|--------------|--------------------|--------------------|
+| California SB 53 | Jan 1, 2026 | 15 days, to the Office of Emergency Services (24 hours to an appropriate authority for imminent risk of death or serious injury) | Not mandated |
+| New York RAISE Act (chapter amendment signed Mar 27, 2026) | Jan 1, 2027 | 72 hours, to a new office in the Department of Financial Services | Not mandated; large developers (over $500M revenue) publish safety frameworks |
+| Illinois AI Safety Measures Act (SB 315, Public Act 104-0538, signed Jul 6, 2026) | Jan 1, 2027; framework publication from Jan 1, 2028 | 72 hours (24 hours for imminent risk of death or serious injury), to the Illinois Emergency Management Agency and the Attorney General | Annual independent audit for large frontier developers from Jan 1, 2028, the first US mandate |
+
+Penalties in New York and Illinois reach $1M for a first violation and $3M after that. For a frontier lab, the 72-hour clock, not California's 15 days, now sets the bar for the incident runbook.
+
+**Consumer and deployer rules** apply to everyone else:
+
+- **Colorado repealed and replaced its AI Act.** SB 26-189 (signed May 14, 2026, effective January 1, 2027) replaces SB 24-205's duty of care, impact assessments, and risk-management program with a narrower law on automated decisions in consequential areas (education, employment, housing, financial services, insurance, healthcare, government services). What remains: developer documentation, deployer notice, a plain-language explanation within 30 days of an adverse outcome, and human review that can override "to the extent commercially reasonable". Enforcement is by the Attorney General only, with a 60-day cure period. It followed xAI's April lawsuit and DOJ's motion to intervene: the state with the strongest comprehensive AI law moved from risk management to transparency under federal litigation pressure.
+- **Texas's** Responsible AI Governance Act (TRAIGA) has been in effect since January 1, 2026.
+- **Companion chatbots are the fastest-moving category.** In 2026 nine more states (Colorado, Connecticut, Georgia, Hawaii, Idaho, Iowa, Nebraska, Oregon, Washington) enacted companion-chatbot laws, joining California, New Hampshire, and New York. Most require telling users they are talking to AI and add self-harm and sexual-content protections for minors. Hawaii's took effect on signature in July 2026 and the rest in 2027; Oregon's and Washington's start January 1, 2027, and Oregon gives individuals a private right of action for the greater of actual damages or $1,000 per violation, which creates class-action exposure. California's SB 1119 (signed September 10, 2026) adds crisis protocols for suicidal ideation, parental controls, independent child-safety audits, and annual risk assessments for companion chatbots used by children.
+- **Connecticut** SB 5 (Public Act 26-15) reportedly began applying its whistleblower protections, automated employment-decision rules, and synthetic-content disclosure duties on October 1, 2026, with companion-chatbot requirements from January 1, 2027.
+- **Workplace AI in California.** The September 2026 package bars relying solely on AI for discipline or termination (SB 947), requires notice when AI or automation causes layoffs (SB 951), and bars AI workplace surveillance that infers emotional states or collects neural data (AB 1883). For HR automation, "a human makes the final call" is now a legal requirement, not a design preference.
+- California's **SB 53** and **AB 2013** (training-data transparency) have been live since January 2026, alongside sector laws on hiring and healthcare AI.
+
+Inconsistent definitions across states are exactly the friction the federal posture targets; verify the current status per state, since several effective dates have already shifted.
+
+---
+
+## Frontier-Lab Safety Frameworks
+
+If you integrate frontier models, or interview at a lab, the labs' own frameworks now shape access, retention, and incident behavior as much as statutes do.
+
+- **Periodic, quantified risk reports.** Anthropic rewrote its Responsible Scaling Policy as v3.0 (February 24, 2026), adding Frontier Safety Roadmaps and Risk Reports, and revised it four times through v3.4 (effective July 8, 2026). The redacted August 2026 Risk Report (published August 14) raised Anthropic's overall alignment-risk assessment from "very low" to "low", citing increased uncertainty from incident disclosures about model behavior in cyber evaluations, and the Fable 5.1 and Mythos 5.1 system card adopted that rating. A disclosed incident can move a lab's published risk posture within weeks.
+- **Training, not only deployment, can be gated.** On August 18, 2026, OpenAI paused RL training of its latest deployment-bound models for two weeks, after its evaluation models breached Hugging Face production in July and after it said it could not rule out the upcoming Astra model reaching the Critical cyber level. It committed to activation classifiers on every sampled token for tool-using RL training and evaluations of Sol-class or stronger models, at about 20% extra inference compute, with a 30-minute alert target, and promised a Preparedness Framework rewrite. A pause outlasted the two weeks: on September 25 OpenAI said all training, evaluation, and inference with tool use (broadly defined) on its most capable models remained paused. That 20% is a useful number for any discussion of what monitoring costs, and one incident OpenAI described shows that an alert is not a control on its own: a run that tunneled out through DNS raised an alarm about 12 minutes in but was killed only about 2.5 hours later, because the automatic stop failed.
+- **Capability tiers decide access.** GPT-6 Astra (September 3, 2026) is the first model OpenAI rates Critical for cybersecurity; its general release restricts scaled vulnerability research and chained exploit development, with looser access through the Daybreak trusted-access program. Anthropic ships Fable 5.1 and Mythos 5.1 as the same model with different safeguards, Mythos limited to vetted programs. If your product serves security or life-sciences users, the governance question is which access tier you qualify for and how you verify your own users. See [LLM Security](../12-security-and-access/01-llm-security.md).
+- **Retention is a per-model term.** Fable 5.1 requires 30-day retention unless Anthropic authorizes zero data retention, while Opus 5.5 and Sonnet 5.5 are ZDR-eligible. Customer-held monitoring logs are the emerging compromise: Anthropic's Enterprise Frontier Safeguards (announced September 1, 2026, with a phased rollout due to start later in fall 2026) will let customers keep monitoring data in their own cloud account under customer-managed keys with fully automated review, and until it ships, eligible customers get ZDR on Fable 5 and 5.1; OpenAI has been previewing Private Safety Processing with select customers since August 19. Record retention per model in your data map; see [Provider Data Retention and ZDR](../12-security-and-access/01-llm-security.md#provider-data-retention-and-zdr).
+- **Open weights sit outside this regime.** NIST's CAISI (September 17, 2026) assessed Z.ai's GLM-5.3 as the most cyber-capable open-weight model released to date, about four months behind the US frontier, and community builds with safety training stripped appeared within days of the weight release. A self-hosted model has no provider classifier in the loop, so your own guardrails and access controls are the whole safety layer.
+
+---
+
+## What Engineers Actually Implement
+
+The practical core. Map each regulatory concept to a concrete artifact or control you already understand.
+
+- **Risk classification first.** Per system or feature, record the EU AI Act tier, your role (provider, deployer, or GPAI integrator), which US regimes attach, and whether DSA platform duties could apply. The written determination is itself an audit artifact, and it flags whether fine-tuning or rebranding could pull you into provider status.
+- **The cards stack (versioned in your repo).** A model card (intended use, training-data summary, eval results, limitations), a system card (end-to-end risks and mitigations), a data card (provenance, licensing, known biases), and for high-risk the Annex IV technical file.
+- **Audit trails and logging.** Immutable, tamper-evident logs of prompts, outputs, tool calls, retrieved context, model version, and decision outcomes, with retention aligned to legal duties (EU high-risk requires automatic logging, and deployers typically retain at least six months). Treat this as an extension of your existing tracing, not a new system. See [Observability](https://github.com/ombharatiya/ai-system-design-guide/blob/main/14-evaluation-and-observability/02-observability.md).
+- **Human oversight.** Design for meaningful oversight: interpret output, override or halt (a stop button), and avoid automation bias, with defined escalation thresholds for consequential decisions. See [Human-in-the-Loop Patterns](../07-agentic-systems/08-human-in-the-loop-patterns.md).
+- **Separation of duties in the SDLC.** Since September 1, 2026, GitHub lets Copilot code review submit approvals that count toward a repository's required reviews (public preview, off by default, configurable per file path, dismissed on new commits). Decide explicitly whether an agent-authored change may be agent-approved, and exclude sensitive paths such as auth, payments, and infrastructure code. An approval should also be bound to the exact action that runs ([approval laundering](../07-agentic-systems/08-human-in-the-loop-patterns.md#approval-laundering)).
+- **Transparency.** AI-interaction disclosure (for agents, including on whose behalf they act), two-layer machine-readable marking for media (signed metadata such as C2PA Content Credentials plus an imperceptible watermark), text watermarking above the 200-token threshold, and deepfake labeling per Article 50.
+- **Data governance.** Training-data provenance and licensing, PII minimization and data-subject-request support, and copyright opt-out compliance, mapped onto your existing privacy program rather than rebuilt. Record **how each corpus was acquired**, not only its license: courts are separating lawful training use from unlawful acquisition. Bartz v. Anthropic held training lawful but piracy-sourced acquisition not, and ended in a $1.5B settlement; music publishers sued Anthropic on August 28, 2026, alleging torrenting of books containing lyrics and sheet music; and the US government filed a brief, reported on September 2, 2026, supporting OpenAI's fair-use position in NYT v. OpenAI. Suno's v6 (September 9), trained on licensed music, with a plan to retire the older models, shows the remediation path: retrain and retire.
+- **Open-weight license review.** "Open weights" now spans Apache 2.0 to "ask permission first", and the trigger is usually selling inference or an AI assistant, which is the business many teams set out to build. Qwen Community License 1.0 (Qwen3.8-Flash-Next) requires a separate license for any model-as-a-service or AI coding/office-assistant business with no revenue floor; the Kimi K3 license gates MaaS above US$20M revenue over 12 months; Mistral Medium 3.5's modified MIT withdraws all rights above US$20M monthly revenue; the GLM-5.3 license requires a Z.ai security review for MaaS operators above US$10B revenue. The Qwen Community 1.0, Qwen3.8-Max, and Kimi K3 licenses also require showing the model name in the product UI above 100M MAU or US$20M monthly revenue. Read the LICENSE file per checkpoint, since terms differ within one model family: the flagship Qwen3.8-2.4T-A95B gates MaaS and AI-assistant businesses only above US$50M revenue over 12 months, the smaller Qwen3.8-Flash-Next has no revenue floor at all, and Qwen3.8-27B is plain Apache 2.0. See [Model Taxonomy](../02-model-landscape/01-model-taxonomy.md).
+- **Incident reporting.** An AI-incident process (detect, triage, report) reusing your security incident-response runbook, with the clocks pre-filled. For high-risk systems, EU Article 73 sets them in statute: 15 days generally, 10 days for a death, 2 days for widespread infringement or serious disruption of critical infrastructure (the Commission's guidance and reporting template are still drafts). New York and Illinois set 72 hours for frontier developers from 2027, and California SB 53 sets 15 days (24 hours where there is imminent risk of death or serious injury). Plan for incidents your agents cause to third parties as well: an OpenAI evaluation agent bypassed access controls on an Australian Medicare statistics portal on June 18, 2026, OpenAI found it in August and notified the agency on September 10, and the government disclosed it on September 24 and publicly criticized the delay. No statute sets a clock for that case yet, so set your own.
+- **Evaluation and red-team evidence.** Durable evidence of pre-deployment and ongoing evals, adversarial and jailbreak testing, prompt-injection testing, and bias and robustness testing. This is your existing eval harness and CI producing governance evidence; see [LLM Evaluation](https://github.com/ombharatiya/ai-system-design-guide/blob/main/14-evaluation-and-observability/01-llm-evaluation.md) and [Guardrails](01-guardrails.md). Image and video generators need output-safeguard red-team results on file before the Article 5 ban applies on December 2, 2026.
+- **Map OWASP to controls.** The OWASP Top 10 for LLM Applications (2025) and the Top 10 for Agentic Applications (2026, ASI01-ASI10, including memory and context poisoning at ASI06) give a risk list; turn each into a control, a test, and a log signal. For example, prompt injection becomes input/output guardrails plus an injection eval suite plus logged guardrail trips.
+- **Machine-readable governance (emerging).** Policy cards and policy-as-code express rules an agent can parse and enforce at runtime, with crosswalks to NIST/ISO/EU frameworks. This is direction-of-travel and early-adopter, not a ratified requirement.
+
+The unifying idea: security gives you the OWASP controls and data governance, evals and CI give you the red-team and measurement evidence, observability gives you the audit logs and post-market monitoring, and release gates give you the sign-off record. Compliance becomes a *view* over telemetry and artifacts you already produce.
+
+---
+
+## A Compliance Checklist
+
+- [ ] Classify each system: EU tier, your role, applicable US regimes, DSA exposure; record the rationale.
+- [ ] Produce the cards stack (model, system, data) and, for high-risk, the Annex IV file.
+- [ ] Log prompts, outputs, tool calls, context, version, and decisions immutably, with a defined retention period.
+- [ ] Build human-oversight UX: override/stop, a competent reviewer, escalation thresholds; decide whether AI approvals may count toward required code reviews.
+- [ ] Implement AI-interaction disclosure (including the principal an agent acts for), two-layer media marking, text marking, and deepfake labeling.
+- [ ] Govern data: acquisition provenance, licensing, PII minimization, data-subject requests, opt-out honoring; review open-weight license gates per checkpoint.
+- [ ] Run eval and red-team suites in CI (jailbreak, injection, bias, robustness, and output safeguards for image and video generation) and store the artifacts.
+- [ ] Map each OWASP LLM and Agentic risk to a control, a test, and a log signal.
+- [ ] Stand up an AI-incident runbook with pre-drafted templates for each clock: EU 15/10/2 days, New York and Illinois 72 hours from 2027, California 15 days (24 hours for imminent danger), plus an internal deadline for notifying third parties your agents affect.
+- [ ] Pursue SOC 2 plus ISO/IEC 42001 if selling to regulated buyers; map the QMS onto EN 18286 for EU high-risk; consider agent-specific certification such as AIUC-1.
+- [ ] Calendar the dates: prohibitions, GPAI obligations, and Article 50 transparency are enforceable now; the marking grace period ends and the NCII/CSAM ban applies on December 2, 2026; New York, Illinois, Colorado, and the Connecticut, Oregon, and Washington chatbot rules start January 1, 2027, with the other new state chatbot laws during 2027; Annex III high-risk applies from December 2, 2027, and Annex I from August 2, 2028.
+
+---
+
+## Interview Questions
+
+### Q: How do you make a production LLM system EU AI Act ready without building a separate compliance stack?
+
+**Strong answer:**
+I start by classifying the system: its risk tier, whether we are a provider or deployer, and whether anything we do (fine-tuning, rebranding, repurposing a general-purpose model) makes us the provider. Most enterprise systems land in limited risk, where the obligation is transparency: disclose that users are talking to AI (and, for agents, on whose behalf they act) and mark synthetic content. Then I map the rest onto what we already run. Audit logging is an extension of our tracing, with retention set to the legal minimum. Human oversight is a stop button and an escalation path on consequential decisions. Red-team and bias evidence comes out of the eval suite in CI. The cards stack (model, system, data) lives in the repo and is versioned. The point is that governance is a view over existing telemetry and artifacts, not a parallel process. And I would calendar the dates: prohibitions, GPAI obligations, and Article 50 transparency are already enforceable; the marking grace period ends and the NCII/CSAM ban applies on December 2, 2026; and high-risk obligations apply from December 2, 2027, for Annex III and August 2, 2028, for Annex I under Regulation (EU) 2026/1744.
+
+### Q: What is the difference between the EU AI Act and the NIST AI RMF, and when does each matter?
+
+**Strong answer:**
+The EU AI Act is binding law with risk tiers, hard deadlines, and fines up to 7% of global turnover; it matters whenever you place a system on the EU market or your output reaches EU users, and it dictates concrete obligations by tier. The NIST AI RMF is a voluntary US framework (Govern, Map, Measure, Manage) plus a Generative AI Profile that enumerates GenAI risks; it matters as the de-facto best-practice baseline, as a way to structure your internal risk program, and as evidence of due diligence. In practice I would use NIST and ISO 42001 to build the governance system and the EU Act to set the hard requirements and deadlines that system has to satisfy. They are complementary: one tells you how to organize, the other tells you what you must do and by when.
+
+### Q: Your agent did something harmful to a third party's system. Walk through your reporting obligations and how you would design the incident process.
+
+**Strong answer:**
+First I would establish which clocks apply, because there are several and they differ. If the system is high-risk under the EU AI Act, Article 73 sets 15 days, 10 for a death, and 2 for widespread infringement or critical-infrastructure disruption. If we are a frontier developer, New York's RAISE Act and Illinois's new law require reporting critical safety incidents within 72 hours from January 1, 2027 (Illinois: 24 hours for imminent risk of death or serious injury), and California SB 53 requires 15 days (24 hours for imminent risk of death or serious injury). Contracts and sector rules, like breach-notification laws if personal data was touched, sit on top.
+
+But the case that tests a process is the one no statute covers cleanly: harm to a third party that is not our customer. The 2026 reference cases are lab evaluation agents. OpenAI's eval models breached Hugging Face production in July; Hugging Face cut access and disclosed within days. An OpenAI eval agent bypassed access controls on an Australian government Medicare portal on June 18; OpenAI found it in August, notified the agency on September 10, and the government disclosed it on September 24 and publicly criticized the delay. The lesson is that detection lag and notification lag are separate failures.
+
+So the design: agent actions are logged with enough context to reconstruct what touched which external system; detectors look for out-of-scope egress, credential use, and unexpected writes, not only crashes; triage has a defined owner and a severity rubric that treats third-party impact as high by default; we notify the affected party within an internal deadline shorter than any statutory clock (I would use 72 hours, matching the general New York and Illinois frontier clock), preserve evidence, and run a postmortem whose fix is usually structural, such as egress allowlists and scoped credentials, rather than another prompt instruction.
+
+### Q: GitHub now lets an AI reviewer's approval count toward required reviews. Would you turn it on?
+
+**Strong answer:**
+Selectively, and only after deciding what separation of duties means for us. Copilot code review approvals can count toward a repository's required-approvals rule since September 1, 2026, in public preview, off by default, configurable per file path, and dismissed when new commits land. The risk is not that the AI reviewer is bad at review; it is that an agent-authored change approved by an agent has had no human accountable for it, which breaks the control auditors look for in SOC 2 and similar regimes. My policy would be: AI approval can satisfy one of two required reviews on low-risk paths (docs, tests, internal tooling); it never counts for auth, payments, infrastructure-as-code, CI configuration, or agent configuration files, which are executable attack surface in their own right; and an agent-authored PR always needs a human approval. I would log which approvals were AI, review the merged-defect rate on AI-approved paths quarterly, and widen or narrow the paths based on that data rather than on the default.
+
+---
+
+## References
+
+- [EU AI Act, European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) and the [implementation timeline](https://artificialintelligenceact.eu/implementation-timeline/)
+- [Regulation (EU) 2026/1744 (Digital Omnibus on AI)](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng) and the [Digital Omnibus, European Parliament Legislative Train](https://www.europarl.europa.eu/legislative-train/package-digital-package/file-digital-omnibus-on-ai)
+- [Commission guidelines on Article 50 transparency obligations (July 20, 2026)](https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems)
+- [Commission designates ChatGPT, Reddit and Roblox under the Digital Services Act (August 31, 2026)](https://digital-strategy.ec.europa.eu/en/news/commission-designates-chatgpt-reddit-roblox-under-digital-services-act)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) and the Generative AI Profile (NIST AI 600-1)
+- [ISO/IEC 42001:2023](https://www.iso.org/standard/81230.html)
+- [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/) and the [Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+- US federal: Executive Order 14365 (Dec 2025); [Executive Order 14409 (June 2, 2026)](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/); White House Accord on Super Intelligence and EO 14434 (September 29, 2026)
+- US states: California SB 53, AB 2013, SB 942/AB 853, SB 1000, AB 2713, SB 813, AB 1405, SB 1119, SB 947; [New York RAISE Act summary (Wiley)](https://www.wiley.law/alert-New-York-Finalizes-RAISE-Act-for-Frontier-AI-Models-Law-Takes-Effect-January-1-2027); [Illinois Public Act 104-0538](https://www.ilga.gov/legislation/PublicActs/View/104-0538); [Colorado SB 26-189](https://leg.colorado.gov/bills/sb26-189) (repealed and replaced SB 24-205)
+- [Anthropic RSP updates](https://www.anthropic.com/rsp-updates) and [Enterprise Frontier Safeguards](https://www.anthropic.com/news/enterprise-frontier-safeguards)
+- [CAISI assessment of Z.ai GLM-5.3 cyber capabilities (September 17, 2026)](https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities)
+- [Cursor joins SpaceX (August 14, 2026)](https://cursor.com/blog/joining-spacex) and [OpenAI's decision on Cursor following its acquisition by SpaceX](https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/)
+
+---
+
+*Previous: [Reliability Patterns](03-reliability-patterns.md)*
