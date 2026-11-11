@@ -59,6 +59,10 @@ AWS의 모든 요청은 "**누가(Principal)** 무엇을(Action) 어떤 리소�
 
 > 한 줄 요약: **명시적 Deny > 명시적 Allow > 암묵적 Deny**. "분명히 권한을 줬는데 안 된다"는 문제는 대개 상위의 SCP나 어딘가의 Deny 때문이다.
 
+![유효 권한 교집합 — 자격증명 기반 정책, Permission Boundary, SCP의 교집합과 명시적 Deny 우선](/img/certs/saa-iam-boundary.svg)
+
+*그림 1. 최종 유효 권한 = 자격증명 기반 정책 ∩ Permission Boundary ∩ SCP. 어디든 명시적 Deny가 있으면 그 전부를 이긴다.*
+
 ### 역할과 STS — 임시 자격 증명의 원리
 
 - **STS(Security Token Service)** 가 `AssumeRole` 요청을 받아 **유효 기간이 있는 임시 키**(액세스 키 + 세션 토큰)를 내준다. 만료되면 자동으로 무효가 되므로 장기 키보다 안전하다.
@@ -73,6 +77,10 @@ AWS의 모든 요청은 "**누가(Principal)** 무엇을(Action) 어떤 리소�
 - **기업 직원(사내 AD/IdP)** → **SAML 2.0 연합** 또는 **IAM Identity Center**(구 AWS SSO). 여러 계정·앱에 한 번 로그인으로 접근.
 - **모바일·웹 앱의 일반 사용자(수백만 명)** → **Amazon Cognito**. Google·Apple 같은 소셜 로그인(OIDC/Web Identity)을 받아 임시 AWS 자격 증명으로 바꿔 준다. "앱 사용자에게 S3 임시 접근" 류 문제의 정답.
 - **온프렘 AD 연계** → **AWS Managed Microsoft AD** 또는 **AD Connector**.
+
+![Cognito 사용자 풀과 자격 증명 풀 — 외부 신원을 임시 AWS 자격 증명으로 교환하는 흐름](/img/certs/saa-cognito.svg)
+
+*그림 2. Cognito 사용자 풀(User Pool)은 로그인·회원 관리(인증), 자격 증명 풀(Identity Pool)은 로그인 결과를 임시 AWS 자격 증명으로 교환(인가)한다.*
 
 ### Organizations와 SCP
 
@@ -117,6 +125,10 @@ AWS의 모든 요청은 "**누가(Principal)** 무엇을(Action) 어떤 리소�
 - **Stateless(NACL)**: 들어옴과 나감을 **따로** 허용해야 한다. 응답 트래픽을 위한 아웃바운드 규칙(임시 포트 범위)을 깜빡하면 통신이 막힌다.
 - **특정 IP를 차단**해야 하면 SG로는 불가능하다(SG는 Allow만). 이때는 **NACL의 Deny 규칙**을 쓴다. 이게 전형적인 함정 문제다.
 
+![보안 그룹과 네트워크 ACL 비교 — 적용 단위, 상태 유지 여부, 허용·거부 규칙](/img/certs/saa-sg-nacl.svg)
+
+*그림 3. 보안 그룹은 인스턴스(ENI) 단위·Stateful·Allow 전용, 네트워크 ACL은 서브넷 단위·Stateless·Allow와 Deny 모두. IP 차단은 NACL의 몫이다.*
+
 ### VPC 엔드포인트 — 인터넷 없이 AWS 서비스 접근
 
 프라이빗 서브넷에서 S3 같은 서비스에 **인터넷을 거치지 않고** 접근하고 싶을 때 쓴다.
@@ -145,6 +157,10 @@ AWS의 모든 요청은 "**누가(Principal)** 무엇을(Action) 어떤 리소�
 - **Firewall Manager**: 여러 계정의 WAF·SG·Shield 규칙을 **중앙에서 일괄 관리**.
 
 > 구분 요령: **위협 탐지=GuardDuty, 취약점=Inspector, 민감정보=Macie, 통합=Security Hub, 조사=Detective**.
+
+![보안 서비스 지도 — 탐지·취약점·민감정보·통합·방어 역할별 분류](/img/certs/saa-sec-map.svg)
+
+*그림 4. 보안 서비스는 역할로 구분한다 — 위협 탐지(GuardDuty)·취약점(Inspector)·민감정보(Macie)·통합(Security Hub)·조사(Detective)·방어(WAF/Shield).*
 
 ### 비밀 관리 — Secrets Manager vs Parameter Store
 
@@ -176,6 +192,10 @@ AWS의 모든 요청은 "**누가(Principal)** 무엇을(Action) 어떤 리소�
 ### 봉투 암호화(envelope encryption)
 
 KMS의 핵심 개념이다. 데이터를 **데이터 키(DEK)** 로 암호화하고, 그 데이터 키를 다시 **KMS의 마스터 키(CMK)** 로 암호화해 함께 저장한다. 큰 데이터를 KMS에 매번 보내지 않고 로컬에서 빠르게 암·복호화하면서도, 마스터 키는 KMS 밖으로 절대 나가지 않는다. 복호화할 때만 KMS에 "이 암호화된 데이터 키를 풀어 달라"고 요청한다.
+
+![봉투 암호화 흐름 — 데이터 키로 데이터를, KMS 마스터 키로 데이터 키를 암호화](/img/certs/saa-envelope.svg)
+
+*그림 5. 봉투 암호화 — 로컬에서 데이터 키(DEK)로 데이터를 암·복호화하고, 그 데이터 키는 KMS 마스터 키로 감싼다. 마스터 키는 KMS 밖으로 나가지 않는다.*
 
 ### KMS 키 종류
 
@@ -245,6 +265,10 @@ KMS의 핵심 개념이다. 데이터를 **데이터 키(DEK)** 로 암호화하
 - **AWS Config**: 리소스의 **구성 상태와 변경 이력**을 기록하고, **Config Rules**로 "암호화 안 된 EBS가 있나", "퍼블릭 S3가 있나" 같은 **컴플라이언스를 지속 평가**한다. 위반 시 자동 교정(remediation)도 가능.
 - **CloudTrail(누가 호출했나)과 Config(무엇이 어떻게 구성됐나)는 짝**으로 외운다.
 - **VPC Flow Logs**: VPC·서브넷·ENI의 **트래픽 메타데이터**를 기록한다. 네트워크 조사와 GuardDuty 입력에 쓰인다.
+
+![CloudTrail과 AWS Config 비교 — API 호출 기록과 구성 상태·컴플라이언스 평가](/img/certs/saa-audit.svg)
+
+*그림 6. CloudTrail은 "누가 어떤 API를 호출했나"를, AWS Config는 "리소스 구성이 규정에 맞나"를 기록·평가한다. 둘은 짝으로 쓴다.*
 
 ### S3 접근 통제 (단골)
 
