@@ -5,7 +5,13 @@ sidebar_position: 1
 description: SAA-C03 시험 형식, 도메인 비중, 공부 로드맵과 전체 항목 지도
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # SAA-C03 시험 개요와 공부 전략
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="R5OT_1VCJPU" title="AWS SAA-C03 합격, 어디서부터? — 시험 개요와 도메인 지도" />
 
 ## 시험 정보 (한눈에)
 

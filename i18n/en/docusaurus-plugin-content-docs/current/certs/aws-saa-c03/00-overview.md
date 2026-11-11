@@ -5,7 +5,13 @@ sidebar_position: 1
 description: SAA-C03 exam format, domain weighting, study roadmap, and the full item map
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # SAA-C03 — Exam Overview & Strategy
+
+This page is also available as a video.
+
+<YouTube id="R5OT_1VCJPU" title="AWS SAA-C03 — Exam Overview | AWS Certifications #01" />
 
 ## Exam at a glance
 
