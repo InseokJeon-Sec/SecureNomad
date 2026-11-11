@@ -34,10 +34,10 @@ This case study covers designing a high-reliability AI system for generating equ
 - Current manual process: 8 hours per report, $500 cost
 
 **Goal:**
-- Reduce report generation time to < 30 minutes
+- Reduce report generation time to &lt; 30 minutes
 - Maintain accuracy at 99.5%+
 - Clear audit trail for compliance
-- Cost target: < $50 per report
+- Cost target: &lt; $50 per report
 
 ---
 

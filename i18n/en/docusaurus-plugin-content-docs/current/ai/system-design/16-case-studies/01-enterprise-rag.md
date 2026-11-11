@@ -59,11 +59,11 @@ A financial services company wants to build an AI-powered search system for thei
 
 | Requirement | Target | Rationale |
 |-------------|--------|-----------|
-| Latency (P95) | < 5 seconds | User experience |
+| Latency (P95) | &lt; 5 seconds | User experience |
 | Accuracy | > 90% | Trust and adoption |
 | Availability | 99.9% | Business critical |
 | Concurrent users | 500 | Peak usage |
-| Document freshness | < 1 hour | Policy updates |
+| Document freshness | &lt; 1 hour | Policy updates |
 
 ### Security Requirements
 

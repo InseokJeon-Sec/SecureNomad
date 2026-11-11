@@ -35,7 +35,7 @@ This case study walks through designing a production customer support agent for 
 - Support team: 100 agents
 
 **Goal:**
-- Reduce response time to < 5 minutes for common queries
+- Reduce response time to &lt; 5 minutes for common queries
 - Improve CSAT to > 85%
 - Handle 60% of tickets without human intervention
 - Maintain quality for escalated tickets
@@ -61,11 +61,11 @@ This case study walks through designing a production customer support agent for 
 
 | Requirement | Target | Rationale |
 |-------------|--------|-----------|
-| Latency (TTFT) | < 1s | User expectation for chat |
-| Latency (full) | < 5s | Maintain engagement |
+| Latency (TTFT) | &lt; 1s | User expectation for chat |
+| Latency (full) | &lt; 5s | Maintain engagement |
 | Availability | 99.9% | Business-critical |
 | Accuracy | > 95% | Customer trust |
-| Escalation rate | < 40% | Cost efficiency |
+| Escalation rate | &lt; 40% | Cost efficiency |
 | CSAT | > 85% | Business goal |
 
 ### Security Requirements
@@ -427,10 +427,10 @@ class QualityMonitor:
 
 | Metric | Target | Actual |
 |--------|--------|--------|
-| Latency (TTFT) | < 1s | 0.8s |
-| Latency (full) | < 5s | 3.2s |
+| Latency (TTFT) | &lt; 1s | 0.8s |
+| Latency (full) | &lt; 5s | 3.2s |
 | Accuracy | > 95% | 94.3% |
-| Escalation rate | < 40% | 38% |
+| Escalation rate | &lt; 40% | 38% |
 | CSAT | > 85% | 87% |
 | Resolution rate | > 60% | 62% |
 

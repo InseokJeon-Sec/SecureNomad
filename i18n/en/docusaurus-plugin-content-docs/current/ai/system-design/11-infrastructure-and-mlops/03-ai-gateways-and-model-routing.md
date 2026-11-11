@@ -55,8 +55,8 @@ Routing strategies form a ladder of increasing complexity and overhead. As a rou
 | Strategy | Decides by | Best for | Overhead | Failure modes |
 |----------|-----------|----------|----------|---------------|
 | Static / manual | Hard-coded model per route | Simple, predictable workloads | ~0ms | Brittle; no adaptation to outages or price changes |
-| Task-based | Task type maps to a model | Known task taxonomy | <1ms | Misclassification; taxonomy goes stale |
-| Cost-based | Cheapest model meeting constraints | Cost ceilings, batch work | <1ms | Can starve quality; cheapest may rate-limit |
+| Task-based | Task type maps to a model | Known task taxonomy | &lt;1ms | Misclassification; taxonomy goes stale |
+| Cost-based | Cheapest model meeting constraints | Cost ceilings, batch work | &lt;1ms | Can starve quality; cheapest may rate-limit |
 | Latency-based | Lowest observed/expected latency | Real-time UX | ~1-5ms | Herding onto one fast endpoint; cold-start skew |
 | Capability-based | Required capability (long context, vision, tools) | Heterogeneous needs | 1-5ms | Over-provisioning to the "best" model |
 | Semantic | Embed the request, match to a route | Intent dispatch, mixed difficulty | ~5-50ms | Embedding drift; ambiguous tail; threshold tuning |

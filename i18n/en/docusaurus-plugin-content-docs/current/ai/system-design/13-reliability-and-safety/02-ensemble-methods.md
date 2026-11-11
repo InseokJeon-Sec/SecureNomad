@@ -479,7 +479,7 @@ The effect column is directional on purpose. Effect sizes depend on the model an
 | Situation | Why Not | Alternative |
 |-----------|---------|-------------|
 | Simple factual lookup | No diversity benefit | Single RAG call |
-| Latency < 500ms required | Ensemble adds latency | Single model + caching |
+| Latency &lt; 500ms required | Ensemble adds latency | Single model + caching |
 | Cost is primary constraint | Ensembles multiply cost | Model distillation |
 | Models highly correlated | No diversity = no benefit | Get diverse models first |
 

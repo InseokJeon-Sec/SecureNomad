@@ -207,7 +207,7 @@ Two controls catch this class of failure:
 | Latency p95 | 95th percentile | > 5s |
 | Latency p99 | 99th percentile | > 10s |
 | TTFT | Time to first token | > 1s |
-| Token throughput | Tokens per second | < baseline |
+| Token throughput | Tokens per second | &lt; baseline |
 
 ### Quality Metrics
 
@@ -471,9 +471,9 @@ alerts:
 
 | Severity | Response Time | Examples |
 |----------|---------------|----------|
-| Critical | < 15 min | Service down, > 50% error rate |
-| High | < 1 hour | > 10% error rate, P99 > 30s |
-| Warning | < 4 hours | Quality degradation, cost spike |
+| Critical | &lt; 15 min | Service down, > 50% error rate |
+| High | &lt; 1 hour | > 10% error rate, P99 > 30s |
+| Warning | &lt; 4 hours | Quality degradation, cost spike |
 | Info | Next business day | Trend changes, capacity planning |
 
 Plan the critical tier around vendor-wide outages, not single-model failures. Between August 16 and September 29, 2026, Anthropic's status feed logged at least 12 major or critical incidents, and OpenAI's September 29 incident degraded the API, ChatGPT, and Codex together for about 5 hours 20 minutes. When an outage takes out a vendor's API and its coding agent at once, a fallback chain that stays inside one vendor does not help; route across vendors, and alert on the fallback rate so you know when you are running on the backup.

@@ -46,9 +46,9 @@ Two of these rows are easy to miss because nothing throws. **Silent quality chan
 
 | Tier | Availability | Latency p99 | Examples |
 |------|--------------|-------------|----------|
-| Critical | 99.99% | < 3s | Payment processing |
-| Standard | 99.9% | < 10s | Customer support |
-| Best effort | 99% | < 30s | Background tasks |
+| Critical | 99.99% | &lt; 3s | Payment processing |
+| Standard | 99.9% | &lt; 10s | Customer support |
+| Best effort | 99% | &lt; 30s | Background tasks |
 
 ---
 
