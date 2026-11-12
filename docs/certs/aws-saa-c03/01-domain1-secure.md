@@ -5,6 +5,8 @@ sidebar_position: 2
 description: SAA-C03 Domain 1 — IAM 접근 제어와 네트워크·보안 서비스를 시험에 바로 쓰도록 설명한다 (Part 1)
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Domain 1 — 보안 아키텍처 설계 (30%)
 
 :::tip 모르는 서비스·용어가 나오면
@@ -20,6 +22,10 @@ description: SAA-C03 Domain 1 — IAM 접근 제어와 네트워크·보안 서�
 ---
 
 ## 1.1 안전한 접근 설계 — IAM
+
+이 절(IAM)은 영상으로도 볼 수 있다. — AWS 자격증 바로 알기 #2
+
+<YouTube id="hHbAHHAQLi8" title="AWS IAM 핵심과 시험 함정 — AWS 자격증 바로 알기 (SAA-C03) #2" />
 
 ### IAM이 푸는 문제
 

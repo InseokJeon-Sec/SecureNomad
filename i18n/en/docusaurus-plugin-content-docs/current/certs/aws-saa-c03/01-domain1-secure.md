@@ -5,7 +5,13 @@ sidebar_position: 2
 description: SAA-C03 Secure Architectures study items
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Domain 1 — Secure Architectures (30%)
+
+The IAM section of this domain is also available as a video. — AWS Certification Essentials #2
+
+<YouTube id="hHbAHHAQLi8" title="AWS IAM — Core Concepts and Exam Traps | AWS Certification Essentials (SAA-C03) #2" />
 
 > Study checklist. Detailed notes to follow.
 
