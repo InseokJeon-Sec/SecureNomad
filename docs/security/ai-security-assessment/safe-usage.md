@@ -6,7 +6,13 @@ description: 조직·사용자·기술·개발자 관점에서 AI를 안전하�
 tags: [AI보안, 가이드, 모범사례]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 안전한 AI 사용 가이드
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="Z3106P4rrns" title="직원이 몰래 쓰는 AI, 어떻게 통제하나 — AI 사용 정책과 거버넌스 | AI 바로 알기 #11" />
 
 평가로 "무엇이 위험한지" 알았다면, 이제 **"어떻게 안전하게 쓸지"** 입니다. 대상별로 정리합니다.
 

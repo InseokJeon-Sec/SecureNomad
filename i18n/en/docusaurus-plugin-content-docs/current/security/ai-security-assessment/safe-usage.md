@@ -6,7 +6,13 @@ description: Practical guidance for using AI safely from the organization, user,
 tags: [AI-security, guide, best-practices]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Safe AI Usage Guide
+
+This page is also available as a video.
+
+<YouTube id="Z3106P4rrns" title="Shadow AI and AI Usage Policy — Organizational AI Governance | AI Essentials #11" />
 
 Once the assessment shows "what is risky," the next question is **"how to use it safely."** Organized by audience.
 
