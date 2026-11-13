@@ -13,6 +13,10 @@ The IAM section of this domain is also available as a video. — AWS Certificati
 
 <YouTube id="hHbAHHAQLi8" title="AWS IAM — Core Concepts and Exam Traps | AWS Certification Essentials (SAA-C03) #2" />
 
+The federation & multi-account section is also available as a video. — AWS Certification Essentials #3
+
+<YouTube id="0ubYoS2-oFc" title="Federation & Multi-Account — Organizations, SSO, Cognito | AWS Certification Essentials (SAA-C03) #3" />
+
 > Study checklist. Detailed notes to follow.
 
 - Secure access: IAM users/groups/roles/policies, policy evaluation, least privilege, permission boundaries

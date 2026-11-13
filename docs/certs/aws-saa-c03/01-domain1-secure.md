@@ -78,6 +78,10 @@ AWS의 모든 요청은 "**누가(Principal)** 무엇을(Action) 어떤 리소�
 
 ### 연합(Federation) — 외부 신원을 끌어오기
 
+이 절(연합·멀티계정)은 영상으로도 볼 수 있다. — AWS 자격증 바로 알기 #3
+
+<YouTube id="0ubYoS2-oFc" title="연합과 멀티계정 — Organizations·SSO·Cognito | AWS 자격증 바로 알기 #3 (SAA-C03)" />
+
 사용자를 IAM에 일일이 만들지 않고, 이미 있는 신원 체계로 로그인시키는 방법이다. 시나리오별로 정답이 갈린다.
 
 - **기업 직원(사내 AD/IdP)** → **SAML 2.0 연합** 또는 **IAM Identity Center**(구 AWS SSO). 여러 계정·앱에 한 번 로그인으로 접근.

@@ -6,7 +6,13 @@ description: AI 보안성 평가 프로세스(자산식별→위협모델링→�
 tags: [AI보안, 보안성평가, 방법론]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # AI 보안성 평가 방법론
+
+이 문서의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="PFqDOFBiS1o" title="데모만 보고 도입하면 안 되는 이유 — AI 도입 보안성 평가 (보안 관점) | AI 바로 알기 #12" />
 
 위협을 알았다면, 이제 **체계적으로 평가**할 차례입니다. 이 문서는 실무에서 쓰는 평가 프로세스와 점검 영역을 정리합니다.
 

@@ -6,7 +6,13 @@ description: The AI security assessment process (asset identification→threat m
 tags: [AI-security, security-assessment, methodology]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # AI Security Assessment Methodology
+
+This page is also available as a video.
+
+<YouTube id="PFqDOFBiS1o" title="Why a demo isn't enough — AI adoption security assessment | AI 바로 알기 #12" />
 
 Once you know the threats, it's time to **assess systematically**. This document lays out the assessment process and check domains used in practice.
 
