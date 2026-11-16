@@ -6,7 +6,13 @@ description: A roundup of international and domestic guidelines, standards, and 
 tags: [AI-security, guidelines, compliance]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Domestic & International AI Security Guidelines & Standards
+
+AI data privacy and governance is also available as a video. — AI Essentials #13
+
+<YouTube id="9R4fJMWB_Ns" title="Privacy & Data Governance — Training/Input/Output Data and Personal-Data Controls | AI Essentials #13" />
 
 An AI security assessment should rest on **recognized criteria**, not gut feeling. Here are the international and domestic documents most referenced in practice.
 

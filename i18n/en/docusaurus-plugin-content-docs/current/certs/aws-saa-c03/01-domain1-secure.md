@@ -17,6 +17,10 @@ The federation & multi-account section is also available as a video. — AWS Cer
 
 <YouTube id="0ubYoS2-oFc" title="Federation & Multi-Account — Organizations, SSO, Cognito | AWS Certification Essentials (SAA-C03) #3" />
 
+The network security section is also available as a video. — AWS Certification Essentials #4
+
+<YouTube id="aF9S9_LhS-Q" title="Network Security — Security Groups, NACLs, VPC Endpoints, SSM | AWS Certification Essentials (SAA-C03) #4" />
+
 > Study checklist. Detailed notes to follow.
 
 - Secure access: IAM users/groups/roles/policies, policy evaluation, least privilege, permission boundaries
