@@ -5,10 +5,16 @@ authors: [inseok]
 tags: [ai, claude, security]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 AI와 오래 일하다 보니, 어느 순간 하나의 대화창이 너무 많은 일을 짊어지고 있었다.
 그래서 업무를 '채널'로 나눴다. 단순한 정리처럼 보이지만, 나눠 보니 결국 평소 보안에서 쓰던 원칙을 내 작업 공간에 그대로 적용하는 일이었다.
 
 {/* truncate */}
+
+이 글의 내용은 영상으로도 볼 수 있다.
+
+<YouTube id="jh2kEmJNdOg" title="AI한테 다 맡겼더니 보안 설계를 하고 있었다 — 멀티에이전트와 보안" />
 
 ## 하나의 창에서 모든 걸 하다
 
