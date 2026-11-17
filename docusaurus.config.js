@@ -7,8 +7,9 @@ const isKorean = currentLocale === 'ko';
 
 import fs from 'node:fs';
 import path from 'node:path';
+import {execFileSync} from 'node:child_process';
 
-// 첫 화면 '최근 업데이트'용: notes/news 폴더에서 최신 글을 읽어 전역 데이터로 주입
+// 첫 화면 '최근 업데이트'용: notes/news 최신 글 + 전체 문서의 최근 변경을 전역 데이터로 주입
 function recentPostsPlugin(context) {
   function read(dir, base, limit) {
     const abs = path.join(context.siteDir, dir);
@@ -31,6 +32,61 @@ function recentPostsPlugin(context) {
     items.sort((a, b) => (a.date < b.date ? 1 : -1));
     return items.slice(0, limit);
   }
+
+  // 소스 파일의 마지막 git 커밋 날짜(YYYY-MM-DD). 실패 시 파일 수정시각으로 대체.
+  function lastChanged(absFile) {
+    try {
+      const out = execFileSync('git', ['log', '-1', '--format=%cI', '--', absFile],
+        {cwd: context.siteDir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore']}).trim();
+      if (out) return out.slice(0, 10);
+    } catch (e) {}
+    try { return new Date(fs.statSync(absFile).mtime).toISOString().slice(0, 10); } catch (e) {}
+    return '';
+  }
+
+  // docs/ 전체를 걸어 각 문서의 permalink(= Docusaurus 라우팅 규칙)·제목·git 수정일을 구해 최신순 정렬
+  function recentDocs(limit) {
+    const root = path.join(context.siteDir, 'docs');
+    const out = [];
+    const strip = (seg) => seg.replace(/^\d+-/, '');           // 세그먼트별 NN- 프리픽스 제거
+    function walk(dir) {
+      let entries = [];
+      try { entries = fs.readdirSync(dir, {withFileTypes: true}); } catch (e) { return; }
+      for (const ent of entries) {
+        const abs = path.join(dir, ent.name);
+        if (ent.isDirectory()) { walk(abs); continue; }
+        if (!/\.mdx?$/.test(ent.name)) continue;
+        if (/^(index|readme)\.mdx?$/i.test(ent.name)) continue; // 카테고리 인덱스 제외
+        const rel = path.relative(root, abs).replace(/\\/g, '/');
+        const raw = fs.readFileSync(abs, 'utf8');
+        const fm = raw.match(/^---\n([\s\S]*?)\n---/);
+        const fmText = fm ? fm[1] : '';
+        const slugM = fmText.match(/^slug:\s*(.+?)\s*$/m);
+        const dirSegs = rel.split('/').slice(0, -1).map(strip);
+        let route;
+        if (slugM) {
+          let slug = slugM[1].trim().replace(/^['"]|['"]$/g, '');
+          route = slug.startsWith('/') ? slug : '/' + [...dirSegs, slug].join('/');
+        } else {
+          const segs = rel.replace(/\.mdx?$/, '').split('/').map(strip);
+          route = '/' + segs.join('/');
+        }
+        if (route.length > 1) route = route.replace(/\/$/, '');
+        if (route === '/') continue;                            // 홈(intro) 제외
+        const tm = fmText.match(/^title:\s*(.+?)\s*$/m);
+        const hm = raw.match(/^#\s+(.+?)\s*$/m);
+        let title = (tm ? tm[1] : (hm ? hm[1] : strip(ent.name.replace(/\.mdx?$/, ''))))
+          .trim().replace(/^['"]|['"]$/g, '');
+        out.push({title, permalink: route, date: lastChanged(abs)});
+      }
+    }
+    walk(root);
+    return out
+      .filter((d) => d.date)
+      .sort((a, b) => (a.date < b.date ? 1 : -1))
+      .slice(0, limit);
+  }
+
   return {
     name: 'recent-posts',
     async loadContent() {
@@ -40,7 +96,7 @@ function recentPostsPlugin(context) {
       };
     },
     async contentLoaded({content, actions}) {
-      actions.setGlobalData(content);
+      actions.setGlobalData({...content, changes: recentDocs(4)});
     },
   };
 }
@@ -81,7 +137,7 @@ const config = {
         docs: {
           routeBasePath: '/',          // 문서를 사이트 첫 화면으로
           sidebarPath: './sidebars.js',
-          showLastUpdateTime: true,    // 문서 하단에 마지막 수정일 표시
+          showLastUpdateTime: false,   // 문서 하단 '최종 수정' 표기 끔(홈의 '최근 변경' 칼럼으로 대체)
         },
         blog: {                        // Notes (날짜순 이슈 메모, 번역 없이 한국어로 표시)
           path: 'notes',
