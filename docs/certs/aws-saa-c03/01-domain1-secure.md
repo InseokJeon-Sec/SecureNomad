@@ -198,6 +198,10 @@ AWS의 모든 요청은 "**누가(Principal)** 무엇을(Action) 어떤 리소�
 
 ## 1.3 데이터 보호 — 암호화
 
+이 절(데이터 암호화)은 영상으로도 볼 수 있다. — AWS 자격증 바로 알기 #6
+
+<YouTube id="IymVjJiui7w" title="데이터 암호화 — KMS 봉투 암호화·S3 옵션·Secrets Manager | AWS 자격증 바로 알기 #6 (SAA-C03)" />
+
 ### 두 가지 축: 전송 중 vs 저장 시
 
 - **전송 중 암호화(in transit)**: 네트워크를 지나는 데이터를 TLS로 보호. 인증서는 **ACM**으로 발급·자동 갱신한다.

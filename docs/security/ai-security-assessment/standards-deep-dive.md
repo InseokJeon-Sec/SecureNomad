@@ -6,7 +6,13 @@ description: NIST AI RMF, ISO/IEC 42001·23894, OWASP LLM Top 10, MITRE ATLAS, E
 tags: [AI보안, 표준, NIST, ISO, 가이드라인]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 표준·프레임워크 상세와 관계도
+
+AI 규제와 표준(AI 기본법·EU AI Act·ISO 42001·NIST AI RMF)은 영상으로도 볼 수 있다. — AI 바로 알기 #14
+
+<YouTube id="-16Qb4Gbj7A" title="AI 규제와 표준 — AI 기본법·EU AI Act·ISO 42001·NIST AI RMF | AI 바로 알기 #14" />
 
 [02. 국내외 가이드라인](./guidelines.md)이 "목록과 요약"이라면, 이 문서는 **각 표준을 상세히 파고, 서로 어떻게 엮이는지**를 공부하기 위한 자료다.
 

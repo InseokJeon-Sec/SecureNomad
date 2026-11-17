@@ -6,7 +6,13 @@ description: A study document covering AI security standards in detail (NIST AI 
 tags: [AI-security, standards, NIST, ISO, guidelines]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Standards & Frameworks — Detail and Relationships
+
+AI regulation and standards are also available as a video. — AI Essentials #14
+
+<YouTube id="-16Qb4Gbj7A" title="AI Regulation & Standards — AI Framework Act, EU AI Act, ISO 42001, NIST AI RMF | AI Essentials #14" />
 
 Where [02. Guidelines](./guidelines.md) is "a list and summary," this document is for studying **each standard in depth and how they fit together**.
 

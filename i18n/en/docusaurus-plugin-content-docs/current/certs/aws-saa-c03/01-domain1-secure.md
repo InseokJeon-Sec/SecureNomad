@@ -21,6 +21,10 @@ The network security section is also available as a video. — AWS Certification
 
 <YouTube id="aF9S9_LhS-Q" title="Network Security — Security Groups, NACLs, VPC Endpoints, SSM | AWS Certification Essentials (SAA-C03) #4" />
 
+The data encryption section is also available as a video. — AWS Certification Essentials #6
+
+<YouTube id="IymVjJiui7w" title="Data Encryption — KMS Envelope Encryption, S3 Options, Secrets Manager | AWS Certification Essentials (SAA-C03) #6" />
+
 > Study checklist. Detailed notes to follow.
 
 - Secure access: IAM users/groups/roles/policies, policy evaluation, least privilege, permission boundaries
