@@ -6,7 +6,13 @@ description: 조직의 AI 사용을 안전하게 하기 위한 보안성 평가�
 tags: [AI보안, 보안성평가]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # AI 보안성 평가 개요
+
+시리즈 'AI 바로 알기'의 마지막 편은 지금까지의 모든 내용을 한 장의 지도로 묶습니다. AI를 **알고·지키고·안전하게 쓰는** 큰 틀을 먼저 잡고 싶다면 아래 영상으로 시작해 보세요.
+
+<YouTube id="liCe152xE3Y" title="AI 보안 전체를 한 장의 지도로 — 안다·지킨다·쓴다 | AI 바로 알기 #15" />
 
 ## I. 왜 AI 사용에 보안성 평가가 필요한가
 

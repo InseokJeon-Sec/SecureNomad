@@ -25,6 +25,10 @@ The data encryption section is also available as a video. — AWS Certification 
 
 <YouTube id="IymVjJiui7w" title="Data Encryption — KMS Envelope Encryption, S3 Options, Secrets Manager | AWS Certification Essentials (SAA-C03) #6" />
 
+The audit & governance section is also available as a video. — AWS Certification Essentials #7
+
+<YouTube id="3p3Mh-9Rnxc" title="Audit & Governance — CloudTrail, Config, S3 Security | AWS Certification Essentials (SAA-C03) #7" />
+
 > Study checklist. Detailed notes to follow.
 
 - Secure access: IAM users/groups/roles/policies, policy evaluation, least privilege, permission boundaries

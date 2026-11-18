@@ -6,7 +6,13 @@ description: The concept and scope of security assessment for an organization's 
 tags: [AI-security, security-assessment]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Securing AI — Overview
+
+The final episode of the "AI Essentials" series ties everything together into a single map. If you want the big picture of how to know, defend, and safely use AI first, start with the video below (Korean audio).
+
+<YouTube id="liCe152xE3Y" title="The whole of AI security on one map — Know, Defend, Use | AI Essentials #15" />
 
 ## I. Why a security assessment is needed for AI usage
 
