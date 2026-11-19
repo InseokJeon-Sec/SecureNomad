@@ -29,6 +29,10 @@ The audit & governance section is also available as a video. — AWS Certificati
 
 <YouTube id="3p3Mh-9Rnxc" title="Audit & Governance — CloudTrail, Config, S3 Security | AWS Certification Essentials (SAA-C03) #7" />
 
+The full Domain 1 is also available as a scenario walkthrough. — AWS Certification Essentials #8
+
+<YouTube id="gK99tp9cCWI" title="Security Domain Practice — 10 Exam-style Scenarios | AWS Certification Essentials (SAA-C03) #8" />
+
 > Study checklist. Detailed notes to follow.
 
 - Secure access: IAM users/groups/roles/policies, policy evaluation, least privilege, permission boundaries
