@@ -6,7 +6,13 @@ description: Q·K·V, Scaled Dot-Product Attention, multi-head, causal masking, 
 tags: [AI, transformer, attention, deep-dive]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Attention and Transformer (Technical Deep Dive)
+
+Prefer to get the core ideas from a video first? See below ("AI Essentials" Deep Dive #1 — with a security angle; Korean audio).
+
+<YouTube id="QiMOSp0k8yQ" title="What does AI pay attention to? — Inside Transformer & Attention | AI Essentials Deep Dive #1" />
 
 :::tip Go deeper — AI System Design Guide (translation)
 A deeper, production/interview-oriented treatment of this topic → [Attention Mechanisms](../system-design/01-foundations/03-attention-mechanisms.md)

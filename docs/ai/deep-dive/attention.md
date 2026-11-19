@@ -6,7 +6,13 @@ description: Q·K·V, Scaled Dot-Product Attention, 멀티헤드, 인과 마스�
 tags: [AI, 트랜스포머, 어텐션, 심화]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 어텐션과 트랜스포머 (기술 심화)
+
+이 글의 핵심 개념을 영상으로 먼저 잡고 싶다면 아래를 참고하세요. ('AI 바로 알기' 심화 1편 — 보안 관점까지)
+
+<YouTube id="QiMOSp0k8yQ" title="AI는 문장에서 무엇에 주목하나 — 트랜스포머와 어텐션의 속 | AI 바로 알기 심화 #1" />
 
 :::tip 더 깊이 — AI 시스템 디자인 가이드(번역)
 이 주제를 프로덕션·인터뷰 관점에서 더 깊이 다룬 번역 문서 → [어텐션 메커니즘](../system-design/01-foundations/03-attention-mechanisms.md)
