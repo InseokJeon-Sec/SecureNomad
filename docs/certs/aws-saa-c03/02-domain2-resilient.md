@@ -5,6 +5,8 @@ sidebar_position: 3
 description: SAA-C03 Domain 2 — 확장성·느슨한 결합과 고가용성·내결함성을 시험에 바로 쓰도록 설명한다
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Domain 2 — 복원력 아키텍처 설계 (26%)
 
 :::tip 모르는 서비스·용어가 나오면
@@ -77,6 +79,8 @@ description: SAA-C03 Domain 2 — 확장성·느슨한 결합과 고가용성·�
 ---
 
 ## 2.2 고가용성·내결함성 아키텍처
+
+<YouTube id="3u8IGNrMRok" title="고가용성 설계 — 다중 AZ·ELB·Auto Scaling·DB 고가용성 | AWS 자격증 바로 알기 #9 (SAA-C03)" />
 
 ### 먼저 용어: 가용성 vs 내구성 vs 복원력
 - **가용성(Availability)**: 지금 쓸 수 있는가(다운타임이 짧은가).

@@ -5,7 +5,13 @@ sidebar_position: 3
 description: SAA-C03 Resilient Architectures study items
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Domain 2 — Resilient Architectures (26%)
+
+The high availability section is also available as a video. — AWS Certification Essentials #9
+
+<YouTube id="3u8IGNrMRok" title="High Availability — Multi-AZ, ELB, Auto Scaling, DB HA | AWS Certification Essentials (SAA-C03) #9" />
 
 > Study checklist. Detailed notes to follow.
 
