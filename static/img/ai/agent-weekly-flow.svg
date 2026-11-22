@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 190" font-family="Pretendard, 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#5e97d6"/>
+    </marker>
+  </defs>
+
+  <!-- auto zone bracket -->
+  <text x="289" y="28" text-anchor="middle" fill="#9aa3b2" font-size="12.5" font-weight="600">자동 (무인) — 매주 반복</text>
+  <line x1="6" y1="38" x2="570" y2="38" stroke="#4a5a6e" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="684" y="28" text-anchor="middle" fill="#e0a648" font-size="12.5" font-weight="700">사람 개입 (1곳)</text>
+
+  <!-- 1 cron -->
+  <rect x="6" y="56" width="168" height="80" rx="12" fill="#2e5b97"/>
+  <text x="90" y="90" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">크론 트리거</text>
+  <text x="90" y="112" text-anchor="middle" fill="#cfe0f5" font-size="12">매주 월요일 06:00</text>
+
+  <!-- 2 agent -->
+  <rect x="204" y="56" width="168" height="80" rx="12" fill="#2e5b97"/>
+  <text x="288" y="84" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">에이전트</text>
+  <text x="288" y="104" text-anchor="middle" fill="#cfe0f5" font-size="12">수집 · 작성 · 검증</text>
+  <text x="288" y="122" text-anchor="middle" fill="#9fc0e8" font-size="11">(승인된 소스만)</text>
+
+  <!-- 3 PR -->
+  <rect x="402" y="56" width="168" height="80" rx="12" fill="#2e5b97"/>
+  <text x="486" y="90" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">PR 생성 + 알림</text>
+  <text x="486" y="112" text-anchor="middle" fill="#cfe0f5" font-size="12">새 브랜치 · 메일/슬랙</text>
+
+  <!-- 4 human gate -->
+  <rect x="600" y="56" width="168" height="80" rx="12" fill="#e0a648"/>
+  <text x="684" y="90" text-anchor="middle" fill="#1b1407" font-size="15" font-weight="800">사람 승인</text>
+  <text x="684" y="112" text-anchor="middle" fill="#3a2a0a" font-size="12">수동 검토 후 머지</text>
+
+  <!-- 5 deploy -->
+  <rect x="798" y="56" width="156" height="80" rx="12" fill="#1f3f6b"/>
+  <text x="876" y="90" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">배포</text>
+  <text x="876" y="112" text-anchor="middle" fill="#cfe0f5" font-size="12">CI 빌드 → 라이브</text>
+
+  <!-- arrows -->
+  <line x1="174" y1="96" x2="202" y2="96" stroke="#5e97d6" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="372" y1="96" x2="400" y2="96" stroke="#5e97d6" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="570" y1="96" x2="598" y2="96" stroke="#5e97d6" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="768" y1="96" x2="796" y2="96" stroke="#5e97d6" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <text x="480" y="170" text-anchor="middle" fill="#9aa3b2" font-size="12.5">자동화는 사람을 빼는 게 아니라, 사람을 '마지막 판단'에만 남긴다</text>
+</svg>
