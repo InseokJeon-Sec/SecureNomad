@@ -13,6 +13,10 @@ The high availability section is also available as a video. — AWS Certificatio
 
 <YouTube id="3u8IGNrMRok" title="High Availability — Multi-AZ, ELB, Auto Scaling, DB HA | AWS Certification Essentials (SAA-C03) #9" />
 
+The decoupling section is also available as a video. — AWS Certification Essentials #10
+
+<YouTube id="9fi0I-yQbGU" title="Decoupling — SQS, SNS, EventBridge & fan-out | AWS Certification Essentials (SAA-C03) #10" />
+
 > Study checklist. Detailed notes to follow.
 
 - Decoupling: SQS, SNS, EventBridge, Step Functions, API Gateway, event-driven/fan-out

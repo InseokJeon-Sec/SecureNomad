@@ -6,7 +6,13 @@ description: How an LLM splits text into tokens (BPE / WordPiece / SentencePiece
 tags: [AI, tokenizer, BPE, deep-dive]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Tokenizers and BPE (Technical Deep Dive)
+
+Prefer to get the core ideas from a video first? See below ("AI Essentials" Deep Dive #2 — with a security angle; Korean audio).
+
+<YouTube id="r6p41QK1miU" title="How does AI split text? — Tokenizer, tokens, and security | AI Essentials Deep Dive #2" />
 
 :::tip Go deeper — AI System Design Guide (translation)
 A deeper, production/interview-oriented treatment of this topic → [Tokenization Deep Dive](../system-design/01-foundations/02-tokenization-deep-dive.md)

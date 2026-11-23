@@ -6,7 +6,13 @@ description: LLM이 글을 토큰으로 쪼개는 방식(BPE·WordPiece·Sentenc
 tags: [AI, 토크나이저, BPE, 심화]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 토크나이저와 BPE (기술 심화)
+
+이 글의 핵심 개념을 영상으로 먼저 잡고 싶다면 아래를 참고하세요. ('AI 바로 알기' 심화 2편 — 보안 관점까지)
+
+<YouTube id="r6p41QK1miU" title="AI는 글자를 어떻게 쪼개나 — 토크나이저와 토큰, 그리고 보안 | AI 바로 알기 심화 #2" />
 
 :::tip 더 깊이 — AI 시스템 디자인 가이드(번역)
 이 주제를 프로덕션·인터뷰 관점에서 더 깊이 다룬 번역 문서 → [토큰화 심층 분석](../system-design/01-foundations/02-tokenization-deep-dive.md)

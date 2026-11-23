@@ -5,10 +5,16 @@ authors: [inseok]
 tags: [ai, security, supply-chain, incident]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 어제 [에이전트 자동화를 안전하게 만드는 법](/ai/advanced/agent-automation-security)을 정리하면서 위협 지도를 그렸다 — 블래스트 반경, 간접 프롬프트 인젝션, 과도한 에이전시.
 그런데 공교롭게도 **바로 그 주에**, 그 지도를 그대로 재현한 두 사건이 터졌다. 이론이 아니라 현실이었다.
 
 {/* truncate */}
+
+이 글의 영상 버전입니다. 두 사건을 타임라인과 하나의 지도로 묶어 풀었습니다.
+
+<YouTube id="lmWxf_6lPi0" title="AI 에이전트가 뚫린 한 주 — PyPI 공급망 탈취와 Meta Muse 장악 | 실제 침해 사례 분석" />
 
 사실관계는 [주간 보안 브리핑 W47](/news/2026/11/23/security-weekly-w47)에 적었다. 여기서는 그 두 건을 '에이전트 자동화 보안'의 눈으로 다시 읽는다.
 
