@@ -131,6 +131,9 @@ DNS 레벨에서 트래픽을 어디로 보낼지 정한다.
 - **EFS**: 다중 AZ에서 여러 EC2가 공유하는 관리형 NFS. One Zone 옵션은 단일 AZ(저비용, 가용성↓).
 
 ### 백업과 복구
+
+<YouTube id="0R6U6IMLGvw" title="백업과 복구 — PITR·스냅샷·AWS Backup·S3 버전 관리·교차 리전 복제 | AWS 자격증 바로 알기 #11 (SAA-C03)" />
+
 - **AWS Backup**: EBS·RDS·DynamoDB·EFS 등 **중앙 집중 백업 정책**(스케줄·보존·교차 리전 복사)을 한 곳에서.
 - **스냅샷**: EBS/RDS의 시점 백업. S3에 저장되고 증분.
 

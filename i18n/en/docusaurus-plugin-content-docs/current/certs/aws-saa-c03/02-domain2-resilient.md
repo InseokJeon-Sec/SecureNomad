@@ -17,6 +17,10 @@ The decoupling section is also available as a video. — AWS Certification Essen
 
 <YouTube id="9fi0I-yQbGU" title="Decoupling — SQS, SNS, EventBridge & fan-out | AWS Certification Essentials (SAA-C03) #10" />
 
+The backup & recovery section is also available as a video. — AWS Certification Essentials #11
+
+<YouTube id="0R6U6IMLGvw" title="Backup & Recovery — PITR, snapshots, AWS Backup, S3 versioning & cross-region replication | AWS Certification Essentials (SAA-C03) #11" />
+
 > Study checklist. Detailed notes to follow.
 
 - Decoupling: SQS, SNS, EventBridge, Step Functions, API Gateway, event-driven/fan-out

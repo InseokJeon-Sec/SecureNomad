@@ -6,7 +6,13 @@ description: logits에서 다음 토큰을 고르는 방식 — temperature, top
 tags: [AI, 샘플링, 디코딩, temperature, 심화]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # 샘플링과 디코딩 (기술 심화)
+
+이 글의 핵심 개념을 영상으로 먼저 잡고 싶다면 아래를 참고하세요. ('AI 바로 알기' 심화 3편 — 비결정성의 보안까지)
+
+<YouTube id="kCxih9F-Ja4" title="같은 질문, 왜 다른 답? — 샘플링·temperature와 비결정성 | AI 바로 알기 심화 #3" />
 
 :::tip 더 깊이 — AI 시스템 디자인 가이드(번역)
 이 주제를 프로덕션·인터뷰 관점에서 더 깊이 다룬 번역 문서 → [추론 파이프라인 (샘플링 전략)](../system-design/01-foundations/06-inference-pipeline.md)

@@ -6,7 +6,13 @@ description: How the next token is chosen from logits — temperature, top-k, to
 tags: [AI, sampling, decoding, temperature, deep-dive]
 ---
 
+import YouTube from '@site/src/components/YouTube';
+
 # Sampling and Decoding (Technical Deep Dive)
+
+Prefer to get the core ideas from a video first? See below ("AI Essentials" Deep Dive #3 — with a security angle; Korean audio).
+
+<YouTube id="kCxih9F-Ja4" title="Why does the same question give different answers? — Sampling, temperature & nondeterminism | AI Essentials Deep Dive #3" />
 
 :::tip Go deeper — AI System Design Guide (translation)
 A deeper, production/interview-oriented treatment of this topic → [Inference Pipeline (sampling)](../system-design/01-foundations/06-inference-pipeline.md)
