@@ -1,7 +1,7 @@
 ---
 title: Inference Optimization (Technical Deep Dive)
 sidebar_label: Inference Optimization
-sidebar_position: 6
+sidebar_position: 7
 description: KV cache, quantization, batching, FlashAttention, GQA/MQA and more — techniques to serve LLMs fast and cheap
 tags: [AI, inference, quantization, KV-cache, deep-dive]
 ---

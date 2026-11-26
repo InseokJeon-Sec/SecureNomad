@@ -1,7 +1,7 @@
 ---
 title: RAG Internals (Technical Deep Dive)
 sidebar_label: RAG Internals
-sidebar_position: 4
+sidebar_position: 5
 description: How RAG retrieves and incorporates sources — chunking, embeddings, vector similarity, ANN search, reranking, context injection
 tags: [AI, RAG, embeddings, vector-search, deep-dive]
 ---

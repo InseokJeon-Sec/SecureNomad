@@ -1,7 +1,7 @@
 ---
 title: RAG 내부 동작 (기술 심화)
 sidebar_label: RAG 내부 동작
-sidebar_position: 4
+sidebar_position: 5
 description: 청킹·임베딩·벡터 유사도·ANN 검색·리랭킹·컨텍스트 주입까지 RAG가 자료를 가져와 반영하는 방식을 기술적으로 상세히 설명
 tags: [AI, RAG, 임베딩, 벡터검색, 심화]
 ---

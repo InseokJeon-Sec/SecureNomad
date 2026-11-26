@@ -1,7 +1,7 @@
 ---
 title: Fine-tuning and LoRA (Technical Deep Dive)
 sidebar_label: Fine-tuning & LoRA
-sidebar_position: 5
+sidebar_position: 6
 description: How full fine-tuning and PEFT (LoRA/QLoRA) work, and how adapters update weights in a low-rank way
 tags: [AI, fine-tuning, LoRA, PEFT, deep-dive]
 ---
