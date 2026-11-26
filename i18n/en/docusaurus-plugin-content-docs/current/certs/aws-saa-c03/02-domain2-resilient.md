@@ -21,6 +21,10 @@ The backup & recovery section is also available as a video. — AWS Certificatio
 
 <YouTube id="0R6U6IMLGvw" title="Backup & Recovery — PITR, snapshots, AWS Backup, S3 versioning & cross-region replication | AWS Certification Essentials (SAA-C03) #11" />
 
+The disaster recovery (DR) section is also available as a video. — AWS Certification Essentials #12
+
+<YouTube id="xF8bOi5PF0M" title="Disaster Recovery (DR) — RTO/RPO, 4 strategies & Route 53 failover | AWS Certification Essentials (SAA-C03) #12" />
+
 > Study checklist. Detailed notes to follow.
 
 - Decoupling: SQS, SNS, EventBridge, Step Functions, API Gateway, event-driven/fan-out
