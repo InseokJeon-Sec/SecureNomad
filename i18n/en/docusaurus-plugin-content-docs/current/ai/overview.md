@@ -39,6 +39,8 @@ AI (especially LLMs) organized from the concepts. No math; the focus is on under
 - [Tokenizers & BPE](/en/ai/deep-dive/tokenizer) — subword splitting
 - [Attention & Transformer](/en/ai/deep-dive/attention) — Q·K·V, Scaled Dot-Product, multi-head
 - [Sampling & decoding](/en/ai/deep-dive/sampling) — temperature · top-k · top-p
+- [System prompt & role separation](/en/ai/deep-dive/roles-and-system-prompt) — role token stream · prompt injection · LLM07
+- [Pre-training & alignment](/en/ai/deep-dive/pretraining-and-alignment) — SFT · RLHF · shallow alignment · external guardrails
 - [RAG internals](/en/ai/deep-dive/rag-internals) — chunking · embeddings · ANN · reranking
 - [Fine-tuning & LoRA](/en/ai/deep-dive/finetuning-lora) — PEFT · LoRA · QLoRA
 - [Inference optimization](/en/ai/deep-dive/inference-optimization) — KV cache · quantization · batching

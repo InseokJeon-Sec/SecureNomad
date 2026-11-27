@@ -25,6 +25,10 @@ The disaster recovery (DR) section is also available as a video. — AWS Certifi
 
 <YouTube id="xF8bOi5PF0M" title="Disaster Recovery (DR) — RTO/RPO, 4 strategies & Route 53 failover | AWS Certification Essentials (SAA-C03) #12" />
 
+The storage resilience section is also available as a video. — AWS Certification Essentials #13
+
+<YouTube id="OMf3WIs6FUQ" title="Storage Resilience — durability vs availability, S3 classes, block/file/object | AWS Certification Essentials (SAA-C03) #13" />
+
 > Study checklist. Detailed notes to follow.
 
 - Decoupling: SQS, SNS, EventBridge, Step Functions, API Gateway, event-driven/fan-out

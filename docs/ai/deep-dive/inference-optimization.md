@@ -1,7 +1,7 @@
 ---
 title: 추론 최적화 (기술 심화)
 sidebar_label: 추론 최적화 심화
-sidebar_position: 7
+sidebar_position: 8
 description: KV 캐시, 양자화, 배칭, FlashAttention, GQA/MQA 등 LLM을 빠르고 싸게 서빙하기 위한 기술을 설명
 tags: [AI, 추론, 양자화, KV캐시, 심화]
 ---

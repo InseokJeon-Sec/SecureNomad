@@ -1,7 +1,7 @@
 ---
 title: 파인튜닝과 LoRA (기술 심화)
 sidebar_label: 파인튜닝·LoRA 심화
-sidebar_position: 6
+sidebar_position: 7
 description: 전체 파인튜닝과 PEFT(LoRA·QLoRA)의 동작 원리, 어댑터가 가중치를 저차원으로 갱신하는 방식을 기술적으로 설명
 tags: [AI, 파인튜닝, LoRA, PEFT, 심화]
 ---

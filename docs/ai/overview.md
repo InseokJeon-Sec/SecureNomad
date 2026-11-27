@@ -39,6 +39,8 @@ AI(특히 LLM, 대규모 언어 모델)를 개념부터 정리한다. 수식 없
 - [토크나이저와 BPE](./deep-dive/tokenizer.md) — 서브워드 분할
 - [어텐션과 트랜스포머](./deep-dive/attention.md) — Q·K·V, Scaled Dot-Product, 멀티헤드
 - [샘플링과 디코딩](./deep-dive/sampling.md) — temperature·top-k·top-p
+- [시스템 프롬프트와 역할 분리](./deep-dive/roles-and-system-prompt.md) — 역할 토큰 열·프롬프트 인젝션·LLM07
+- [사전학습과 사후학습(정렬)](./deep-dive/pretraining-and-alignment.md) — SFT·RLHF·표층 정렬·외부 가드레일
 - [RAG 내부 동작](./deep-dive/rag-internals.md) — 청킹·임베딩·ANN·리랭킹
 - [파인튜닝과 LoRA](./deep-dive/finetuning-lora.md) — PEFT·LoRA·QLoRA
 - [추론 최적화](./deep-dive/inference-optimization.md) — KV 캐시·양자화·배칭
